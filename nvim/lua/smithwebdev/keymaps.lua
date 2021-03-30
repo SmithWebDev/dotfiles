@@ -10,8 +10,11 @@ vim.g.mapleader = ' '
 -- -------------------------------------
 utils.keymap('n', '<leader>ba', '<cmd>buffers<CR>')
 utils.keymap('n', '<leader>bn', '<cmd>enew<CR>')
-utils.keymap('n', '<leader>bl',      '<cmd>bnext<CR>')
-utils.keymap('n', '<leader>bh',      '<cmd>bprevious<CR>')
+utils.keymap('n', '<leader>bl', '<cmd>bnext<CR>')
+utils.keymap('n', '<leader>bh', '<cmd>bprevious<CR>')
+
+-- Disable highlights
+utils.keymap('n', '<leader><CR>', '<cmd>noh<CR>')
 
 -- Easy Esc
 -- -------------------------------------
