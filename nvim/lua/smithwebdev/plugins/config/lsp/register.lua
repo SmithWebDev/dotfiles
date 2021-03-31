@@ -2,7 +2,6 @@ local current_path = (...):gsub('%.init$', '')
 local lsp = require 'lspconfig'
 local lsp_status = require 'lsp-status'
 local utils = require 'smithwebdev.utils'
---local tsserver_opts = require 'creativenull.plugins.config.lsp.tsserver'
 local M = {}
 
 -- LSP Buffer Keymaps
@@ -42,12 +41,12 @@ function M.register_lsp(lsp_name, opts)
     capabilities = lsp_status.capabilities
   }
 
-  if lsp_name == 'tsserver' then
-    -- default_opts.commands = {
-    --   TsOrganizeImports = { ts_organize_imports, description = 'Organize imports' }
-    -- }
-    default_opts.commands = tsserver_opts.organize_cmd
-  end
+--  if lsp_name == 'tsserver' then
+--    -- default_opts.commands = {
+--    --   TsOrganizeImports = { ts_organize_imports, description = 'Organize imports' }
+--    -- }
+--    default_opts.commands = tsserver_opts.organize_cmd
+--  end
 
   if opts ~= nil and not vim.tbl_isempty(opts) then
     -- Merge 'opts' w/ 'default_opts'. If keys are the same, then override key from 'opts'

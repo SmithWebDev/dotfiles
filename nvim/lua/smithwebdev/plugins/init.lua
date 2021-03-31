@@ -39,8 +39,8 @@ packer.startup(function(use)
   use 'creativenull/diagnosticls-nvim'
 
   -- Ruby/ Rails
---  use 'tpope/vim-endwise'
---  use 'tpope/vim-rails'
+  use 'tpope/vim-endwise'
+  use 'tpope/vim-rails'
   
 --  -- Treesitter
 --  use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
