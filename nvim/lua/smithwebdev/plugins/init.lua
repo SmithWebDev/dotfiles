@@ -34,8 +34,7 @@ packer.startup(function(use)
   use 'glepnir/lspsaga.nvim'
 --  use 'onsails/lspkind-nvim'
 --  use 'kosayoda/nvim-lightbulb'
---  use 'kabouzeid/nvim-lspinstall'
---  use 'nvim-lua/completion-nvim'
+  use 'kabouzeid/nvim-lspinstall'
   use 'nvim-lua/lsp-status.nvim'
   use 'creativenull/diagnosticls-nvim'
 
