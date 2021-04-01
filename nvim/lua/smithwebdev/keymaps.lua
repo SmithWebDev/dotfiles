@@ -75,9 +75,13 @@ utils.keymap('n', '<leader>vi', ':luafile $MYVIMRC<CR>')
 utils.keymap('n', '<leader>vm', ':e $VIMM<CR>')
 utils.keymap('n', '<leader>vp', ':e $VIMP<CR>')
 utils.keymap('n', '<leader>vr', ':luafile %<CR>')
+utils.keymap('n', '<leader>vs', ':e $VIMP<CR>')
 
 -- Plugin Commands
 -- =====================================
+
+-- **Nvim-Tree 
+-- -------------------------------------
 utils.keymap('n', '<leader>e', ':NvimTreeToggle<CR>')
 
 -- **Packer 

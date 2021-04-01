@@ -15,12 +15,12 @@ packer.startup(function(use)
   use 'wbthomason/packer.nvim'
 --
 --  -- Lua Guide Info
---  use 'nanotee/nvim-lua-guide'
+  use 'nanotee/nvim-lua-guide'
 --
   -- AutoCompletion
   use 'hrsh7th/nvim-compe'
---  use 'hrsh7th/vim-vsnip'
---  use 'hrsh7th/vim-vsnip-integ'
+  use 'hrsh7th/vim-vsnip'
+  use 'hrsh7th/vim-vsnip-integ'
   use 'mattn/emmet-vim'
 
   -- Explorer
