@@ -24,7 +24,7 @@ packer.startup(function(use)
   use 'mattn/emmet-vim'
 
   -- Explorer
---  use 'kyazdani42/nvim-tree.lua'
+  use 'kyazdani42/nvim-tree.lua'
 
   -- FileType Snippets (VS-Code)
 --  use 'rubyide/vscode-ruby'
@@ -41,27 +41,27 @@ packer.startup(function(use)
   -- Ruby/ Rails
   use 'tpope/vim-endwise'
   use 'tpope/vim-rails'
-  
+
 --  -- Treesitter
---  use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
+  use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
 --  use 'sheerun/vim-polyglot'
---  use 'nvim-treesitter/nvim-treesitter-refactor'
---  use 'nvim-treesitter/playground'
+  use 'nvim-treesitter/nvim-treesitter-refactor'
+  use 'nvim-treesitter/playground'
 --
 --  -- Status Line and Bufferline
 --  use 'glepnir/galaxyline.nvim'
 --  use 'romgrk/barbar.nvim'
 --
 --  -- Icons
---  use 'kyazdani42/nvim-web-devicons'
---  use 'ryanoasis/vim-devicons'
+  use 'kyazdani41/nvim-web-devicons'
+  use 'ryanoasis/vim-devicons'
 --
   -- Telescope
---  use 'nvim-telescope/telescope.nvim'
---  use 'nvim-lua/plenary.nvim'
---  use 'nvim-lua/popup.nvim'
---  use 'nvim-telescope/telescope-fzy-native.nvim'
---  use 'nvim-telescope/telescope-media-files.nvim'
+  use 'nvim-telescope/telescope.nvim'
+  use 'nvim-lua/plenary.nvim'
+  use 'nvim-lua/popup.nvim'
+  use 'nvim-telescope/telescope-fzy-native.nvim'
+  use 'nvim-telescope/telescope-media-files.nvim'
 
 --  -- Git
 --  use 'TimUntersberger/neogit'
@@ -74,6 +74,10 @@ packer.startup(function(use)
 --  use 'mattn/vim-gist'
 --  use 'mattn/webapi-vim'
 --
+--  -- Testing
+--  use 'rcarriga/vim-ultest'
+--  use 'vim-test/vim-test'
+
 --  -- Webdev
 --  use 'windwp/nvim-ts-autotag'
 --  use 'gennaro-tedesco/nvim-jqx'
@@ -86,10 +90,10 @@ packer.startup(function(use)
 
 --
   -- General Plugins
---  use 'windwp/nvim-autopairs'
+  use 'windwp/nvim-autopairs'
 --  use 'tjdevries/colorbuddy.nvim'
 --  use 'bkegley/gloombuddy'
---  use 'tpope/vim-surround'
+  use 'tpope/vim-surround'
 --  use 'kevinhwang91/nvim-bqf'
 --  use 'unblevable/quick-scope'
 --  use 'airblade/vim-rooter'
@@ -99,12 +103,12 @@ packer.startup(function(use)
 --  use 'psliwka/vim-smoothie'
 --  use 'moll/vim-bbye'
 --  use {'iamcco/markdown-preview.nvim', run = 'cd app && npm install'}
---  use 'liuchengxu/vim-which-key'
+  use 'liuchengxu/vim-which-key'
 --  use 'voldikss/vim-floaterm'
 --  use 'liuchengxu/vista.vim'
 --  use 'terrortylor/nvim-comment'
 --  use 'bfredl/nvim-miniyank'
---  use 'junegunn/goyo.vim'
+  use 'junegunn/goyo.vim'
 --  use 'andymass/vim-matchup'
 --  use 'phaazon/hop.nvim'
 --  use 'tpope/vim-sleuth'

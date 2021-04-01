@@ -22,13 +22,6 @@ utils.keymap('i', 'jj', '<Esc>')
 utils.keymap('i', 'jk', '<Esc>')
 utils.keymap('i', 'kj', '<Esc>')
 
--- **Packer 
--- -------------------------------------
-utils.keymap('n', '<leader>Pc', ':PackerClean<CR>' )
-utils.keymap('n', '<leader>Pi', ':PackerInstall<CR>' )
-utils.keymap('n', '<leader>Ps', ':PackerSync<CR>' )
-utils.keymap('n', '<leader>Pu', ':PackerUpdate<CR>' )
-
 -- Resize window panes
 -- -------------------------------------
 utils.keymap('n', '<up>', ':resize +2<CR>')
@@ -83,4 +76,14 @@ utils.keymap('n', '<leader>vm', ':e $VIMM<CR>')
 utils.keymap('n', '<leader>vp', ':e $VIMP<CR>')
 utils.keymap('n', '<leader>vr', ':luafile %<CR>')
 
+-- Plugin Commands
+-- =====================================
+utils.keymap('n', '<leader>e', ':NvimTreeToggle<CR>')
+
+-- **Packer 
+-- -------------------------------------
+utils.keymap('n', '<leader>Pc', ':PackerClean<CR>' )
+utils.keymap('n', '<leader>Pi', ':PackerInstall<CR>' )
+utils.keymap('n', '<leader>Ps', ':PackerSync<CR>' )
+utils.keymap('n', '<leader>Pu', ':PackerUpdate<CR>' )
 
