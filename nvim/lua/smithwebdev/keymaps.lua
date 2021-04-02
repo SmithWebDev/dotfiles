@@ -97,3 +97,6 @@ utils.keymap('n', '<leader>Pu', ':PackerUpdate<CR>' )
 utils.keymap('n', '<leader>ff', [[<cmd>lua require'smithwebdev.plugins.config.telescope'.find_files()<CR>]])
 utils.keymap('n', '<leader>fg', [[<cmd>lua require'smithwebdev.plugins.config.telescope'.live_grep()<CR>]])
 
+-- **WhichKey 
+-- -------------------------------------
+utils.keymap('n', 'leader', [[<cmd>WhichKey '<Space>'<CR>]])

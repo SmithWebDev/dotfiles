@@ -9,7 +9,7 @@ local w=vim.wo
 -- Completion Options --
 o.completeopt='menuone,noinsert,noselect'
 o.updatetime=5000
-o.timeoutlen=1000
+o.timeoutlen=500
 
 -- Fold Options --
 w.foldmethod='indent'
