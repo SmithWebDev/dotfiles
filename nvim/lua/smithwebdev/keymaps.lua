@@ -75,7 +75,8 @@ utils.keymap('n', '<leader>vi', ':luafile $MYVIMRC<CR>')
 utils.keymap('n', '<leader>vm', ':e $VIMM<CR>')
 utils.keymap('n', '<leader>vp', ':e $VIMP<CR>')
 utils.keymap('n', '<leader>vr', ':luafile %<CR>')
-utils.keymap('n', '<leader>vs', ':e $VIMP<CR>')
+utils.keymap('n', '<leader>vs', ':e $VIMS<CR>')
+utils.keymap('n', '<leader>vv', ':e $MYVIMRC<CR>')
 
 -- Plugin Commands
 -- =====================================
@@ -90,4 +91,9 @@ utils.keymap('n', '<leader>Pc', ':PackerClean<CR>' )
 utils.keymap('n', '<leader>Pi', ':PackerInstall<CR>' )
 utils.keymap('n', '<leader>Ps', ':PackerSync<CR>' )
 utils.keymap('n', '<leader>Pu', ':PackerUpdate<CR>' )
+
+-- **Telescope 
+-- -------------------------------------
+utils.keymap('n', '<leader>ff', [[<cmd>lua require'smithwebdev.plugins.config.telescope'.find_files()<CR>]])
+utils.keymap('n', '<leader>fg', [[<cmd>lua require'smithwebdev.plugins.config.telescope'.live_grep()<CR>]])
 

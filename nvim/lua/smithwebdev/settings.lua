@@ -9,7 +9,7 @@ local w=vim.wo
 -- Completion Options --
 o.completeopt='menuone,noinsert,noselect'
 o.updatetime=5000
-o.timeoutlen=3000
+o.timeoutlen=1000
 
 -- Fold Options --
 w.foldmethod='indent'
@@ -18,7 +18,7 @@ w.foldenable=false
 w.foldlevel=99
 
 -- Indentation Options --
-b.expandtab=true
+o.expandtab=true
 b.tabstop=2
 b.shiftwidth=2
 b.smartindent=true

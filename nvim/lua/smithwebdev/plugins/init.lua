@@ -104,6 +104,7 @@ packer.startup(function(use)
 --  use 'moll/vim-bbye'
 --  use {'iamcco/markdown-preview.nvim', run = 'cd app && npm install'}
   use 'liuchengxu/vim-which-key'
+  use 'acksld/nvim-whichkey-setup.lua'
 --  use 'voldikss/vim-floaterm'
 --  use 'liuchengxu/vista.vim'
 --  use 'terrortylor/nvim-comment'

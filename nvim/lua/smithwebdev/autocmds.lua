@@ -21,7 +21,7 @@ auto(
       au InsertEnter * let updaterestore=&updatetime | set updatetime=10000
       au InsertLeave * let &updatetime=updaterestore
     augroup END
-  ]], true
+  ]], false
 )
 
 -- Saves on text change or exit Insert mode
@@ -29,10 +29,11 @@ auto(
   [[
     augroup autosave
         au!
+        let blacklist = ['packer', 'NvimTree', 'netrw']
         au BufEnter * if &filetype == "" | setlocal ft=text | endif
-        au TextChanged,InsertLeave * if &readonly == 0 | silent w | endif
+        au TextChanged,InsertLeave * if index(blacklist, &ft) < 0 | silent w | endif
     augroup END
-  ]], true
+  ]], false
 )
 --
 -- Auto compile when there are changes in plugins.lua
