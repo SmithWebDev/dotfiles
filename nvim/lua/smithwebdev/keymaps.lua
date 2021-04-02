@@ -10,8 +10,8 @@ vim.g.mapleader = ' '
 -- -------------------------------------
 utils.keymap('n', '<leader>ba', '<cmd>buffers<CR>')
 utils.keymap('n', '<leader>bn', '<cmd>enew<CR>')
-utils.keymap('n', '<leader>bl', '<cmd>bnext<CR>')
-utils.keymap('n', '<leader>bh', '<cmd>bprevious<CR>')
+utils.keymap('n', '<TAB>', '<cmd>bnext<CR>')
+utils.keymap('n', '<S-TAB>', '<cmd>bprevious<CR>')
 
 -- Disable highlights
 utils.keymap('n', '<leader><CR>', '<cmd>noh<CR>')
@@ -31,22 +31,22 @@ utils.keymap('n', '<right>', ':vertical resize -2<CR>')
 
 -- tabs
 -- -------------------------------------
-utils.keymap('n', '<leader>t=', ':-tabm<CR>')
-utils.keymap('n', '<leader>t-', ':+tabm<CR>')
-utils.keymap('n', '<leader>tc', ':tabc<CR>')
-utils.keymap('n', '<leader>te', ':tabedit %<CR>')
-utils.keymap('n', '<leader>th', ':tabfirst<CR>')
-utils.keymap('n', '<leader>ti', ':tabnew $VIMI<CR>')
-utils.keymap('n', '<leader>tj', ':tabnext<CR>')
-utils.keymap('n', '<leader>tk', ':tabprev<CR>')
-utils.keymap('n', '<leader>tl', ':tablast<CR>')
-utils.keymap('n', '<leader>tm', ':tabnew $VIMM<CR>')
-utils.keymap('n', '<leader>tn', ':tabnew<Space>')
-utils.keymap('n', '<leader>tp', ':tabnew $VIMP<CR>')
-utils.keymap('n', '<leader>ts', ':tabnew $VIMS<CR>')
-utils.keymap('n', '<leader>tt', ':tabs<CR>')
-utils.keymap('n', '<leader>tu', ':tabnew $VIMU<CR>')
-utils.keymap('n', '<leader>tx', ':tabnew $VIMC')
+--utils.keymap('n', '<leader>t=', ':-tabm<CR>')
+--utils.keymap('n', '<leader>t-', ':+tabm<CR>')
+--utils.keymap('n', '<leader>tc', ':tabc<CR>')
+--utils.keymap('n', '<leader>te', ':tabedit %<CR>')
+--utils.keymap('n', '<leader>th', ':tabfirst<CR>')
+--utils.keymap('n', '<leader>ti', ':tabnew $VIMI<CR>')
+--utils.keymap('n', '<leader>tj', ':tabnext<CR>')
+--utils.keymap('n', '<leader>tk', ':tabprev<CR>')
+--utils.keymap('n', '<leader>tl', ':tablast<CR>')
+--utils.keymap('n', '<leader>tm', ':tabnew $VIMM<CR>')
+--utils.keymap('n', '<leader>tn', ':tabnew<Space>')
+--utils.keymap('n', '<leader>tp', ':tabnew $VIMP<CR>')
+--utils.keymap('n', '<leader>ts', ':tabnew $VIMS<CR>')
+--utils.keymap('n', '<leader>tt', ':tabs<CR>')
+--utils.keymap('n', '<leader>tu', ':tabnew $VIMU<CR>')
+--utils.keymap('n', '<leader>tx', ':tabnew $VIMC')
 
 --
 -- -------------------------------------
@@ -69,28 +69,29 @@ utils.keymap('n', '<leader>q', '<C-w>q')
 
 -- VIM commands
 -- -------------------------------------
-utils.keymap('n', '<leader>va', ':e $VIMA<CR>')
-utils.keymap('n', '<leader>vc', ':e $VIMC<CR>')
-utils.keymap('n', '<leader>vi', ':luafile $MYVIMRC<CR>')
-utils.keymap('n', '<leader>vm', ':e $VIMM<CR>')
-utils.keymap('n', '<leader>vp', ':e $VIMP<CR>')
-utils.keymap('n', '<leader>vr', ':luafile %<CR>')
-utils.keymap('n', '<leader>vs', ':e $VIMS<CR>')
-utils.keymap('n', '<leader>vv', ':e $MYVIMRC<CR>')
+--utils.keymap('n', '<leader>va', ':e $VIMA<CR>')
+--utils.keymap('n', '<leader>vc', ':e $VIMC<CR>')
+--utils.keymap('n', '<leader>vi', ':luafile $MYVIMRC<CR>')
+--utils.keymap('n', '<leader>vm', ':e $VIMM<CR>')
+--utils.keymap('n', '<leader>vp', ':e $VIMP<CR>')
+--utils.keymap('n', '<leader>vr', ':luafile %<CR>')
+--utils.keymap('n', '<leader>vs', ':e $VIMS<CR>')
+--utils.keymap('n', '<leader>vv', ':e $MYVIMRC<CR>')
 
 -- Plugin Commands
 -- =====================================
 
 -- **Nvim-Tree 
 -- -------------------------------------
-utils.keymap('n', '<leader>e', ':NvimTreeToggle<CR>')
+utils.keymap('n', '<leader>ee', ':NvimTreeToggle<CR>')
+utils.keymap('n', '<leader>ef', ':NvimTreeFindFile<CR>')
 
 -- **Packer 
 -- -------------------------------------
-utils.keymap('n', '<leader>Pc', ':PackerClean<CR>' )
-utils.keymap('n', '<leader>Pi', ':PackerInstall<CR>' )
-utils.keymap('n', '<leader>Ps', ':PackerSync<CR>' )
-utils.keymap('n', '<leader>Pu', ':PackerUpdate<CR>' )
+--utils.keymap('n', '<leader>Pc', ':PackerClean<CR>' )
+--utils.keymap('n', '<leader>Pi', ':PackerInstall<CR>' )
+--utils.keymap('n', '<leader>Ps', ':PackerSync<CR>' )
+--utils.keymap('n', '<leader>Pu', ':PackerUpdate<CR>' )
 
 -- **Telescope 
 -- -------------------------------------
@@ -99,5 +100,5 @@ utils.keymap('n', '<leader>Pu', ':PackerUpdate<CR>' )
 
 -- **WhichKey 
 -- -------------------------------------
-utils.keymap('n', '<leader>', [[<cmd>WhichKey '<Space>'<CR>]])
-utils.keymap('n', ',', [[<cmd>WhichKey ','<CR>]])
+--utils.keymap('n', '<leader>', [[<cmd>WhichKey '<Space>'<CR>]])
+--utils.keymap('n', ',', [[<cmd>WhichKey ','<CR>]])

@@ -19,7 +19,7 @@ packer.startup(function(use)
 --
   -- AutoCompletion
   use 'hrsh7th/nvim-compe'
-  use 'hrsh7th/vim-bsnip'
+  use 'hrsh7th/vim-vsnip'
   use 'hrsh7th/vim-vsnip-integ'
   use 'mattn/emmet-vim'
 
@@ -60,6 +60,7 @@ packer.startup(function(use)
   use 'nvim-telescope/telescope.nvim'
   use 'nvim-lua/plenary.nvim'
   use 'nvim-lua/popup.nvim'
+  use 'windwp/nvim-spectre'
   use 'nvim-telescope/telescope-fzy-native.nvim'
   use 'nvim-telescope/telescope-media-files.nvim'
 
@@ -91,8 +92,8 @@ packer.startup(function(use)
 --
   -- General Plugins
   use 'windwp/nvim-autopairs'
---  use 'tjdevries/colorbuddy.nvim'
---  use 'bkegley/gloombuddy'
+  use 'tjdevries/colorbuddy.nvim'
+  use 'bkegley/gloombuddy'
   use 'tpope/vim-surround'
 --  use 'kevinhwang91/nvim-bqf'
 --  use 'unblevable/quick-scope'
