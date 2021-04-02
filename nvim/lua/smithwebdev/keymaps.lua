@@ -48,9 +48,9 @@ utils.keymap('n', '<leader>tt', ':tabs<CR>')
 utils.keymap('n', '<leader>tu', ':tabnew $VIMU<CR>')
 utils.keymap('n', '<leader>tx', ':tabnew $VIMC')
 
--- Tabs
+--
 -- -------------------------------------
-utils.keymap('n', '<M-j>', [[mz:m+<CR>`z]])
+--utils.keymap('n', '<M-j>', [[mz:m+<CR>`z]])
 
 
 -- Window Navigation
@@ -94,9 +94,10 @@ utils.keymap('n', '<leader>Pu', ':PackerUpdate<CR>' )
 
 -- **Telescope 
 -- -------------------------------------
-utils.keymap('n', '<leader>ff', [[<cmd>lua require'smithwebdev.plugins.config.telescope'.find_files()<CR>]])
-utils.keymap('n', '<leader>fg', [[<cmd>lua require'smithwebdev.plugins.config.telescope'.live_grep()<CR>]])
+--utils.keymap('n', '<leader>ff', [[<cmd>lua require'smithwebdev.plugins.config.telescope'.find_files()<CR>]])
+--utils.keymap('n', '<leader>fg', [[<cmd>lua require'smithwebdev.plugins.config.telescope'.live_grep()<CR>]])
 
 -- **WhichKey 
 -- -------------------------------------
-utils.keymap('n', 'leader', [[<cmd>WhichKey '<Space>'<CR>]])
+utils.keymap('n', '<leader>', [[<cmd>WhichKey '<Space>'<CR>]])
+utils.keymap('n', ',', [[<cmd>WhichKey ','<CR>]])
