@@ -15,7 +15,7 @@ telescope.setup {
 		file_previewer = preview.vim_buffer_cat.new,
 		file_sorter = sorter.get_fuzzy_file,	
 		grep_previewer = preview.vim_buffer_vimgrep.new,
-		layout_strategy = 'vertical',
+		layout_strategy = 'horizontal',
 		mappings = {
 			i = {
 				['<C-j>'] = actions.move_selection_next,

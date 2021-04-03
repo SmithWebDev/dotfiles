@@ -54,6 +54,7 @@ w.relativenumber=true
 -- Window/Buffer/Tab Options --
 o.hidden=true
 o.cmdheight=1
+o.guifont='FiraCode'
 o.pumheight=10
 o.pumblend=25
 o.splitbelow=true
@@ -64,3 +65,7 @@ o.clipboard='unnamedplus'
 
 
 vim.cmd 'syntax on'
+--vim.cmd 'colorscheme birds-of-paradise'
+vim.cmd 'colorscheme gloombuddy'
+--vim.cmd 'colorscheme microdark'
+vim.cmd 'hi Normal guibg=NONE ctermbg=NONE'

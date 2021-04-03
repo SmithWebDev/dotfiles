@@ -26,7 +26,8 @@ packer.startup(function(use)
   -- Explorer
   use 'kyazdani42/nvim-tree.lua'
 
-  -- FileType Snippets (VS-Code)
+  -- Snippets
+--  use 'rafamadriz/friendly-snippets'
 --  use 'rubyide/vscode-ruby'
 
   -- LSP
@@ -52,9 +53,6 @@ packer.startup(function(use)
 --  use 'glepnir/galaxyline.nvim'
 --  use 'romgrk/barbar.nvim'
 --
---  -- Icons
-  use 'kyazdani41/nvim-web-devicons'
-  use 'ryanoasis/vim-devicons'
 --
   -- Telescope
   use 'nvim-telescope/telescope.nvim'
@@ -76,8 +74,8 @@ packer.startup(function(use)
 --  use 'mattn/webapi-vim'
 --
 --  -- Testing
---  use 'rcarriga/vim-ultest'
---  use 'vim-test/vim-test'
+  use 'rcarriga/vim-ultest'
+  use 'vim-test/vim-test'
 
 --  -- Webdev
 --  use 'windwp/nvim-ts-autotag'
@@ -89,17 +87,30 @@ packer.startup(function(use)
 --  use 'kshenoy/vim-signature'
 
 
---
-  -- General Plugins
-  use 'windwp/nvim-autopairs'
+-- ColorScheme Plugins
+  use 'ap/vim-css-color'
+  use 'vim-scripts/ScrollColors'
   use 'tjdevries/colorbuddy.nvim'
   use 'bkegley/gloombuddy'
+  use 'wadackel/vim-dogrun'
+  use 'smithwebdev/birds-of-paradise.vim'
+  use 'sfi0zy/atlantic-dark.vim'
+  use 'cseelus/vim-colors-lucid'
+  use 'chmllr/elrodeo-vim-colorscheme'
+  use 'djjcast/mirodark'
+  use 'yuttie/hydrangea-vim'
+  use 'kristijanhusak/vim-hybrid-material'
+  use 'bignimbus/pop-punk.vim'
+  use 'rafi/awesome-vim-colorschemes'
+
+  -- General Plugins
+  use 'windwp/nvim-autopairs'
   use 'tpope/vim-surround'
 --  use 'kevinhwang91/nvim-bqf'
 --  use 'unblevable/quick-scope'
 --  use 'airblade/vim-rooter'
 --  use 'kevinhwang91/rnvimr'
---  use 'mhinz/vim-startify'
+  use 'mhinz/vim-startify'
 --  use 'metakirby5/codi.vim'
 --  use 'psliwka/vim-smoothie'
 --  use 'moll/vim-bbye'
@@ -114,6 +125,10 @@ packer.startup(function(use)
 --  use 'andymass/vim-matchup'
 --  use 'phaazon/hop.nvim'
 --  use 'tpope/vim-sleuth'
+
+--  -- Icons
+  use 'kyazdani41/nvim-web-devicons'
+  use 'ryanoasis/vim-devicons'
 end)
 
 require('smithwebdev.plugins.config.setup')

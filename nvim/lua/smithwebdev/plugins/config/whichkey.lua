@@ -43,11 +43,20 @@ local keymap = {
                 u = {':tabnew $VIMU<CR>','open utils file'},
                 x = {':tabnew $vimc', 'open config dir'}
         },
+        u = {
+                name = '+ultest',
+                a = {'<cmd>UltestAttach', 'Attach (Debugging live)'},
+                j = {'<cmd>UltestNearest', 'Run nearest test current file'},
+                s = {'<cmd>UltestSummary', 'Toggle summary window'},
+                u = {'<cmd>Ultest', 'Run all test current file'},
+                x = {'<cmd>UltestStop', 'Stop running tests'}
+        },
         v = {
                 name = '+vim',
                 a = {'<cmd>e $VIMA<CR>', 'autocmds config'},
                 c = {'<cmd>e $VIMC/<CR>', 'plugins config'},
                 i = {'<cmd>luafile $MYVIMRC', 'luafile init config'},
+                j = {'<cmd>so %<CR>', 'refresh vim source'},
                 m = {'<cmd>e $VIMM<CR>', 'keymaps config'},
                 p = {'<cmd>e $VIMP<CR>', 'plugin list'},
                 r = {'<cmd>luafile %', 'luafile %'},

@@ -35,6 +35,12 @@ auto(
     augroup END
   ]], false
 )
+
+auto(
+  [[
+    autocmd BufWritePost smithwebdev.plugins PackerCompile
+    ]],false
+)
 --
 -- Auto compile when there are changes in plugins.lua
 --vim.cmd 'autocmd BufWritePost plugins.lua PackerCompile' 
