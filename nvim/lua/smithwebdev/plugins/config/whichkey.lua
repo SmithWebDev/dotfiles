@@ -6,9 +6,9 @@ local keymap = {
                 name = '+extended',
                 b = {
                         name = '+Bracey',
-                        b = {'<cmd>Bracey', 'start Bracey server'},
-                        r = {'<cmd>BraceyReload', 'reload Bracey server'},
-                        s = {'<cmd>BraceyStop', 'stop Bracey server'},
+                        b = {'<cmd>Bracey<cr>', 'start Bracey server'},
+                        r = {'<cmd>BraceyReload<cr>', 'reload Bracey server'},
+                        s = {'<cmd>BraceyStop<cr>', 'stop Bracey server'},
                 },
                 e = {'<cmd>NvimTreeToggle<cr>', 'toggle NvimTree'},
                 --s = {'<cmd><cr>', 'show open tabs'},
