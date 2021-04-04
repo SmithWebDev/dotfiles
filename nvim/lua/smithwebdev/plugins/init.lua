@@ -51,7 +51,7 @@ packer.startup(function(use)
 --
   -- Status Line and Bufferline
   use 'glepnir/galaxyline.nvim'
-  use 'romgrk/barbar.nvim'
+--  use 'romgrk/barbar.nvim'
 --
 --
   -- Telescope

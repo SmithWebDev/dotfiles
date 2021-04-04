@@ -9,6 +9,7 @@ vim.g.mapleader = ' '
 -- Buffer maps
 -- -------------------------------------
 utils.keymap('n', '<leader>ba', '<cmd>buffers<CR>')
+utils.keymap('n', '<leader>bd', '<cmd>bdelete<CR>')
 utils.keymap('n', '<leader>bn', '<cmd>enew<CR>')
 utils.keymap('n', '<TAB>', '<cmd>bnext<CR>')
 utils.keymap('n', '<S-TAB>', '<cmd>bprevious<CR>')

@@ -48,6 +48,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/birds-of-paradise.vim"
   },
+  ["bracey.vim"] = {
+    loaded = true,
+    path = "/home/smith/.local/share/nvim/site/pack/packer/start/bracey.vim"
+  },
   ["colorbuddy.nvim"] = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/colorbuddy.nvim"
@@ -63,6 +67,14 @@ _G.packer_plugins = {
   ["emmet-vim"] = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/emmet-vim"
+  },
+  ["friendly-snippets"] = {
+    loaded = true,
+    path = "/home/smith/.local/share/nvim/site/pack/packer/start/friendly-snippets"
+  },
+  ["galaxyline.nvim"] = {
+    loaded = true,
+    path = "/home/smith/.local/share/nvim/site/pack/packer/start/galaxyline.nvim"
   },
   gloombuddy = {
     loaded = true,
@@ -211,6 +223,10 @@ _G.packer_plugins = {
   ["vim-which-key"] = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/vim-which-key"
+  },
+  ["vscode-ruby"] = {
+    loaded = true,
+    path = "/home/smith/.local/share/nvim/site/pack/packer/start/vscode-ruby"
   }
 }
 

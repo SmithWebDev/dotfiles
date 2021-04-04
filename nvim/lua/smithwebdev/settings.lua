@@ -34,7 +34,7 @@ w.list=true
 o.showmode= false
 o.statusline = require 'smithwebdev.statusline'.get_statusline()
 o.showtabline = 2
-o.tabline = require 'smithwebdev.tabline'.get_tabline()
+--o.tabline = require 'smithwebdev.tabline'.get_tabline()
 
 -- Search Options --
 o.ignorecase=true

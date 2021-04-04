@@ -43,6 +43,7 @@ auto(
     ]], false
     )
 
+
 -- Statusline and Tabline Highlights
 auto(
   [[
@@ -63,6 +64,19 @@ auto(
     au Filetype * setlocal tabstop=2
   ]], false
 )
+
+auto(
+  [[
+    au Filetype NvimTree set relativenumber
+  ]],false
+  )
+
+auto(
+  [[
+    au!
+    au BufWritePost * UltestNearest
+  ]], false
+  )
 
 -- Autorun PackerCompile when writing to buffer
 --auto(
