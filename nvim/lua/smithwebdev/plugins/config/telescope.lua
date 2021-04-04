@@ -3,6 +3,7 @@ local actions = require('telescope.actions')
 local builtin = require('telescope.builtin')
 local preview = require('telescope.previewers')
 local sorter = require('telescope.sorters')
+--local tree = require('telescope.treesitter')
 local M = {}
 
 telescope.load_extension('media_files')

@@ -29,7 +29,7 @@ auto(
   [[
     augroup autosave
         au!
-        let blacklist = ['packer', 'NvimTree', 'netrw', 'TelescopePrompt', 'spectre_panel']
+        let blacklist = ['packer', 'NvimTree', 'netrw', 'TelescopePrompt', 'spectre_panel', 'startify']
         au BufEnter * if &filetype == "" | setlocal ft=text | endif
         au TextChanged,InsertLeave * if index(blacklist, &ft) < 0 | silent w | endif
     augroup END
@@ -38,9 +38,17 @@ auto(
 
 auto(
   [[
-    autocmd BufWritePost smithwebdev.plugins PackerCompile
-    ]],false
-)
+    autocmd Filetype help wincmd L
+    ]], false
+    )
+
+
+-- Autorun PackerCompile when writing to buffer
+--auto(
+--  [[
+--    autocmd BufWritePost smithwebdev.plugins PackerCompile
+--    ]],false
+--)
 --
 -- Auto compile when there are changes in plugins.lua
 --vim.cmd 'autocmd BufWritePost plugins.lua PackerCompile' 

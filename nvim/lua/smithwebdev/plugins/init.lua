@@ -27,8 +27,8 @@ packer.startup(function(use)
   use 'kyazdani42/nvim-tree.lua'
 
   -- Snippets
---  use 'rafamadriz/friendly-snippets'
---  use 'rubyide/vscode-ruby'
+  use 'rafamadriz/friendly-snippets'
+  use 'rubyide/vscode-ruby'
 
   -- LSP
   use 'neovim/nvim-lspconfig'
@@ -44,14 +44,14 @@ packer.startup(function(use)
   use 'tpope/vim-rails'
 
 --  -- Treesitter
-  use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
+--  use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
 --  use 'sheerun/vim-polyglot'
-  use 'nvim-treesitter/nvim-treesitter-refactor'
-  use 'nvim-treesitter/playground'
+--  use 'nvim-treesitter/nvim-treesitter-refactor'
+--  use 'nvim-treesitter/playground'
 --
---  -- Status Line and Bufferline
---  use 'glepnir/galaxyline.nvim'
---  use 'romgrk/barbar.nvim'
+  -- Status Line and Bufferline
+  use 'glepnir/galaxyline.nvim'
+  use 'romgrk/barbar.nvim'
 --
 --
   -- Telescope
@@ -80,7 +80,8 @@ packer.startup(function(use)
 --  -- Webdev
 --  use 'windwp/nvim-ts-autotag'
 --  use 'gennaro-tedesco/nvim-jqx'
---  use 'turbio/bracey.vim'
+  use 'turbio/bracey.vim'
+  use 'ap/vim-css-color'
 --
 --  -- Marks & Registers
 --  use 'gennaro-tedesco/nvim-peekup'
@@ -88,7 +89,6 @@ packer.startup(function(use)
 
 
 -- ColorScheme Plugins
-  use 'ap/vim-css-color'
   use 'vim-scripts/ScrollColors'
   use 'tjdevries/colorbuddy.nvim'
   use 'bkegley/gloombuddy'
@@ -106,6 +106,7 @@ packer.startup(function(use)
   -- General Plugins
   use 'windwp/nvim-autopairs'
   use 'tpope/vim-surround'
+  use 'easymotion/vim-easymotion'
 --  use 'kevinhwang91/nvim-bqf'
 --  use 'unblevable/quick-scope'
 --  use 'airblade/vim-rooter'

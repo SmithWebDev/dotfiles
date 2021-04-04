@@ -2,7 +2,24 @@ local wk = require('whichkey_setup')
 
 
 local keymap = {
+        ['<leader>'] = { 
+                name = '+extended',
+                b = {
+                        name = '+Bracey',
+                        b = {'<cmd>Bracey', 'start Bracey server'},
+                        r = {'<cmd>BraceyReload', 'reload Bracey server'},
+                        s = {'<cmd>BraceyStop', 'stop Bracey server'},
+                },
+                e = {'<cmd>NvimTreeToggle<cr>', 'toggle NvimTree'},
+                --s = {'<cmd><cr>', 'show open tabs'},
+                t = {':tabs<cr>', 'show open tabs'},
+                u = {'<cmd>Ultest', 'Run all test current file'},
+        },
         b = { name = '+buffers' },
+        e = {
+                name = '+NvimTree',
+                f = {'<cmd>NvimTreeFindFile<cr>', 'NvimTreeFindFile'}
+        },
         f = {
                 name = '+find',
                 b = {'<cmd>Telescope buffers<CR>', 'buffers'},
@@ -23,6 +40,14 @@ local keymap = {
                 h = {'<cmd>Telescope help_tags<CR>', 'help tags'},
                 r = {'<cmd>Telescope registers<CR>', 'find register'},
                 t = {'<cmd>Telescope tags<CR>', 'find tags'},
+                T = {'<cmd>Telescope treesitter<cr>', 'find treesitter'}
+        },
+        p = {
+                name ='+Packer',
+                c = {'<cmd>PackerClean<CR>', 'PackerClean'},
+                i = {'<cmd>PackerInstall<CR>', 'PackerInstall'},
+                s = {'<cmd>PackerSync<CR>', 'PackerSync'},
+                u = {'<cmd>PackerUpdate<CR>', 'PackerUpdate'},
         },
         t = {
                 name = '+tabs',
@@ -39,7 +64,6 @@ local keymap = {
                 n = {':tabnew<space>', 'open new tab'},
                 p = {':tabnew $VIMP<CR>', ' open plugin file'},
                 s = {':tabnew $VIMS<CR>', 'open settings file'},
-                t = {':tabs<cr>', 'show open tabs'},
                 u = {':tabnew $VIMU<CR>','open utils file'},
                 x = {':tabnew $vimc', 'open config dir'}
         },
@@ -48,7 +72,6 @@ local keymap = {
                 a = {'<cmd>UltestAttach', 'Attach (Debugging live)'},
                 j = {'<cmd>UltestNearest', 'Run nearest test current file'},
                 s = {'<cmd>UltestSummary', 'Toggle summary window'},
-                u = {'<cmd>Ultest', 'Run all test current file'},
                 x = {'<cmd>UltestStop', 'Stop running tests'}
         },
         v = {
@@ -62,13 +85,6 @@ local keymap = {
                 r = {'<cmd>luafile %', 'luafile %'},
                 s = {'<cmd>e $VIMS<CR>', 'settings config'},
                 v = {'<cmd>e $MYVIMRC<CR>', 'edit init'}
-        },
-        P = {
-                name ='+Packer',
-                c = {'<cmd>PackerClean<CR>', 'PackerClean'},
-                i = {'<cmd>PackerInstall<CR>', 'PackerInstall'},
-                s = {'<cmd>PackerSync<CR>', 'PackerSync'},
-                u = {'<cmd>PackerUpdate<CR>', 'PackerUpdate'},
         },
         s = {
                 name = '+spectre',

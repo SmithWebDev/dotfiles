@@ -84,8 +84,8 @@ utils.keymap('n', '<leader>q', '<C-w>q')
 
 -- **Nvim-Tree 
 -- -------------------------------------
-utils.keymap('n', '<leader>ee', ':NvimTreeToggle<CR>')
-utils.keymap('n', '<leader>ef', ':NvimTreeFindFile<CR>')
+--utils.keymap('n', '<leader>ee', ':NvimTreeToggle<CR>')
+--utils.keymap('n', '<leader>ef', ':NvimTreeFindFile<CR>')
 
 -- **Packer 
 -- -------------------------------------

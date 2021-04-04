@@ -32,6 +32,22 @@ local function try_loadstring(s, component, name)
 end
 
 _G.packer_plugins = {
+  ScrollColors = {
+    loaded = true,
+    path = "/home/smith/.local/share/nvim/site/pack/packer/start/ScrollColors"
+  },
+  ["atlantic-dark.vim"] = {
+    loaded = true,
+    path = "/home/smith/.local/share/nvim/site/pack/packer/start/atlantic-dark.vim"
+  },
+  ["awesome-vim-colorschemes"] = {
+    loaded = true,
+    path = "/home/smith/.local/share/nvim/site/pack/packer/start/awesome-vim-colorschemes"
+  },
+  ["birds-of-paradise.vim"] = {
+    loaded = true,
+    path = "/home/smith/.local/share/nvim/site/pack/packer/start/birds-of-paradise.vim"
+  },
   ["colorbuddy.nvim"] = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/colorbuddy.nvim"
@@ -39,6 +55,10 @@ _G.packer_plugins = {
   ["diagnosticls-nvim"] = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/diagnosticls-nvim"
+  },
+  ["elrodeo-vim-colorscheme"] = {
+    loaded = true,
+    path = "/home/smith/.local/share/nvim/site/pack/packer/start/elrodeo-vim-colorscheme"
   },
   ["emmet-vim"] = {
     loaded = true,
@@ -52,6 +72,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/goyo.vim"
   },
+  ["hydrangea-vim"] = {
+    loaded = true,
+    path = "/home/smith/.local/share/nvim/site/pack/packer/start/hydrangea-vim"
+  },
   ["lsp-status.nvim"] = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/lsp-status.nvim"
@@ -59,6 +83,10 @@ _G.packer_plugins = {
   ["lspsaga.nvim"] = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/lspsaga.nvim"
+  },
+  mirodark = {
+    loaded = true,
+    path = "/home/smith/.local/share/nvim/site/pack/packer/start/mirodark"
   },
   ["nvim-autopairs"] = {
     loaded = true,
@@ -88,14 +116,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/nvim-tree.lua"
   },
-  ["nvim-treesitter"] = {
-    loaded = true,
-    path = "/home/smith/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
-  },
-  ["nvim-treesitter-refactor"] = {
-    loaded = true,
-    path = "/home/smith/.local/share/nvim/site/pack/packer/start/nvim-treesitter-refactor"
-  },
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/nvim-web-devicons"
@@ -108,13 +128,13 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/packer.nvim"
   },
-  playground = {
-    loaded = true,
-    path = "/home/smith/.local/share/nvim/site/pack/packer/start/playground"
-  },
   ["plenary.nvim"] = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/plenary.nvim"
+  },
+  ["pop-punk.vim"] = {
+    loaded = true,
+    path = "/home/smith/.local/share/nvim/site/pack/packer/start/pop-punk.vim"
   },
   ["popup.nvim"] = {
     loaded = true,
@@ -132,17 +152,41 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/telescope.nvim"
   },
+  ["vim-colors-lucid"] = {
+    loaded = true,
+    path = "/home/smith/.local/share/nvim/site/pack/packer/start/vim-colors-lucid"
+  },
+  ["vim-css-color"] = {
+    loaded = true,
+    path = "/home/smith/.local/share/nvim/site/pack/packer/start/vim-css-color"
+  },
   ["vim-devicons"] = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/vim-devicons"
+  },
+  ["vim-dogrun"] = {
+    loaded = true,
+    path = "/home/smith/.local/share/nvim/site/pack/packer/start/vim-dogrun"
+  },
+  ["vim-easymotion"] = {
+    loaded = true,
+    path = "/home/smith/.local/share/nvim/site/pack/packer/start/vim-easymotion"
   },
   ["vim-endwise"] = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/vim-endwise"
   },
+  ["vim-hybrid-material"] = {
+    loaded = true,
+    path = "/home/smith/.local/share/nvim/site/pack/packer/start/vim-hybrid-material"
+  },
   ["vim-rails"] = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/vim-rails"
+  },
+  ["vim-startify"] = {
+    loaded = true,
+    path = "/home/smith/.local/share/nvim/site/pack/packer/start/vim-startify"
   },
   ["vim-surround"] = {
     loaded = true,
