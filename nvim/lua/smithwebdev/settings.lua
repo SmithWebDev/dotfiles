@@ -6,6 +6,12 @@ local b=vim.bo
 local w=vim.wo
 -- =============================================================================
 
+vim.cmd 'syntax on'
+--vim.cmd 'colorscheme birds-of-paradise'
+--vim.cmd 'colorscheme gloombuddy'
+vim.cmd 'colorscheme mirodark'
+vim.cmd 'hi Normal guibg=NONE ctermbg=NONE'
+
 -- Completion Options --
 o.completeopt='menuone,noinsert,noselect'
 o.updatetime=3000
@@ -32,9 +38,7 @@ o.scrolloff=999
 o.sidescrolloff=15
 w.list=true
 o.showmode= false
-o.statusline = require 'smithwebdev.statusline'.get_statusline()
 o.showtabline = 2
---o.tabline = require 'smithwebdev.tabline'.get_tabline()
 
 -- Search Options --
 o.ignorecase=true
@@ -68,8 +72,3 @@ o.writebackup=false
 o.clipboard='unnamedplus'
 
 
-vim.cmd 'syntax on'
---vim.cmd 'colorscheme birds-of-paradise'
---vim.cmd 'colorscheme gloombuddy'
-vim.cmd 'colorscheme mirodark'
-vim.cmd 'hi Normal guibg=NONE ctermbg=NONE'

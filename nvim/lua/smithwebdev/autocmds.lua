@@ -43,25 +43,9 @@ auto(
     ]], false
     )
 
-
--- Statusline and Tabline Highlights
 auto(
   [[
-    au ColorScheme * lua require 'smithwebdev.statusline'.set_highlights()
-    au ColorScheme * lua require 'smithwebdev.tabline'.set_highlights()
-  ]],true
-)
--- Statusline Render
-auto(
-  [[
-    au WinEnter * lua require 'smithwebdev.statusline'.setlocal_active_statusline()
-    au WinLeave * lua require 'smithwebdev.statusline'.setlocal_inactive_statusline()
-  ]], true
-)
-
-auto(
-  [[
-    au Filetype * setlocal tabstop=2
+    au Filetype * set tabstop=2
   ]], false
 )
 
@@ -73,24 +57,7 @@ auto(
 
 auto(
   [[
-    au!
     au BufWritePost * UltestNearest
-  ]], false
+  ]], true
   )
 
--- Autorun PackerCompile when writing to buffer
---auto(
---  [[
---    autocmd BufWritePost smithwebdev.plugins PackerCompile
---  ]],false
---)
---
--- Auto compile when there are changes in plugins.lua
---vim.cmd 'autocmd BufWritePost plugins.lua PackerCompile' 
-
-
-
-
-
--- Attempts to refactor
---set_auto('exitInsert', { 'au CursorHoldI * stopinsert InsertEnter * let updaterestore=&updatetime | set updatetime=3000 InsertLeave * let &updatetime=updaterestore'})

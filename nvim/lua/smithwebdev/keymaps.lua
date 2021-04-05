@@ -83,6 +83,9 @@ utils.keymap('n', '<leader>q', '<C-w>q')
 -- Plugin Commands
 -- =====================================
 
+-- Compe Completion
+-- -------------------------------------
+utils.keymap('i', '<leader><leader>', 'compe#confirm("<CR>")')
 -- **Nvim-Tree 
 -- -------------------------------------
 --utils.keymap('n', '<leader>ee', ':NvimTreeToggle<CR>')
