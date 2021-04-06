@@ -1,4 +1,4 @@
-local execute = vim.api.nvim_command
+leocal execute = vim.api.nvim_command
 local fn = vim.fn
 
 local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
@@ -9,28 +9,28 @@ if fn.empty(fn.glob(install_path)) > 0 then
 end
 
 local packer = require 'packer'
-require('smithwebdev.plugins.config')
+--require('smithwebdev.plugins.config')
 
 packer.startup(function(use)
   use 'wbthomason/packer.nvim'
---
---  -- Lua Guide Info
+
+-- Lua Guide Info
   use 'nanotee/nvim-lua-guide'
---
-  -- AutoCompletion
+
+-- AutoCompletion
   use 'hrsh7th/nvim-compe'
   use 'hrsh7th/vim-vsnip'
   use 'hrsh7th/vim-vsnip-integ'
   use 'mattn/emmet-vim'
 
-  -- Explorer
+-- Explorer
   use 'kyazdani42/nvim-tree.lua'
 
-  -- Snippets
+-- Snippets
   use 'rafamadriz/friendly-snippets'
-  use 'rubyide/vscode-ruby'
+--  use 'rubyide/vscode-ruby'
 
-  -- LSP
+-- LSP
   use 'neovim/nvim-lspconfig'
   use 'glepnir/lspsaga.nvim'
 --  use 'onsails/lspkind-nvim'
@@ -39,22 +39,21 @@ packer.startup(function(use)
   use 'nvim-lua/lsp-status.nvim'
   use 'creativenull/diagnosticls-nvim'
 
-  -- Ruby/ Rails
+-- Ruby/ Rails
   use 'tpope/vim-endwise'
   use 'tpope/vim-rails'
 
---  -- Treesitter
+-- Treesitter
 --  use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
 --  use 'sheerun/vim-polyglot'
 --  use 'nvim-treesitter/nvim-treesitter-refactor'
 --  use 'nvim-treesitter/playground'
---
-  -- Status Line and Bufferline
+
+-- Status Line and Bufferline
   use 'glepnir/galaxyline.nvim'
   use 'romgrk/barbar.nvim'
---
---
-  -- Telescope
+
+-- Telescope
   use 'nvim-telescope/telescope.nvim'
   use 'nvim-lua/plenary.nvim'
   use 'nvim-lua/popup.nvim'
@@ -62,31 +61,30 @@ packer.startup(function(use)
   use 'nvim-telescope/telescope-fzy-native.nvim'
   use 'nvim-telescope/telescope-media-files.nvim'
 
---  -- Git
+-- Git
 --  use 'TimUntersberger/neogit'
 --  use {'lewis6991/gitsigns.nvim', requires = {'nvim-lua/plenary.nvim'}}
 --  use 'f-person/git-blame.nvim'
 --  use 'tpope/vim-fugitive'
 --  use 'tpope/vim-rhubarb'
---
---  -- Easily Create Gists
+
+-- Easily Create Gists
 --  use 'mattn/vim-gist'
 --  use 'mattn/webapi-vim'
---
---  -- Testing
+
+-- Testing
   use 'rcarriga/vim-ultest'
   use 'vim-test/vim-test'
 
---  -- Webdev
+-- Webdev
 --  use 'windwp/nvim-ts-autotag'
 --  use 'gennaro-tedesco/nvim-jqx'
   use 'turbio/bracey.vim'
   use 'ap/vim-css-color'
---
---  -- Marks & Registers
---  use 'gennaro-tedesco/nvim-peekup'
---  use 'kshenoy/vim-signature'
 
+-- Marks & Registers
+--  use 'gennaro-tedesco/nvim-peekup'
+  use 'kshenoy/vim-signature'
 
 -- ColorScheme Plugins
   use 'vim-scripts/ScrollColors'
@@ -103,7 +101,7 @@ packer.startup(function(use)
   use 'bignimbus/pop-punk.vim'
   use 'rafi/awesome-vim-colorschemes'
 
-  -- General Plugins
+-- General Plugins
   use 'windwp/nvim-autopairs'
   use 'tpope/vim-surround'
   use 'easymotion/vim-easymotion'
@@ -127,8 +125,8 @@ packer.startup(function(use)
 --  use 'phaazon/hop.nvim'
 --  use 'tpope/vim-sleuth'
 
---  -- Icons
-  use 'kyazdani41/nvim-web-devicons'
+-- Icons
+  use 'kyazdani42/nvim-web-devicons'
   use 'ryanoasis/vim-devicons'
 end)
 

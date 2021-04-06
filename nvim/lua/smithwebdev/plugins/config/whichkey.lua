@@ -2,7 +2,7 @@ local wk = require('whichkey_setup')
 
 local keymap = {
         ['<leader>'] = { 
-                name = '+extended',
+                name = '+extended options',
                 B = {
                         name = '+Bracey',
                         b = {'<cmd>Bracey<cr>', 'start Bracey server'},
