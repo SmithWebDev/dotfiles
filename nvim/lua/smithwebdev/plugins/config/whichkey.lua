@@ -1,5 +1,4 @@
 local wk = require('whichkey_setup')
-
 local keymap = {
         ['<leader>'] = { 
                 name = '+extended options',

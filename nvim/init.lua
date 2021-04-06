@@ -1,5 +1,5 @@
-require 'smithwebdev.plugins'
 require 'smithwebdev.utils'
-require 'smithwebdev.keymaps'
+require 'smithwebdev.plugins'
 require 'smithwebdev.settings'
+require 'smithwebdev.keymaps'
 require 'smithwebdev.autocmds'
