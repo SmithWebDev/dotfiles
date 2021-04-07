@@ -9,7 +9,7 @@ if fn.empty(fn.glob(install_path)) > 0 then
 end
 
 local packer = require 'packer'
-require('smithwebdev.plugins.config')
+require 'smithwebdev.plugins.config'.init()
 
 packer.startup(function(use)
   use 'wbthomason/packer.nvim'
@@ -130,4 +130,4 @@ packer.startup(function(use)
   use 'ryanoasis/vim-devicons'
 end)
 
-require('smithwebdev.plugins.config.setup')
+require 'smithwebdev.plugins.config'.setup()
