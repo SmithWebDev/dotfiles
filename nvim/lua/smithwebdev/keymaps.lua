@@ -52,6 +52,9 @@ utils.keymap('n', '<right>', ':vertical resize -2<CR>')
 --
 -- -------------------------------------
 --utils.keymap('n', '<M-j>', [[mz:m+<CR>`z]])
+-- Special Commands
+-- -------------------------------------
+utils.keymap('v', '<leader><leader>h', ':VYank ' )
 
 --Selection Remaps
 -- -------------------------------------
@@ -89,7 +92,7 @@ utils.keymap('n', '<leader>q', '<C-w>q')
 
 -- Compe Completion
 -- -------------------------------------
-utils.keymap('i', '<leader><leader>', 'compe#confirm("<CR>")')
+--utils.keymap('i', '<leader><leader>', 'compe#confirm("<CR>")')
 
 -- **Nvim-Tree 
 -- -------------------------------------

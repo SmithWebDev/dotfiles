@@ -100,6 +100,11 @@ packer.startup(function(use)
   use 'kristijanhusak/vim-hybrid-material'
   use 'bignimbus/pop-punk.vim'
   use 'rafi/awesome-vim-colorschemes'
+  use 'rktjmp/lush.nvim'
+
+
+-- Ruby Plugins
+  use 'joshcheek/seeing_is_believing'
 
 -- General Plugins
   use 'windwp/nvim-autopairs'

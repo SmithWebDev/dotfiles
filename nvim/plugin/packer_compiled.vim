@@ -44,6 +44,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/awesome-vim-colorschemes"
   },
+  ["barbar.nvim"] = {
+    loaded = true,
+    path = "/home/smith/.local/share/nvim/site/pack/packer/start/barbar.nvim"
+  },
   ["birds-of-paradise.vim"] = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/birds-of-paradise.vim"
@@ -95,6 +99,10 @@ _G.packer_plugins = {
   ["lspsaga.nvim"] = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/lspsaga.nvim"
+  },
+  ["lush.nvim"] = {
+    loaded = true,
+    path = "/home/smith/.local/share/nvim/site/pack/packer/start/lush.nvim"
   },
   mirodark = {
     loaded = true,
@@ -196,6 +204,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/vim-rails"
   },
+  ["vim-signature"] = {
+    loaded = true,
+    path = "/home/smith/.local/share/nvim/site/pack/packer/start/vim-signature"
+  },
   ["vim-startify"] = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/vim-startify"
@@ -223,10 +235,6 @@ _G.packer_plugins = {
   ["vim-which-key"] = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/vim-which-key"
-  },
-  ["vscode-ruby"] = {
-    loaded = true,
-    path = "/home/smith/.local/share/nvim/site/pack/packer/start/vscode-ruby"
   }
 }
 

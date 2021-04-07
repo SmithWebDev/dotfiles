@@ -2,7 +2,7 @@ local wk = require('whichkey_setup')
 local keymap = {
         ['<leader>'] = { 
                 name = '+extended options',
-                B = {
+                b = {
                         name = '+Bracey',
                         b = {'<cmd>Bracey<cr>', 'start Bracey server'},
                         r = {'<cmd>BraceyReload<cr>', 'reload Bracey server'},
@@ -14,7 +14,8 @@ local keymap = {
                         o = {'<cmd>VsnipOpen<cr>', 'Open Snippets'},
                         s = {'<cmd>VsnipOpenSplit<cr>', 'Open Snippet split'},
                         v = {'<cmd>VsnipOpenVSplit<cr>', 'Open Snippets vsplit'},
-                        y = {'<cmd>VsnipYank | VsnipOpen | p<cr>', 'Open Snippets vsplit'},
+                        h = {':VYank', 'Open Snippets vsplit'},
+                        --y = {'<cmd>VsnipYank | VsnipOpen | p<cr>', 'Open Snippets vsplit'},
                 },
                 t = {':tabs<cr>', 'show open tabs'},
                 u = {'<cmd>Ultest<cr>', 'Run all test current file'},
@@ -85,7 +86,7 @@ local keymap = {
                 p = {':tabnew $VIMP<cr>', ' open plugin file'},
                 s = {':tabnew $VIMS<cr>', 'open settings file'},
                 u = {':tabnew $VIMU<cr>','open utils file'},
-                x = {':tabnew $vimc', 'open config dir'}
+                x = {':tabnew $VIME/', 'open config file'}
         },
         u = {
                 name = '+ultest',
@@ -98,13 +99,13 @@ local keymap = {
                 name = '+vim',
                 a = {'<cmd>e $VIMA<cr>', 'autocmds config'},
                 c = {'<cmd>e $VIMC/<cr>', 'plugins config'},
-                i = {'<cmd>luafile $MYVIMRC<cr>', 'luafile init config'},
                 j = {'<cmd>so %<cr>', 'refresh vim source'},
                 m = {'<cmd>e $VIMM<cr>', 'keymaps config'},
                 o = {'<cmd>e $MYVIMRC<cr>', 'edit init'},
                 p = {'<cmd>e $VIMP<cr>', 'plugin list'},
                 r = {'<cmd>luafile %<cr>', 'luafile %'},
                 s = {'<cmd>e $VIMS<cr>', 'settings config'},
+                v = {'<cmd>luafile $MYVIMRC<cr>', 'luafile init config'},
         }
 }
 
