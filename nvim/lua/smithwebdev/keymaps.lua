@@ -89,7 +89,7 @@ utils.keymap('n', '<leader>q', '<C-w>q')
 
 -- Compe Completion
 -- -------------------------------------
-utils.keymap('i', '<leader>', 'compe#confirm("<CR>")')
+utils.keymap('i', '<leader><leader>', 'compe#confirm("<CR>")')
 
 -- **Nvim-Tree 
 -- -------------------------------------
