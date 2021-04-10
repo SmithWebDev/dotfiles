@@ -1,9 +1,10 @@
 local M = {}
 
 function M.init()
-        require 'smithwebdev.plugins.config.emmet'
         require 'smithwebdev.plugins.config.bracey'
+        require 'smithwebdev.plugins.config.emmet'
         require 'smithwebdev.plugins.config.easymotion'
+        require 'smithwebdev.plugins.config.vsnip'
 end
 
 

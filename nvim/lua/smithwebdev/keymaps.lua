@@ -20,7 +20,6 @@ utils.keymap('n', '<leader><CR>', '<cmd>noh<CR>')
 -- Easy Esc
 -- -------------------------------------
 utils.keymap('i', 'jj', '<Esc>')
-utils.keymap('i', 'jk', '<Esc>')
 utils.keymap('i', 'kj', '<Esc>')
 
 -- Resize window panes
@@ -52,8 +51,15 @@ utils.keymap('n', '<right>', ':vertical resize -2<CR>')
 --
 -- -------------------------------------
 --utils.keymap('n', '<M-j>', [[mz:m+<CR>`z]])
--- Special Commands
+
+-- Vsnip Maps
 -- -------------------------------------
+utils.keymap('i','jk', [[vsnip#expandable() ? '<Plug>(vsnip-expand)' : 'jk']], {expr = true, noremap = false})
+utils.keymap('s','jk', [[vsnip#expandable() ? '<Plug>(vsnip-expand)' : 'jk']], {expr = true, noremap = false})
+utils.keymap('i','<TAB>', [[vsnip#jumpable(1) ? '<Plug>(vsnip-expand)' : '<TAB>']], {expr = true, noremap = false})
+utils.keymap('s','<TAB>', [[vsnip#jumpable(1) ? '<Plug>(vsnip-expand)' : '<TAB>']], {expr = true, noremap = false})
+utils.keymap('i','<S-TAB>', [[vsnip#jumpable(-1) ? '<Plug>(vsnip-expand)' : '<S-TAB>']], {expr = true, noremap = false})
+utils.keymap('s','<S-TAB>', [[vsnip#jumpable(-1) ? '<Plug>(vsnip-expand)' : '<S-TAB>']], {expr = true, noremap = false})
 utils.keymap('v', '<leader><leader>h', ':VYank ' )
 
 --Selection Remaps
@@ -92,7 +98,7 @@ utils.keymap('n', '<leader>q', '<C-w>q')
 
 -- Compe Completion
 -- -------------------------------------
---utils.keymap('i', '<leader><leader>', 'compe#confirm("<CR>")')
+--utils.keymap('i', 'jk', 'compe#confirm("<CR>")')
 
 -- **Nvim-Tree 
 -- -------------------------------------

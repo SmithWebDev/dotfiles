@@ -27,8 +27,7 @@ packer.startup(function(use)
   use 'kyazdani42/nvim-tree.lua'
 
 -- Snippets
-  use 'rafamadriz/friendly-snippets'
---  use 'rubyide/vscode-ruby'
+--  use 'rafamadriz/friendly-snippets'
 
 -- LSP
   use 'neovim/nvim-lspconfig'
@@ -43,9 +42,13 @@ packer.startup(function(use)
   use 'tpope/vim-endwise'
   use 'tpope/vim-rails'
 
+-- File Converter
+  use 'vim-pandoc/vim-pandoc'
+  use 'vim-pandoc/vim-pandoc-syntax'
+
 -- Treesitter
 --  use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
---  use 'sheerun/vim-polyglot'
+  use 'sheerun/vim-polyglot'
 --  use 'nvim-treesitter/nvim-treesitter-refactor'
 --  use 'nvim-treesitter/playground'
 
@@ -110,15 +113,18 @@ packer.startup(function(use)
   use 'windwp/nvim-autopairs'
   use 'tpope/vim-surround'
   use 'easymotion/vim-easymotion'
+  use 'junegunn/vim-easy-align'
 --  use 'kevinhwang91/nvim-bqf'
 --  use 'unblevable/quick-scope'
 --  use 'airblade/vim-rooter'
 --  use 'kevinhwang91/rnvimr'
   use 'mhinz/vim-startify'
 --  use 'metakirby5/codi.vim'
---  use 'psliwka/vim-smoothie'
+  use 'psliwka/vim-smoothie'
 --  use 'moll/vim-bbye'
 --  use {'iamcco/markdown-preview.nvim', run = 'cd app && npm install'}
+  use 'camspiers/animate.vim'
+  use 'camspiers/lens.vim'
   use 'liuchengxu/vim-which-key'
   use 'acksld/nvim-whichkey-setup.lua'
 --  use 'voldikss/vim-floaterm'
@@ -128,7 +134,7 @@ packer.startup(function(use)
   use 'junegunn/goyo.vim'
 --  use 'andymass/vim-matchup'
 --  use 'phaazon/hop.nvim'
---  use 'tpope/vim-sleuth'
+  use 'tpope/vim-sleuth'
 
 -- Icons
   use 'kyazdani42/nvim-web-devicons'

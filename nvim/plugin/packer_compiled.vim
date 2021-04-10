@@ -36,6 +36,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/ScrollColors"
   },
+  ["animate.vim"] = {
+    loaded = true,
+    path = "/home/smith/.local/share/nvim/site/pack/packer/start/animate.vim"
+  },
   ["atlantic-dark.vim"] = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/atlantic-dark.vim"
@@ -72,10 +76,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/emmet-vim"
   },
-  ["friendly-snippets"] = {
-    loaded = true,
-    path = "/home/smith/.local/share/nvim/site/pack/packer/start/friendly-snippets"
-  },
   ["galaxyline.nvim"] = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/galaxyline.nvim"
@@ -91,6 +91,10 @@ _G.packer_plugins = {
   ["hydrangea-vim"] = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/hydrangea-vim"
+  },
+  ["lens.vim"] = {
+    loaded = true,
+    path = "/home/smith/.local/share/nvim/site/pack/packer/start/lens.vim"
   },
   ["lsp-status.nvim"] = {
     loaded = true,
@@ -160,6 +164,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/popup.nvim"
   },
+  seeing_is_believing = {
+    loaded = true,
+    path = "/home/smith/.local/share/nvim/site/pack/packer/start/seeing_is_believing"
+  },
   ["telescope-fzy-native.nvim"] = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/telescope-fzy-native.nvim"
@@ -188,6 +196,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/vim-dogrun"
   },
+  ["vim-easy-align"] = {
+    loaded = true,
+    path = "/home/smith/.local/share/nvim/site/pack/packer/start/vim-easy-align"
+  },
   ["vim-easymotion"] = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/vim-easymotion"
@@ -200,6 +212,18 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/vim-hybrid-material"
   },
+  ["vim-pandoc"] = {
+    loaded = true,
+    path = "/home/smith/.local/share/nvim/site/pack/packer/start/vim-pandoc"
+  },
+  ["vim-pandoc-syntax"] = {
+    loaded = true,
+    path = "/home/smith/.local/share/nvim/site/pack/packer/start/vim-pandoc-syntax"
+  },
+  ["vim-polyglot"] = {
+    loaded = true,
+    path = "/home/smith/.local/share/nvim/site/pack/packer/start/vim-polyglot"
+  },
   ["vim-rails"] = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/vim-rails"
@@ -207,6 +231,14 @@ _G.packer_plugins = {
   ["vim-signature"] = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/vim-signature"
+  },
+  ["vim-sleuth"] = {
+    loaded = true,
+    path = "/home/smith/.local/share/nvim/site/pack/packer/start/vim-sleuth"
+  },
+  ["vim-smoothie"] = {
+    loaded = true,
+    path = "/home/smith/.local/share/nvim/site/pack/packer/start/vim-smoothie"
   },
   ["vim-startify"] = {
     loaded = true,

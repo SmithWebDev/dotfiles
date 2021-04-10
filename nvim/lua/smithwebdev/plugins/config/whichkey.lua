@@ -17,7 +17,6 @@ local keymap = {
                         h = {':VYank', 'Open Snippets vsplit'},
                         --y = {'<cmd>VsnipYank | VsnipOpen | p<cr>', 'Open Snippets vsplit'},
                 },
-                t = {':tabs<cr>', 'show open tabs'},
                 u = {'<cmd>Ultest<cr>', 'Run all test current file'},
         },
         b = { name = '+buffers' },
@@ -64,6 +63,19 @@ local keymap = {
                 s = {'<cmd>PackerSync<cr>', 'PackerSync'},
                 u = {'<cmd>PackerUpdate<cr>', 'PackerUpdate'},
         },
+        r = {
+                name = '+rails',
+                a = {
+                        name = '+alternate',
+                        e = {':AE<cr>', 'edit alternate file'},
+                        s = {':AS<cr>', 'edit alternate in split'},
+                        t = {':AT<cr>', 'edit alternate in tab'},
+                        v = {},
+                },
+                r = {
+                        name = '+relative',
+                },
+        },
         s = {
                 name = '+spectre',
                 f = {[[viw:lua require('spectre').open_file_search()<cr>]], 'search in current file'},
@@ -85,6 +97,7 @@ local keymap = {
                 n = {':tabnew<space>', 'open new tab'},
                 p = {':tabnew $VIMP<cr>', ' open plugin file'},
                 s = {':tabnew $VIMS<cr>', 'open settings file'},
+                t = {':tabs<cr>', 'show open tabs'},
                 u = {':tabnew $VIMU<cr>','open utils file'},
                 x = {':tabnew $VIME/', 'open config file'}
         },
