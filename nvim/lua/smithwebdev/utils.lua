@@ -35,7 +35,7 @@ end
 -- in config lua/ dir
 function M.reload_config()
   for k, v in pairs(package.loaded) do
-    if string.match(k, "^creativenull") then
+    if string.match(k, "^smithwebdev") then
       package.loaded[k] = nil
     end
   end

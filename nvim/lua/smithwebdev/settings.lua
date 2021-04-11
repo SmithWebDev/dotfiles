@@ -8,7 +8,7 @@ local w=vim.wo
 
 vim.cmd 'syntax on'
 --vim.cmd 'colorscheme birds-of-paradise'
-vim.cmd 'colorscheme gloombuddy'
+--vim.cmd 'colorscheme gloombuddy'
 --vim.cmd 'colorscheme mirodark'
 vim.cmd 'hi Normal guibg=NONE ctermbg=NONE'
 
@@ -25,13 +25,15 @@ w.foldlevel=99
 
 -- Indentation Options --
 o.expandtab=true
-b.tabstop=2
-b.shiftwidth=2
-b.smartindent=true
-b.softtabstop=2
+o.tabstop=2
+o.shiftwidth=0
+o.smartindent=true
+o.autoindent=true
+o.smarttab=true
+o.softtabstop=2
 
 -- Line Options --
-b.textwidth=80
+o.textwidth=80
 o.listchars='space:·,tab:→ ,trail:·,extends:…,eol:↩'
 o.showbreak='+++'
 o.scrolloff=999
@@ -46,7 +48,7 @@ o.smartcase=true
 o.wrapscan=true
 
 -- File --
-b.swapfile=false
+o.swapfile=false
 o.autowrite=true
 o.autowriteall=true
 o.mouse='a'

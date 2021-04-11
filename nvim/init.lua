@@ -1,6 +1,6 @@
 require 'smithwebdev.utils'
 require 'smithwebdev.settings'
-require 'smithwebdev.commands'
+--require 'smithwebdev.commands'
 require 'smithwebdev.keymaps'
 require 'smithwebdev.plugins'
 require 'smithwebdev.autocmds'
