@@ -3,5 +3,4 @@ vim.g.vsnip_filetypes = {
   javascriptreact = { 'javascript' },
   typescriptreact = { 'typescript' },
   eruby = { 'ruby' },
-  ruby = { 'eruby' }
 }

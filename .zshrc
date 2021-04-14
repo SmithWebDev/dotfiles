@@ -13,9 +13,9 @@ source $ZSH/oh-my-zsh.sh
 
 # ColorLS (ruby gem)
 # ----------------------------
-alias ls='colorls --sort-dirs'
-alias lsa='colorls -A --sort-dirs'
-alias lst='colorls --tree --light'
+#alias ls='colorls --sort-dirs'
+#alias lsa='colorls -A --sort-dirs'
+#alias lst='colorls --tree --light'
 
 # Config files
 # ----------------------------
@@ -197,12 +197,16 @@ alias vimc='$HOME/.config/nvim/lua/smithwebdev/plugins/config'
 alias vimp='$HOME/.config/nvim/lua/smithwebdev/plugins'
 alias vims='$HOME/.config/nvim/lua/smithwebdev'
 
+#VSCode Extensions dir
+# ----------------------------
+alias codex='mnt/c/Users/smith/.vscode/extensions'
 
 alias ctag='ctags -R -f .gitignore/tags --exclude=.git --exclude=log'
 alias explorer="explorer.exe ."
+alias vivaldi="vivaldi.exe"
 
 function zgi() {echo "sudo apt-get install $1" >> ~/Setup/linux.txt && sudo apt-get install $1}
-function zi() {echo "sudo apt-get install $1" >> ~/Setup/linux.txt && sudo apt install $1}
+function zi() {echo "sudo apt install $1" >> ~/Setup/linux.txt && sudo apt install $1}
 function zu() {echo "sudo apt-get update" >> ~/Setup/linux.txt && sudo apt-get update}
 function zr() {echo "sudo add-apt-repository $1" >> ~/Setup/linux.txt && sudo add-apt-repository} 
 
@@ -217,7 +221,8 @@ if command -v pyenv 1>/dev/null 2>&1; then
 fi
 
 export VIMA="$HOME/.config/nvim/lua/smithwebdev/autocmds.lua"
-export VIMC="$HOME/.config/nvim/lua/smithwebdev/plugins/config"
+export VIMC="$HOME/.config/nvim/lua/smithwebdev/commands.lua"
+export VIME="$HOME/.config/nvim/lua/smithwebdev/plugins/config"
 export VIMI="$HOME/.config/nvim/init.lua"
 export VIMM="$HOME/.config/nvim/lua/smithwebdev/keymaps.lua"
 export VIMP="$HOME/.config/nvim/lua/smithwebdev/plugins/init.lua"

@@ -8,11 +8,11 @@ vim.g.mapleader = ' '
 
 -- Buffer maps
 -- -------------------------------------
-utils.keymap('n', '<leader>ba', '<cmd>buffers<CR>')
-utils.keymap('n', '<leader>bd', '<cmd>bdelete<CR>')
-utils.keymap('n', '<leader>bn', '<cmd>enew<CR>')
-utils.keymap('n', '<TAB>', '<cmd>bnext<CR>')
-utils.keymap('n', '<S-TAB>', '<cmd>bprevious<CR>')
+--utils.keymap('n', '<leader>ba', '<cmd>buffers<CR>')
+--utils.keymap('n', '<leader>bd', '<cmd>bdelete<CR>')
+--utils.keymap('n', '<leader>bn', '<cmd>enew<CR>')
+--utils.keymap('n', '<TAB>', '<cmd>bnext<CR>')
+--utils.keymap('n', '<S-TAB>', '<cmd>bprevious<CR>')
 
 -- Disable highlights
 utils.keymap('n', '<leader><CR>', '<cmd>noh<CR>')
@@ -56,16 +56,17 @@ utils.keymap('n', '<right>', ':vertical resize -2<CR>')
 -- -------------------------------------
 utils.keymap('i','jk', [[vsnip#expandable() ? '<Plug>(vsnip-expand)' : 'jk']], {expr = true, noremap = false})
 utils.keymap('s','jk', [[vsnip#expandable() ? '<Plug>(vsnip-expand)' : 'jk']], {expr = true, noremap = false})
-utils.keymap('i','<TAB>', [[vsnip#jumpable(1) ? '<Plug>(vsnip-expand)' : '<TAB>']], {expr = true, noremap = false})
-utils.keymap('s','<TAB>', [[vsnip#jumpable(1) ? '<Plug>(vsnip-expand)' : '<TAB>']], {expr = true, noremap = false})
-utils.keymap('i','<S-TAB>', [[vsnip#jumpable(-1) ? '<Plug>(vsnip-expand)' : '<S-TAB>']], {expr = true, noremap = false})
-utils.keymap('s','<S-TAB>', [[vsnip#jumpable(-1) ? '<Plug>(vsnip-expand)' : '<S-TAB>']], {expr = true, noremap = false})
-utils.keymap('v', '<leader><leader>h', ':VYank ' )
+utils.keymap('i','<TAB>', [[vsnip#jumpable(1) ? '<Plug>(vsnip-jump-next)' : '<TAB>']], {expr = true, noremap = false})
+utils.keymap('s','<TAB>', [[vsnip#jumpable(1) ? '<Plug>(vsnip-jump-next)' : '<TAB>']], {expr = true, noremap = false})
+utils.keymap('i','<S-TAB>', [[vsnip#jumpable(-1) ? '<Plug>(vsnip-jump-prev)' : '<S-TAB>']], {expr = true, noremap = false})
+utils.keymap('s','<S-TAB>', [[vsnip#jumpable(-1) ? '<Plug>(vsnip-jump-prev)' : '<S-TAB>']], {expr = true, noremap = false})
+utils.keymap('v', '<leader><leader>h', ':VYank<cr>')
 
 --Selection Remaps
 -- -------------------------------------
 utils.keymap('i', '<C-j>', '<C-n>')
 utils.keymap('i', '<C-k>', '<C-p>')
+
 
 -- Window Navigation
 -- -------------------------------------
@@ -73,8 +74,8 @@ utils.keymap('n', '<C-h>', '<C-w>h')
 utils.keymap('n', '<C-j>', '<C-w>j')
 utils.keymap('n', '<C-k>', '<C-w>k')
 utils.keymap('n', '<C-l>', '<C-w>l')
-utils.keymap('n', '<C-d>', '<C-w>_<C-w>|')
-utils.keymap('n', '<C-=>', '<C-w>=')
+utils.keymap('n', '<leader>d', '<C-w>_<C-w>|')
+utils.keymap('n', '<leader>=', '<C-w>=')
 utils.keymap('n', '<leader>|', '<C-w>|')
 utils.keymap('n', '<leader>_', '<C-w>_')
 utils.keymap('n', '<leader>\\', '<C-w>v')

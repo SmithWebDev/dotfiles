@@ -1,17 +1,27 @@
-vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
-  underline = true,
-  virtual_text = false,
-  signs = true,
-  update_in_insert = true,
-})
+local utils = require'smithwebdev.utils'
+local config = require 'lspconfig'
+local install = require 'lspinstall'
+local status = require 'lsp-status'
 
-_G.RegisterLsp = require 'smithwebdev.plugins.config.lsp.register'.register_lsp
+local function setup_servers()
+	install.setup()
 
-require 'diagnosticls-nvim'.init {
-  on_attach = on_attach,
-  root_dir = require 'lspconfig'.util.root_pattern('.git')
-}
+	local servers = install.installed_servers()
+	for _, server in pairs(servers) do 
+		config[server].setup{on_attach = on_attach}
+	end
+end
 
--- For debug
--- vim.lsp.set_log_level('debug')
+setup_servers()
 
+install.post_install_hook = function ()
+	setup_servers()
+	vim.cmd("bufdo e")
+end
+
+
+-- LSP Saga
+-- -------------------------------------
+utils.keymap('n', '<C-S-j>', [[:lua require('lspsaga.action').smart_scroll_with_saga(1)<cr>]])
+utils.keymap('n', '<C-S-k>', [[:lua require('lspsaga.action').smart_scroll_with_saga(-1)<cr>]])
+utils.keymap('v', '<leader>la', ':<C-U>Lspsaga range_code_action<cr>')
