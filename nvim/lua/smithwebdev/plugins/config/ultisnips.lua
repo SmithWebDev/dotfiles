@@ -1,2 +1,2 @@
 vim.g.UltiSnipsEditSplit = vertical
-vim.g.UltiSnipsSnippetDirectories = ["~/dotfiles/smithpets"]
+vim.g.UltiSnipsSnippetDirectories = [["$HOME/dotfiles/smithpets"]]

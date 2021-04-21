@@ -27,6 +27,7 @@ packer.startup(function(use)
   use 'mattn/emmet-vim'
   use 'rafamadriz/friendly-snippets'
   use 'SirVer/ultisnips'
+  use 'honza/vim-snippets'
   use 'hrsh7th/vim-vsnip'
   use 'hrsh7th/vim-vsnip-integ'
 --

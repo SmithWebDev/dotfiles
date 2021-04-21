@@ -1,0 +1,1833 @@
+snippet begin
+begin
+	$1
+rescue => exception
+	
+end
+endsnippet
+
+snippet "begin ensure"
+begin
+	$1
+rescue => exception
+	
+ensure
+	
+end
+endsnippet
+
+snippet "begin else"
+begin
+	$1
+rescue => exception
+	
+else
+	
+end
+endsnippet
+
+snippet "begin else ensure"
+begin
+	$1
+rescue => exception
+	
+else
+	
+ensure
+	
+end
+endsnippet
+
+snippet "class init"
+class ${1:ClassName}
+	def initialize
+		$0
+	end
+end
+endsnippet
+
+snippet class
+class ${1:ClassName}
+	$0
+end
+endsnippet
+
+snippet loop
+loop do
+	$0
+end
+endsnippet
+
+snippet module
+module ${1:ModuleName}
+	$0
+end
+endsnippet
+
+snippet unless
+unless ${1:test}
+	$0
+end
+endsnippet
+
+snippet until
+until ${1:test}
+	$0
+end
+endsnippet
+
+snippet def
+def ${1:method_name}
+	$0
+end
+endsnippet
+
+snippet do
+do
+	$0
+end
+endsnippet
+
+snippet dop
+do |${1:variable}|
+	$0
+end
+endsnippet
+
+snippet {p
+{ ${1:|${2:variable}| }$0 
+endsnippet
+
+snippet attr-accessor "attr_accessor"
+attr_accessor :${1:attribute_name}
+endsnippet
+
+snippet attr-reader "attr_reader"
+attr_reader :${1:attribute_name}
+endsnippet
+
+snippet attr-writer "attr_writer"
+attr_writer :${1:attribute_name}
+endsnippet
+
+snippet case "Ruby case"
+case $1
+when $2
+	$3
+when $4
+	$5
+else
+	$6
+end
+endsnippet
+
+snippet each "Ruby each"
+
+${1:@plural}.each do |${2:single}|
+	$0
+end
+
+endsnippet
+
+snippet if "Ruby if"
+if ${1:condition}
+	$2
+end
+
+endsnippet
+
+snippet if-else "Ruby ifelse"
+
+if ${1:condition}
+	$2
+else
+	$3
+end
+
+endsnippet
+
+snippet els-if "Ruby elsif"
+elsif ${1:true}
+endsnippet
+
+snippet if-unless-inline "Ruby if unless inline"
+${1:do_something} ${2:type_if_or_unless} ${3:condition}
+endsnippet
+
+snippet presence "presence"
+presence :${1:true}
+endsnippet
+
+snippet length "length"
+length: {${2:minimum:}${1:3}, ${3:maximum:}${1:}}
+endsnippet
+
+snippet method "length"
+method: :${1:name}
+endsnippet
+
+snippet delete "delete"
+${1::delete}
+endsnippet
+
+snippet data "method"
+data: ${1:{ confirm: 'Are you sure?' }}
+endsnippet
+
+snippet only "method"
+only: ${1:[:edit, :update, :show, :destory]}
+endsnippet
+
+snippet edit "edit"
+:${1:edit,}
+endsnippet
+
+snippet update "update"
+:${1:update,}
+endsnippet
+
+snippet show "show"
+:${1:show,}
+endsnippet
+
+snippet destroy "destroy"
+:${1:destroy}
+endsnippet
+
+snippet format "format"
+format: ${1:{ with: format_name }}
+endsnippet
+
+snippet controller-rest "Rails Restful Controller"
+class ${1:User}sController < ApplicationController
+	before_action :find_${2:user}, except: [:index, :new, :create]
+
+	def index
+		@${2:user}s = ${1:User}.all
+	end
+
+	def show
+	end
+
+	def new
+		@${2:user} = ${1:User}.new
+	end
+
+	def edit
+	end
+
+	def create
+		@${2:user} = ${1:User}.new(params[:${2:user}])
+		if @${2:user}.save
+		  flash[:success] = "${1:User} successfully created"
+		  redirect_to @${2:user}
+		else
+		  flash[:error] = "Something went wrong"
+		  render 'new'
+		end
+	end
+
+	def update
+		if @${2:user}.update_attributes(params[:${2:user}])
+		  flash[:success] = "${1:User} was successfully updated"
+		  redirect_to @${2:user}
+		else
+		  flash[:error] = "Something went wrong"
+		  render 'edit'
+		end
+	end
+
+	def destroy
+		if @${2:user}.destroy
+			flash[:success] = "${1:User} was successfully deleted"
+			redirect_to @${2:user}s_path
+		else
+			flash[:error] = "Something went wrong"
+			redirect_to @${2:user}s_path
+		end
+	end
+
+	private
+
+		def find_${2:user}
+			@${2:user} = ${1:User}.find(params[:id])
+		end
+
+end
+
+endsnippet
+
+snippet param-hash "Rails Params Hash"
+
+params[:${1:id}]$0
+
+endsnippet
+
+snippet find-id "find(id)"
+find(${1:id})
+endsnippet
+
+snippet find-params "find(params[:id])"
+find(params[:${1:id}])
+endsnippet
+
+snippet respond-to "respond_to"
+respond_to do |format|
+	format.${1:html}${2: { $0 }}
+end
+endsnippet
+
+snippet returning "returning do |variable| … end"
+returning ${1:variable} do${2/(^(?<var>\s*[a-z_][a-zA-Z0-9_]*\s*)(,\g<var>)*,?\s*$)|.*/(?1: |)/}${2:v}${2/(^(?<var>\s*[a-z_][a-zA-Z0-9_]*\s*)(,\g<var>)*,?\s*$)|.*/(?1:|)/}
+	$0
+end
+endsnippet
+
+snippet require-file "Create functional test class"
+require File.dirname(__FILE__) + '/../test_helper'
+
+class ${1:Model}ControllerTest < ActionController::TestCase
+	deft$0
+end
+
+endsnippet
+
+snippet crud "crud actions"
+
+  def index
+    @${1} = ${1/(.+)/\u$1/g}.scoped
+  end
+
+  def show
+    @${1} = ${1/(.+)/\u$1/g}.find(params[:id])
+  end
+
+  def create
+    @${1} = ${1/(.+)/\u$1/g}.new(params[:${1}])
+  end
+
+  def update
+    @${1} = ${1/(.+)/\u$1/g}.find(params[:id])
+  end
+
+  def edit
+    @${1} = ${1/(.+)/\u$1/g}.find(params[:id])
+  end
+
+  def destroy
+    ${1} = ${1/(.+)/\u$1/g}.find(params[:id])
+  end
+endsnippet
+
+snippet def-create "Rails Restful Create Action"
+def create
+	@${1:object} = ${2:Object}.new(params[:${1:object}])
+	if @${1:object}.save
+	  flash[:success] = "${2:Object} successfully created"
+	  redirect_to @${1:object}
+	else
+	  flash[:error] = "Something went wrong"
+	  render 'new'
+	end
+end
+
+endsnippet
+
+snippet def-create-model "def create - resource"
+def create
+  @${1:model} = ${2:${1/[[:alpha:]]+|(_)/(?1::\u$0)/g}}.new(params[:$1])
+  $0
+  respond_to do |format|
+    if @$1.save
+      flash[:notice] = '$2 was successfully created.'
+      format.html { redirect_to(@$1) }
+      format.xml { render xml: @$1, status: :created, location: @$1 }
+    else
+      format.html { render action: "new" }
+      format.xml { render xml: @$1.errors, status: :unprocessable_entity }
+    end
+  end
+end
+
+endsnippet
+
+snippet def-destory "Rails Restful Destroy Action"
+def destroy
+	@${1:object} = ${2:Object}.find(${3:params[:id]})
+	if @${1:object}.destroy
+		flash[:success] = '${2:Object} was successfully deleted.'
+		redirect_to ${1:object}s_url
+	else
+		flash[:error] = 'Something went wrong'
+		redirect_to ${1:object}s_url
+	end
+end
+
+endsnippet
+
+snippet def-edit "Rails Restful Edit Action"
+def edit
+	@$1 = $2.find($3)
+end
+
+endsnippet
+
+snippet def-index "Rails Restful Index Action"
+def index
+	@$1 = $2.all
+end
+
+endsnippet
+
+snippet def-new "Rails Restful New Action"
+def new
+	@$1 = $2.new
+end
+
+endsnippet
+
+snippet def-show "Rails Restful Show Action"
+def show
+	@$1 = $2.find($3)
+end
+
+endsnippet
+
+snippet def-update "Rails Restful Update Action"
+def update
+	@${1:object} = ${2:Object}.find(${3:params[:id]})
+    if @${1:object}.update_attributes(params[:${1:object}])
+      flash[:success] = "${2:Object} was successfully updated"
+      redirect_to @${1:object}
+    else
+      flash[:error] = "Something went wrong"
+      render 'edit'
+    end
+end
+
+endsnippet
+
+snippet redirect-to "redirect_to path"
+redirect_to ${1:Something}_path
+endsnippet
+
+snippet redirect-to-action "redirect_to (action)"
+redirect_to action: "${1:index}"
+endsnippet
+
+snippet redirect-to-action-id "redirect_to (action, id)"
+redirect_to action: "${1:show}", id: ${0:@item}
+endsnippet
+
+snippet redirect-to-controller "redirect_to (controller, action)"
+redirect_to controller: "${1:items}", action: "${2:list}"
+endsnippet
+
+snippet redirect-to-controller-action-id "redirect_to (controller, action, id)"
+redirect_to controller: "${1:items}", action: "${2:show}", id: ${0:@item}
+endsnippet
+
+snippet redirect-to-nested-path "redirect_to (nested path)"
+redirect_to(${2:${12:parent}_${13:child}_path(${14:@}${15:${12}}, ${16:@}${17:${13}})})
+endsnippet
+
+snippet redirect-to-nested-path-plural "redirect_to (nested path plural)"
+redirect_to(${2:${10:parent}_${11:child}_path(${12:@}${13:${10}})})
+endsnippet
+
+snippet redirect-to-path "redirect_to (path)"
+redirect_to(${2:${12:model}_path(${13:@}${14:${12}})})
+endsnippet
+
+snippet redirect-to-path-plural "redirect_to (path plural)"
+redirect_to(${2:${10:model}s_path})
+endsnippet
+
+snippet logger-debug "logger.debug"
+logger.debug { "${1:message}" }$0
+endsnippet
+
+snippet logger-error "logger.error"
+logger.error { "${1:message}" }$0
+endsnippet
+
+snippet logger-fatal "logger.fatal"
+logger.fatal { "${1:message}" }$0
+endsnippet
+
+snippet logger-info "logger.info"
+logger.info { "${1:message}" }$0
+endsnippet
+
+snippet logger-warn "logger.warn"
+logger.warn { "${1:message}" }$0
+endsnippet
+
+snippet raild-default-logger "RAILS_DEFAULT_LOGGER.debug"
+RAILS_DEFAULT_LOGGER.debug "${1:message}"$0
+endsnippet
+
+snippet before-block "RSpec Before Block"
+before do
+	$1
+end
+
+endsnippet
+
+snippet before-inline "RSpec Before Inline"
+before { $1 } 
+endsnippet
+
+snippet fill-in "RSpec Capybara fill_in with"
+fill_in "${1:Field}",	with: "${2:sometext}" 
+endsnippet
+
+snippet context "RSpec Context Block"
+context "${1:a context}" do
+	$2
+end
+
+endsnippet
+
+snippet describe-context-it "RSpec Describe + Context + It Block"
+describe "${1:something to be performed}" do
+  context "${2:under condition}" do
+    it "${3:behaves like}" do
+      $4
+    end
+  end
+end
+
+endsnippet
+
+snippet describe "RSpec Describe Block"
+describe "${1:a specification}" do
+	$2
+end
+
+endsnippet
+
+snippet expect "RSpec Expect"
+expect(${1:subject}).to $2 
+endsnippet
+
+snippet it-expect-inline "RSpec It Expect Inline"
+it { expect { $1 }.to $2 } 
+endsnippet
+
+snippet it-expect "RSpec It Expect Change Inline"
+it { expect { $1 }.to change($2, $3) } 
+endsnippet
+
+snippet it-line "RSpec It-Inline"
+it { $1 } 
+endsnippet
+
+snippet it-block "RSpec It Block"
+it "${1:description}" do
+	$2
+end
+
+endsnippet
+
+snippet let "RSpec Let"
+let(:${1:var}) { $2 } 
+endsnippet
+
+snippet pending "RSpec Pending Block"
+pending "${1:a specification}" do
+	$2
+end
+
+endsnippet
+
+snippet should-have-button "RSpec Should Have Button"
+it { ${1:should} have_button('${2:Button Text}') } 
+endsnippet
+
+snippet should-have-filed "RSpec Should Have Field"
+it { ${1:should} have_field('${2:selector}') } 
+endsnippet
+
+snippet should-have-link "RSpec Should Have Link"
+it { ${1:should} have_link('${2:Link Text}') } 
+endsnippet
+
+snippet allow-value "RSpec "shoulda" allow_value"
+it { ${1:should} allow_value("${2:somevalue}").for(:${3:someattr}) } 
+endsnippet
+
+snippet belong-to "RSpec "shoulda" belong_to"
+it { ${1:should} belong_to(:${2:object}) } 
+endsnippet
+
+snippet ensure-length-of "RSpec "shoulda" ensure_length_of"
+ it { ${1:should} ensure_length_of(:${2:attribute}).${3:is_at_most}(${4:50}) }
+endsnippet
+
+snippet have-many "RSpec "shoulda" have_many"
+it { ${1:should} have_many(:${2:objects}) } 
+endsnippet
+
+snippet have-many-through "RSpec "shoulda" have_many_through"
+it { ${1:should} have_many(:$2).through(:$3) } 
+endsnippet
+
+snippet validate-presense-of "RSpec "shoulda" validate_presence_of"
+it { ${1:should} validate_presence_of(:${2:attribute}) }
+endsnippet
+
+snippet validate-uniqueness-of "RSpec "shoulda" validate_uniqueness_of"
+it { ${1:should} validate_uniqueness_of(:${2:attribute}) }
+endsnippet
+
+snippet should-have-selector "RSpec Should Have Selector"
+it { ${1:should} have_selector('${2:selector}'${3:, text: 'text'}) } 
+endsnippet
+
+snippet should-respond-to "RSpec Should Respond To"
+it { ${1:should} respond_to(:${2:method}) } 
+endsnippet
+
+snippet subject "RSpec Subject"
+subject { ${1:page} } 
+endsnippet
+
+snippet subject-let "RSpec Subject-Let"
+subject(:${1:var}) { $2 } 
+endsnippet
+
+snippet def-test-should-get "def test_should_get_action"
+def test_should_get_${1:action}
+	${2:@${3:model} = ${4:$3s}(:${5:fixture_name})
+	}get :${1}${6:, id: @$3.to_param}
+	assert_response :success
+	$0
+end
+endsnippet
+
+snippet def-test-should-post "def test_should_post_action"
+def test_should_post_${1:action}
+	${3:@$2 = ${4:$2s}(:${5:fixture_name})
+	}post :${1}${6:, id: @$2.to_param}, ${2:model}: { $0 }
+	assert_response :redirect
+
+end
+endsnippet
+
+snippet gem-development "Develpment Gem"
+group :${4:development},${2: do}
+	gem '${1:name}' 'version'
+	$3
+end
+
+endsnippet
+
+snippet gem-test "Test Gem"
+group :${4:test},${2: do}
+	gem '${1:name}' 'version'
+	$3
+end
+
+endsnippet
+
+snippet gem-production "Production Gem"
+group :${4:production},${2: do}
+	gem '${1:name}' 'version'
+	$3
+end
+
+endsnippet
+
+snippet gem-development-test "Develpment & Test Gem"
+group :${4::development},${2: test do}
+	gem '${1:name}' 'version'
+	$3
+end
+
+endsnippet
+
+snippet resources-only "resources :name, only: [:actions]"
+resources :${1:res_name}, only: [:${2:index}]
+endsnippet
+
+snippet resources-do "resources with an empty params block"
+resources :${1:res_name} do
+  $2
+end
+endsnippet
+
+snippet resources-do-collection "resources with a custom collection block"
+resources :${1:res_name} do
+  collection do
+    ${2:get} :${3:action}
+  end
+end
+endsnippet
+
+snippet resources-do-member "resources with a custom member block"
+resources :${1:res_name} do
+  member do
+    ${2:get} :${3:action}
+  end
+end
+endsnippet
+
+snippet def-change "def change"
+def change 
+	create_table :${1:table_name} do |t|
+	  t.${2:column_type} :${3:column_name}
+
+	  t.timestamps
+	end
+end
+endsnippet
+
+snippet def-up "def up"
+def up 
+	create_table :${1:table_name} do |t|
+	  t.${2:column_type} :${3:column_name}
+
+	  t.timestamps
+	end
+end
+endsnippet
+
+snippet def-down "def down"
+def down 
+	drop_table :${1:table_name}
+end
+endsnippet
+
+snippet create-table "Create Table"
+create_table :${1:table_name} do |t|
+  t.${2:column_type} :${3:column_name}
+
+  t.timestamps
+end
+
+endsnippet
+
+snippet drop-table "Drop Table"
+drop_table :${1:table_name}
+endsnippet
+
+snippet rename-table "Rename Table"
+rename_table ("${1:old_table_name}", "${2:new_table_name}")
+endsnippet
+
+snippet add-comun "Add Column"
+add_column :${1:table_name}, :${2:column_name}, :${3:column_type}, :${4:column_options}
+#Ex:- add_column("admin_users", "username", :string, :limit =>25, :after => "email")
+endsnippet
+
+snippet remove-column "Remove Column"
+remove_column :${1:table_name}, :${2:column_name}
+endsnippet
+
+snippet change-column "Change Column"
+change_column :${1:table_name}, :${2:column_name}, :${3:column_type}, :${4:column_options}
+#Ex:- change_column("admin_users", "email", :string, :limit =>25)
+endsnippet
+
+snippet rename-column "Rename Column"
+rename_column :${1:table_name}, :${2:old_column_name}, :${3:new_column_name}
+#Ex:- rename_column("admin_users", "pasword","hashed_pasword")
+endsnippet
+
+snippet add-index "Add Index"
+add_index :${1:table_name}, :${2:column_name}${4:, ${5:options}: "${6:custom_index_name}"}
+#Ex:- add_index("admin_users", "username")
+endsnippet
+
+snippet remove-index "Remove Index"
+remove_index :${1:table_name}, name: :${2:index_name}
+endsnippet
+
+snippet t.column "Create Column in Table"
+t.column ${1:column_name}, :${2:column_type}
+# Example: t.column "first_name", :string
+endsnippet
+
+snippet t.binary "t.binary"
+t.binary :${1:title}${2:, limit: ${3:2}.megabytes}
+endsnippet
+
+snippet t.boolean "t.boolean"
+t.boolean :${1:title}
+
+endsnippet
+
+snippet t.time "t.time"
+t.time :${1:title}
+
+endsnippet
+
+snippet t.date "t.date"
+t.date :${1:title}
+
+endsnippet
+
+snippet t.datetime "t.datetime"
+t.datetime ${"created_at"}
+${"updated_at"}
+endsnippet
+
+snippet t.timestamps "Created_at and updated_at in one single comand"
+t.timestamps
+endsnippet
+
+snippet t.decimal "t.decimal"
+t.decimal :${1:title}${2:${3:, precision: ${4:10}}${5:, scale: ${6:2}}}
+endsnippet
+
+snippet t.float "t.float"
+t.float :${1:title}
+endsnippet
+
+snippet t.integer "t.integer"
+t.integer :${1:title}
+endsnippet
+
+snippet t.integer-lock "t.lock_version (tcl)"
+t.integer :lock_version, null: false, default: 0
+endsnippet
+
+snippet t.references "t.references (tcr)"
+t.references :${1:taggable}${2:, polymorphic: ${3:{ default: '${4:Photo}' }}}
+endsnippet
+
+snippet t.rename "Table column(s) rename"
+t.rename(:${1:old_column_name}, :${2:new_column_name})
+endsnippet
+
+snippet t.string "t.string (tcs)"
+t.string :${1:title}
+endsnippet
+
+snippet t.text "t.text (tct)"
+t.text :${1:title}
+endsnippet
+
+snippet :binary "Binary Column Type"
+binary
+endsnippet
+
+snippet :boolean "Binary Column Type"
+boolean
+endsnippet
+
+snippet :boolean "Binary Column Type"
+boolean
+endsnippet
+
+snippet :boolean "Binary Column Type"
+boolean
+endsnippet
+
+snippet :boolean "Binary Column Type"
+boolean
+endsnippet
+
+snippet :boolean "Binary Column Type"
+boolean
+endsnippet
+
+snippet :boolean "Binary Column Type"
+boolean
+endsnippet
+
+snippet :boolean "Binary Column Type"
+boolean
+endsnippet
+
+snippet :boolean "Binary Column Type"
+boolean
+endsnippet
+
+snippet :boolean "Binary Column Type"
+boolean
+endsnippet
+
+snippet :id "Disable automatically add primary key (forgein key)"
+:id => ${false}
+endsnippet
+
+snippet :limit "SQL character limit size"
+:limit => ${1:size} #By default SQL String limit 255 character 
+#Ex:- :limit => 40
+endsnippet
+
+snippet :default "Default Value"
+:default => ${1: value}
+#Ex:- :default =>''
+endsnippet
+
+snippet :null "Null vale true or false"
+:null => ${1: true/false}
+#Ex:- :null => false
+endsnippet
+
+snippet :precision "Precision"
+:precision => ${1: number}
+endsnippet
+
+snippet :scale "Scale"
+:scale => ${1: number}
+endsnippet
+
+snippet :unique ":unique => true/false"
+:unique => ${1: true or false}
+endsnippet
+
+snippet :name ":name => "your_custom_name""
+:name => ${1: your_custom_name}
+endsnippet
+
+snippet :after "Add column after particular table"
+:after => ${1: column_name}
+endsnippet
+
+snippet validate "validates"
+validates ${:attribute}
+endsnippet
+
+snippet validates "Ruby validates"
+validates :${1:attribute}${2:, presence: true}${3:, uniqueness: { case_sensitive: false }}${4:, length: {maximum: 50}}${5:, format: { with: ConstantData::VALID_EMAIL_REGEX }}${6:, if: :method_name?}
+
+
+endsnippet
+
+snippet validated-acceptance-of "validates_acceptance_of"
+validates_acceptance_of :${1:terms}${2:${3:, accept: "${4:1}"}${5:, message: "${6:You must accept the terms of service}"}}
+endsnippet
+
+snippet validated-acceptance-of-if "validates_acceptance_of if"
+validates_acceptance_of :${1:terms}${2:${3:, accept: "${4:1}"}${5:, message: "${6:You must accept the terms of service}"}}, if: proc { |obj| ${7:obj.condition?} }}
+endsnippet
+
+snippet validated-associated "validates_associated"
+validates_associated :${1:attribute}${2:, on: :${3:create}}
+endsnippet
+
+snippet validated-associated-if "validates_associated if"
+validates_associated :${1:attribute}${2:, on: :${3:create}, if: proc { |obj| ${5:obj.condition?} }}
+endsnippet
+
+snippet validated-exclusion-of "validates_confirmation_of"
+validates_confirmation_of :${1:attribute}${2:, on: :${3:create}, message: "${4:should match confirmation}"}
+endsnippet
+
+snippet validated-confirmation-of "validates_confirmation_of if"
+validates_confirmation_of :${1:attribute}${2:, on: :${3:create}, message: "${4:should match confirmation}", if: proc { |obj| ${5:obj.condition?} }}
+endsnippet
+
+snippet validated-exclusion-of "validates_exclusion_of"
+validates_exclusion_of :${1:attribute}${2:, in: ${3:%w( ${4:mov avi} )}, on: :${5:create}, message: "${6:extension %s is not allowed}"}
+endsnippet
+
+snippet validated-exclusion-of-if "validates_exclusion_of if"
+validates_exclusion_of :${1:attribute}${2:, in: ${3:%w( ${4:mov avi} )}, on: :${5:create}, message: "${6:extension %s is not allowed}"}, if: proc { |obj| ${7:obj.condition?} }}
+endsnippet
+
+snippet "validated format of" "validates_format_of"
+validates_format_of :${1:attribute}, with: /${2:^[${3:\w\d}]+$}/${4:, on: :${5:create}, message: "${6:is invalid}"}
+endsnippet
+
+snippet validated-format-of-if "validates_format_of if"
+validates_format_of :${1:attribute}, with: /${2:^[${3:\w\d}]+$}/${4:, on: :${5:create}, message: "${6:is invalid}"}, if: proc { |obj| ${7:obj.condition?} }}
+endsnippet
+
+snippet validated-inclusion-of "validates_inclusion_of"
+validates_inclusion_of :${1:attribute}${2:, in: ${3:%w( ${4:mov avi} )}, on: :${5:create}, message: "${6:extension %s is not included in the list}"}
+endsnippet
+
+snippet validated-inclusion-of-if "validates_inclusion_of if"
+validates_inclusion_of :${1:attribute}${2:, in: ${3:%w( ${4:mov avi} )}, on: :${5:create}, message: "${6:extension %s is not included in the list}"}, if: proc { |obj| ${7:obj.condition?} }}
+endsnippet
+
+snippet "validated-length-of " "validates_length_of"
+validates_length_of :${1:attribute}, within: ${2:3..20}${3:, on: :${4:create}, message: "${5:must be present}"}
+endsnippet
+
+snippet validated-length-of-if "validates_length_of if"
+validates_length_of :${1:attribute}, within: ${2:3..20}${3:, on: :${4:create}, message: "${5:must be present}"}, if: proc { |obj| ${6:obj.condition?} }}
+endsnippet
+
+snippet validated-length-of-is "validates_length_of if"
+validates_length_of :is
+endsnippet
+
+snippet validated-length-of-minimum "validates_length_of if"
+validates_length_of :${1:attribute}, within: ${2:3..20}${3:, on: :${4:create}, 
+endsnippet
+
+snippet validated-numericality "validates_numericality_of if"
+validates_numericality_of :${1:attribute}${2:, on: :${3:create}, message: "${4:is not a number}"}, if: proc { |obj| ${5:obj.condition?} }}
+endsnippet
+
+snippet validated-numericality-of "validates_numericality_of"
+validates_numericality_of :${1:attribute}${2:, on: :${3:create}, message: "${4:is not a number}"}
+endsnippet
+
+snippet validated-presence-of "validates_presence_of"
+validates_presence_of :${1:attribute}${2:, on: :${3:create}, message: "${4:can't be blank}"}
+endsnippet
+
+snippet validated-presence-of-if "validates_presence_of if"
+validates_presence_of :${1:attribute}${2:, on: :${3:create}, message: "${4:can't be blank}"}, if: proc { |obj| ${5:obj.condition?} }}
+endsnippet
+
+snippet validated-uniqueness-of "validates_uniqueness_of"
+validates_uniqueness_of :${1:attribute}${2:, on: :${3:create}, message: "${4:must be unique}"}
+endsnippet
+
+snippet validated-uniqueness-of-if "validates_uniqueness_of if"
+validates_uniqueness_of :${1:attribute}${2:, on: :${3:create}, message: "${4:must be unique}", if: proc { |obj| ${6:obj.condition?} }}
+endsnippet
+
+snippet scope "Name scope"
+scope :${1:name}, -> { where(:${2:attibute} => ${3:value})}
+# Ex:- scope :active, -> {where(:active => true)}
+endsnippet
+
+snippet scope-lambda "Scope with lambda"
+scope :${1:name}, lambda { where(:${2:attibute} => ${3:value})}
+# Ex:- scope :active, lambda {where(:active => true)}
+endsnippet
+
+snippet scope-arguments "scope with arguments"
+scope :${1:name}, ->(${2:argument}){ where(${3:attribute:} ${2}) }
+endsnippet
+
+snippet helper-method "Helper method"
+helper_method :${1:method_name}
+endsnippet
+
+snippet email-downcase "before_save {self.email = email.downcase}"
+before_save {self.email = email.downcase}
+endsnippet
+
+snippet active-record-model "Rails Active Record Model"
+class ${1:User} < ActiveRecord::Base
+
+	$2
+
+	private
+		$3
+end
+
+endsnippet
+
+snippet binding
+
+binding.pry
+
+endsnippet
+
+snippet verify "verify — render"
+verify only: [:$1], method: :post, render: { status: 500, text: "use HTTP-POST" }
+
+endsnippet
+
+snippet "accepts nested attributes for" "accepts_nested_attributes_for"
+accepts_nested_attributes_for :${1:relationship}, ${2:reject_if: ->(attributes){ attributes['name'].blank? }}${3:, allow_destroy: true}
+endsnippet
+
+snippet has-many "has_many"
+has_many :${1:object}s${2:, class_name: "${1}", foreign_key: "${4:reference}_id"}
+endsnippet
+
+snippet has-many-through "has_many (through)"
+has_many :${1:objects}, through: :${2:join_association}${3:, source: :${4:${2}_table_foreign_key_to_${1}_table}}
+endsnippet
+
+snippet has-many-dependent "has_many dependent: :destroy"
+has_many :${1:object}s${2:, class_name: "${1}", foreign_key: "${4:reference}_id"}, dependent: :destroy$0
+endsnippet
+
+snippet has-one "has_one"
+has_one :${1:object}${2:, class_name: "${3:${1/[[:alpha:]]+|(_)/(?1::\u$0)/g}}", foreign_key: "${4:${1}_id}"}
+endsnippet
+
+snippet has-one-through "has_one through"
+has_one :${1:object}, through: :${2:join_association}${3:, source: :${4:${2}_table_foreign_key_to_${1}_table}}
+endsnippet
+
+snippet has-and-belongs-to-many "has_and_belongs_to_many"
+has_and_belongs_to_many :${1:object}${2:, join_table: "${3:table_name}", foreign_key: "${4:${1}_id}"}
+endsnippet
+
+snippet belongs-to "belongs_to"
+belongs_to :${1:object}${2:, class_name: "${3:${1/[[:alpha:]]+|(_)/(?1::\u$0)/g}}", foreign_key: "${4:${1}_id}"}
+endsnippet
+
+snippet before-action "before_action"
+before_action :${1:method}
+endsnippet
+
+snippet before-create "before_create"
+before_create :${1:method}
+endsnippet
+
+snippet before-save "before_save"
+before_save :${1:method}
+endsnippet
+
+snippet before-validation "before_validation"
+before_validation :${1:method}
+endsnippet
+
+snippet before-destroy "before_destroy"
+before_destroy 
+endsnippet
+
+snippet before-update "before_update"
+before_update 
+endsnippet
+
+snippet before-validation-on-create "before_validation on create"
+before_validation ${1:validation_method}, on: :create
+endsnippet
+
+snippet before-validation-on-update "before_validation on update"
+before_validation ${1:validation_method}, on: :update
+endsnippet
+
+snippet assert "assert(var = assigns(:var))"
+assert(${1:var} = assigns(:${1}), "Cannot find @${1}")
+$0
+endsnippet
+
+snippet assert-select "assert_select"
+assert_select '${1:path}'${2:, ${3:text}: ${4:'${5:inner_html}'}}${6: do
+	$0
+end}
+endsnippet
+
+snippet assert-difference "assert_difference"
+assert_difference "${1:Model}.${2:count}", ${3:1} do
+  $0
+end
+endsnippet
+
+snippet assert-no-difference "assert_no_difference"
+assert_no_difference "${1:Model}.${2:count}" do
+  $0
+end
+endsnippet
+
+snippet assert-redirected-to "assert_redirected_to"
+assert_redirected_to ${2:action: "${1:index}"}
+endsnippet
+
+snippet assert-redirected-to-path "assert_redirected_to (path)"
+assert_redirected_to ${1:model}_path
+endsnippet
+
+snippet assert-redirected-to-nested-path "assert_redirected_to (nested path)"
+assert_redirected_to ${1:${2:parent}_${3:child}_path(${4:${2}}, ${5:${3}})}
+endsnippet
+
+snippet assert-response "assert_response(type, message = nil)"
+assert_response :${1:type}
+endsnippet
+
+snippet :success "Asserts response status code was in the 200-299 range"
+:success
+endsnippet
+
+snippet :redirect "Asserts response status code was in the 300-399 range"
+:redirect
+endsnippet
+
+snippet :missing "Asserts response status code was 404"
+:missing
+endsnippet
+
+snippet :error "Asserts response status code was 500-599 range"
+:error
+endsnippet
+
+snippet after-create "after_create"
+after_create :${1:method}
+endsnippet
+
+snippet after-save "after_save"
+after_save :${1:method}
+endsnippet
+
+snippet after-update "after_update"
+after_update 
+endsnippet
+
+snippet after-destroy "after_destroy"
+after_destroy 
+endsnippet
+
+snippet after-validation "after_validation callback"
+after_validation :${1:method}
+endsnippet
+
+snippet after-validation-on-create "after_validation on create"
+after_validation ${1:validation_method}, on: :create
+endsnippet
+
+snippet after-validation-on-update "after_validation on update"
+after_validation ${1:validation_method}, on: :update
+endsnippet
+
+snippet cattr-accessor "cattr_accessor"
+cattr_accessor :${0:attr_names}
+endsnippet
+
+snippet mattr-accessor "mattr_accessor"
+mattr_accessor :${0:attr_names}
+endsnippet
+
+snippet xhr-delete "xhr delete"
+xhr :delete, :${1:destroy}, id: ${2:1}$0
+endsnippet
+
+snippet xhr-get "xhr get"
+xhr :get, :${1:show}${2:, id: ${3:1}}$0
+endsnippet
+
+snippet xhr-post "xhr post"
+xhr :post, :${1:create}, ${2:object}: { $3 }
+endsnippet
+
+snippet xhr-put "xhr put"
+xhr :put, :${1:update}, id: ${2:1}, ${3:object}: { $4 }$0
+endsnippet
+
+snippet only "rails only method"
+only: %i[${1:method}]
+endsnippet
+
+snippet except "rails except method"
+except: %i[${1:method}]
+endsnippet
+
+snippet res "resources without a custom collection block"
+resources :${res_name}
+endsnippet
+
+snippet resb "resources with an empty params block"
+resources :${1:res_name} do
+$2
+end
+endsnippet
+
+snippet rescb "resources with a custom collection block"
+resources :${1:res_name} do
+collection do
+$2
+end
+end
+endsnippet
+
+snippet resmb "resources with a custom member block"
+resources :${1:res_name} do
+member do
+$2
+end
+end
+endsnippet
+
+snippet re "resource without a custom collection block"
+resource :${res_name}
+endsnippet
+
+snippet recb "resource with a custom collection block"
+resource :${1:res_name} do
+collection do
+$2
+end
+end
+endsnippet
+
+snippet remb "resource with a custom member block"
+resource :${1:res_name} do
+member do
+$2
+end
+end
+endsnippet
+
+snippet mb "member block"
+member do
+$1
+end
+endsnippet
+
+snippet cb "collection block"
+collection do
+$1
+end
+endsnippet
+
+snippet render "render path "
+render ${path}
+endsnippet
+
+snippet redirect_to "redirect_to path "
+redirect_to ${path}
+endsnippet
+
+snippet redirect_to_msg "redirect_to path, notice: msg"
+redirect_to ${path}, notice: "${msg}"
+endsnippet
+
+snippet add_column "add_column :table, :column, :type"
+add_column :${1:table}, :${2:column}, :${3:type}
+endsnippet
+
+snippet add_reference "add_reference :table, :column, foreign_key: true"
+add_reference :${1:table}, :${2:column}, foreign_key: true
+endsnippet
+
+snippet t.binary "Table column binary"
+t.binary :
+endsnippet
+
+snippet t.boolean "Table column boolean"
+t.boolean :
+endsnippet
+
+snippet t.date "Table column date"
+t.date :
+endsnippet
+
+snippet t.datetime "Table column datetime"
+t.datetime :
+endsnippet
+
+snippet t.decimal "Table column decimal"
+t.decimal :
+endsnippet
+
+snippet t.float "Table column float"
+t.float :
+endsnippet
+
+snippet t.integer "Table column integer"
+t.integer :
+endsnippet
+
+snippet t.references "Table column(s) references"
+t.references :
+endsnippet
+
+snippet t.string "Table column string"
+t.string :
+endsnippet
+
+snippet t.text "Table column text"
+t.text :
+endsnippet
+
+snippet t.time "Table column time"
+t.time :
+endsnippet
+
+snippet t.timestamp "Table column timestamp"
+t.timestamp :
+endsnippet
+
+snippet t.timestamps "Table column timestamps"
+t.timestamps
+$0
+endsnippet
+
+snippet tcbi "Table column binary"
+t.binary :
+endsnippet
+
+snippet tcb "Table column boolean"
+t.boolean :
+endsnippet
+
+snippet tcda "Table column date"
+t.date :
+endsnippet
+
+snippet tcdt "Table column datetime"
+t.datetime :
+endsnippet
+
+snippet tcd "Table column decimal"
+t.decimal :
+endsnippet
+
+snippet tcf "Table column float"
+t.float :
+endsnippet
+
+snippet tci "Table column integer"
+t.integer :
+endsnippet
+
+snippet tcr "Table column(s) references"
+t.references :
+endsnippet
+
+snippet tcs "Table column string"
+t.string :
+endsnippet
+
+snippet tct "Table column text"
+t.text :
+endsnippet
+
+snippet tcti "Table column time"
+t.time :
+endsnippet
+
+snippet tcts "Table column timestamp"
+t.timestamp :
+endsnippet
+
+snippet tctss "Table column timestamps"
+t.timestamps
+$0
+endsnippet
+
+snippet has_one_dependent "has_one :id, dependent: :type"
+has_one :${1:id}, dependent: :${2:type}
+endsnippet
+
+snippet has_many_through "has_many :model1, through: :model2"
+has_many :${1:model1}, through: :${2:model2}
+endsnippet
+
+snippet has_many_dependent "has_many :id, dependent: :type"
+has_many :${1:id}, dependent: :${2:type}
+endsnippet
+
+snippet belongs_to "belongs_to :"
+belongs_to :
+endsnippet
+
+snippet belongs_to_cache "belongs_to :id, cache: true"
+belongs_to :${1:id}, cache: ${2:true}
+endsnippet
+
+snippet has_and_belongs_to_many "has_and_belongs_to_many :id"
+has_and_belongs_to_many :${1:id}
+endsnippet
+
+snippet habtm "has_and_belongs_to_many :id"
+has_and_belongs_to_many :${1:id}
+endsnippet
+
+snippet params "params.require(:id_name).permit(:variable)"
+params.require(:${1:id_name}).permit(:${2:variable})
+endsnippet
+
+snippet require "require(:id)"
+require(:$1)
+endsnippet
+
+snippet permit "permit(:id)"
+permit(:$1)
+endsnippet
+
+snippet validates "validates :column, presence: true"
+validates :${1:column}, presence: true
+endsnippet
+
+snippet controller "class Controller"
+class ${1:name}Controller < ApplicationController
+$2
+end
+endsnippet
+
+snippet index_method "method index"
+def index
+$1
+end
+endsnippet
+
+snippet create_method "method create"
+def create
+$1
+end
+endsnippet
+
+snippet new_method "method new"
+def new
+$1
+end
+endsnippet
+
+snippet edit_method "method edit"
+def edit
+$1
+end
+endsnippet
+
+snippet show_method "method show"
+def show
+$1
+end
+endsnippet
+
+snippet update_method "method update"
+def update
+$1
+end
+endsnippet
+
+snippet destroy_method "method destroy"
+def destroy
+$1
+end
+endsnippet
+
+snippet before_action "before action"
+before_action :${1:id}
+endsnippet
+
+snippet ba "before action"
+before_action :${1:id}
+endsnippet
+
+snippet do "do block"
+do
+$2
+end
+endsnippet
+
+snippet "if else" "if else block"
+if $1
+$2
+else
+$3
+end
+endsnippet
+
+snippet "if elsif" "if elsif block"
+if $1
+$2
+elsif $3
+$4
+end
+endsnippet
+
+snippet "if elsif else" "if elsif else block"
+if $1
+$2
+elsif $3
+$4
+else
+$5
+end
+endsnippet
+
+snippet first "first(quantity)"
+first(${quantity})
+endsnippet
+
+snippet find_by "find_by(key: value)"
+find_by(${1:key}: ${2:value})
+endsnippet
+
+snippet find_by_params "find_by(id_name: params[:param])"
+find_by(${1:id_name}: params[:${2:param}])
+endsnippet
+
+snippet where "where(condition)"
+where(${condition})
+endsnippet
+
+snippet limit "limit(quantity)"
+limit(${quantity})
+endsnippet
+
+snippet def "def"
+def ${1:name}
+$2
+end
+endsnippet
+
+snippet dm "def method"
+def ${1:name}
+$2
+end
+endsnippet
+
+snippet else "else statement"
+else
+	$0
+endsnippet
+
+snippet increment "increment(:id)"
+increment(:${1:id})
+endsnippet
+
+snippet order "order(column: :desc)"
+order(${1:column}: :${2:desc})
+endsnippet
+
+snippet map
+${1:array}.map{ |${2:i}| $0}
+endsnippet
+
+snippet select
+${1:array}.select { |${2:i}| $0}
+endsnippet
+
+snippet inject
+${1:array}.inject(${2:0}) { |${3:acc}, ${4:i}| $0}
+endsnippet
+
+snippet all? "Returns true if the block never returns false"
+${1:array}.all? {|${2:i}| $0}
+endsnippet
+
+snippet any?
+${1:array}.any? {|${2:i}| $0}
+endsnippet
+
+snippet cla1 "Class initializing one property"
+class ${1:ClassName}
+	def initialize(${2:first})
+		@${2:first} = ${2:first}
+	end
+	$0
+end
+endsnippet
+
+snippet cla2 "Class initializing two properties"
+class ${1:ClassName}
+	def initialize(${2:first}, ${3:second})
+		@${2:first} = ${2:first}
+		@${3:second} = ${3:second}
+	end
+	$0
+end
+endsnippet
+
+snippet cla3 "Class initializing three properties"
+class ${1:ClassName}
+	def initialize(${2:first}, ${3:second}, ${4:third})
+		@${2:first} = ${2:first}
+		@${3:second} = ${3:second}
+		@${4:third} = ${4:third}
+	end
+	$0
+end
+endsnippet
+
+snippet cla3 "Class initializing three properties"
+class ${1:ClassName}
+	def initialize(${2:first}, ${3:second}, ${4:third}, ${5:fourth})
+		@${2:first} = ${2:first}
+		@${3:second} = ${3:second}
+		@${4:third} = ${4:third}
+		@${5:fourth} = ${5:fourth}
+	end
+	$0
+end
+endsnippet
+
+snippet clex "Simple class extends"
+class ${1:ClassName} < ${2:ParentClass}
+	$0
+end
+endsnippet
+
+snippet for
+for ${1:value} in ${2:enumerable} do
+	$0
+end
+endsnippet
+
+snippet each
+${1:items}.each do |${2:item}|
+	$0
+end
+endsnippet
+
+snippet while
+while ${1:test}
+	$0
+end
+endsnippet
+
+snippet "unless else"
+unless ${1:test}
+	$2
+else
+	$3
+end
+endsnippet
+
+snippet rake "Create a Rake Task"
+namespace :${1} do
+	desc "${2}"
+	task ${3}: :environment do
+		${4}
+	end
+end
+endsnippet
+
+snippet get "rails get route"
+get '/${1:route}', to: '${2:controller}#${3:method}'
+endsnippet
+
+snippet post "rails post route"
+post '/${1:route}', to: '${2:controller}#${3:method}'
+endsnippet
+
+snippet patch "rails patch route"
+patch '/${1:route}', to: '${2:controller}#${3:method}'
+endsnippet
+
+snippet put "rails put route"
+put '/${1:route}', to: '${2:controller}#${3:method}'
+endsnippet
+
+snippet delete "rails route of delete"
+delete '/${1:route}', to: '${2:controller}#${3:method}'
+endsnippet
+
+snippet res "resources without a custom collection block"
+resources :${1:res_name}
+endsnippet
+
+snippet reb "resources with an empty params block"
+resources :${1:res_name} do
+	$2
+end
+endsnippet
+
+snippet rescb "resources with a custom collection block"
+resources :${1:res_name} do
+	collection do
+		$2
+	end
+end
+endsnippet
+
+snippet resmember "resources with a custom member block"
+resources :${1:res_name} do
+	member do
+		$2
+	end
+end
+endsnippet
+
+snippet reb "resource with an empty params block"
+resource :${1:res_name} do
+	$2
+end
+endsnippet
+
+snippet recb "resource with a custom collection block"
+resource :${1:res_name} do
+	collection do
+		$2
+	end
+end
+endsnippet
+
+snippet "re member" "resource with a custom member block"
+resource :${1:res_name} do
+	member do
+		$2
+	end
+end
+endsnippet
+
+snippet member "member block"
+member do
+	$1
+end
+endsnippet
+
+snippet collection "collection block"
+collection do
+	$1
+end
+endsnippet
+
+snippet has_one "has_one :"
+has_one :
+endsnippet
+
+snippet dep "model dependent"
+dependent: :${1:id}
+endsnippet
+
+snippet hasmany "has_many :"
+has_many :$0
+endsnippet
+
+snippet has_and_belongs_to_many "has_and_belongs_to_many :id"
+has_and_belongs_to_many :${1:id}
+endsnippet
+
+snippet para1 "parameter with single field"
+params['$1']$0
+endsnippet
+
+snippet para2 "two parameters "
+params['$1']['$2']$0
+endsnippet
+
+snippet para3 "three parameters"
+params['$1']['$2']['$3']$0
+endsnippet
+
+snippet reqq "require(:id)"
+require(:$1)$0
+endsnippet
+
+snippet include "require(:id)"
+include($1)$0
+endsnippet
+
+snippet CRUD "CRUD method"
+def index
+	$0
+end
+
+def new
+
+end
+
+def create
+
+end
+
+def edit
+
+end
+
+def update
+
+end
+
+def show
+
+end
+
+def destroy
+
+end
+endsnippet
+
+snippet frozenstring "May be deprecated in Ruby 3 but until then..."
+# frozen_string_literal: true$0
+endsnippet
+
+snippet rbprettier "gem 'prettier' and then bundle. Then copy and paste this into terminal"
+bundle exec rbprettier --write '**/*.rb'
+endsnippet
+
+snippet gitbashssh "place into gitbash to save ssh key so you can push without entering your password"
+eval $(ssh-agent -s)
+ssh-add ~/.ssh/id_rsa
+endsnippet
