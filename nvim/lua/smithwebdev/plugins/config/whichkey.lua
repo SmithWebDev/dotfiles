@@ -10,6 +10,7 @@ local keymap = {
       r = {'<cmd>BraceyReload<cr>', 'reload Bracey server'},
       s = {'<cmd>BraceyStop<cr>', 'stop Bracey server'},
     },
+    g = {'<cmd>Goyo<cr>', 'toggle Goyo'},
     l = {
       name = '+LSP',
       a = {'<cmd>Lspsaga code_action<CR>', 'lsp code action'},
