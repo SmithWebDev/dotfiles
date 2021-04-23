@@ -676,6 +676,10 @@ snippet ltc "link_to_class (rails)"
 <%= link_to '${1:text}', ${2:path}, class:'${3:class}' %>
 endsnippet
 
+snippet ltd "link_to delete method"
+<%= link_to '${1:text}', ${2:path}, method: :delete, data: {confirm: "Are you sure?"} %>
+endsnippet
+
 snippet ltmdc "rails link_to_method_data_class (rails)"
 <%= link_to '${1:link_text}', ${2:path}, method: '${3:method}', data:{ ${4:data} }, class:'${5:class}' %>
 endsnippet

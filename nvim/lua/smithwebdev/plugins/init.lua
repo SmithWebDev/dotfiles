@@ -17,14 +17,17 @@ packer.startup(function(use)
 -- Lua Guide Info
   use 'nanotee/nvim-lua-guide'
 
--- AutoCompletion
+-- Completion
+  use 'cohama/lexima.vim'
   use 'hrsh7th/nvim-compe'
+  use 'mattn/emmet-vim'
+  --use '9mm/vim-closer'
+  use 'rstacruz/vim-hyperstyle'
 
 -- Explorer
   use 'kyazdani42/nvim-tree.lua'
 
 -- Snippets
-  use 'mattn/emmet-vim'
   use 'rafamadriz/friendly-snippets'
   use 'SirVer/ultisnips'
   use 'honza/vim-snippets'
@@ -34,6 +37,7 @@ packer.startup(function(use)
 -- LSP
   use 'neovim/nvim-lspconfig'
   use 'glepnir/lspsaga.nvim'
+  use 'folke/lsp-trouble.nvim'
 --  use 'onsails/lspkind-nvim'
 --  use 'kosayoda/nvim-lightbulb'
   use 'kabouzeid/nvim-lspinstall'
@@ -117,7 +121,7 @@ packer.startup(function(use)
   use 'joshcheek/seeing_is_believing'
 
 -- General Plugins
-  use 'windwp/nvim-autopairs'
+  use 'alvan/vim-closetag'
   use 'tpope/vim-surround'
   use 'easymotion/vim-easymotion'
   use 'junegunn/vim-easy-align'
@@ -128,6 +132,8 @@ packer.startup(function(use)
   use 'mhinz/vim-startify'
 --  use 'metakirby5/codi.vim'
   use 'psliwka/vim-smoothie'
+  use 'sunjon/shade.nvim'
+  use 'kdav5758/TrueZen.nvim'
 --  use 'moll/vim-bbye'
 --  use {'iamcco/markdown-preview.nvim', run = 'cd app && npm install'}
   use 'camspiers/animate.vim'
@@ -138,7 +144,7 @@ packer.startup(function(use)
 --  use 'liuchengxu/vista.vim'
 --  use 'terrortylor/nvim-comment'
 --  use 'bfredl/nvim-miniyank'
-  use 'junegunn/goyo.vim'
+  --use 'junegunn/goyo.vim'
 --  use 'andymass/vim-matchup'
 --  use 'phaazon/hop.nvim'
   use 'tpope/vim-sleuth'

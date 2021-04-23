@@ -68,13 +68,6 @@ utils.keymap('i', '<C-j>', '<C-n>')
 utils.keymap('i', '<C-k>', '<C-p>')
 
 
--- UltiSnips Maps
--- -------------------------------------
-utils.keymap('i', ' ', ' ')
-utils.keymap('i', ' ', ' ')
-utils.keymap('i', ' ', ' ')
-utils.keymap('i', ' ', ' ')
-
 -- Window Navigation
 -- -------------------------------------
 utils.keymap('n', '<C-h>', '<C-w>h')

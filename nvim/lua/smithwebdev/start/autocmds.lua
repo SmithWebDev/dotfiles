@@ -29,7 +29,7 @@ auto(
   [[
     augroup autosave
         au!
-        let blacklist = ['packer', 'NvimTree', 'netrw', 'TelescopePrompt', 'spectre_panel', 'startify' ]
+        let blacklist = ['packer', 'NvimTree', 'netrw', 'TelescopePrompt', 'spectre_panel', 'startify', 'snippets']
         au BufEnter * if &filetype == "" | setlocal ft=text | endif
         au TextChanged,InsertLeave * if index(blacklist, &ft) < 0 | silent w | endif
     augroup END
