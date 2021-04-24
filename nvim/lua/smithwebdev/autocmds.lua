@@ -3,14 +3,14 @@
 -- =============================================================================
 
 local auto = vim.api.nvim_exec
-local function set_auto(name, cmds)
-  local acmd = 'augroup' .. name .. ' au! '
-  for k, _ in pairs(cmds) do
-    acmd = acmd .. k .. ' '
-  end
-  acmd = acmd .. 'augroup END'
-  vim.api.nvim_exec(cmds, false)
-end
+--local function set_auto(name, cmds)
+--  local acmd = 'augroup' .. name .. ' au! '
+--  for k, _ in pairs(cmds) do
+--    acmd = acmd .. k .. ' '
+--  end
+--  acmd = acmd .. 'augroup END'
+--  vim.api.nvim_exec(cmds, false)
+--end
 -- =============================================================================
 
 -- Automatically exit from Insert mode

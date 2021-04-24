@@ -10,6 +10,12 @@ local keymap = {
       r = {'<cmd>BraceyReload<cr>', 'reload Bracey server'},
       s = {'<cmd>BraceyStop<cr>', 'stop Bracey server'},
     },
+    c = {
+      name = '+edit outside vim configs',
+      t = {':e ~/.tmux.conf<cr>', 'edit tmux config'},
+      --w = {':e ../../../mnt/c/Users/smit/Local Settings/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json', 'edit windows terminal config'},
+      z = {':e ~/.zshrc<cr>', 'edit zshrc'}
+    },
     g = {'<cmd>Goyo<cr>', 'toggle Goyo'},
     l = {
       name = '+LSP',
@@ -34,6 +40,7 @@ local keymap = {
       --y = {'<cmd>VsnipYank | VsnipOpen | p<cr>', 'Open Snippets vsplit'},
     },
     u = {'<cmd>Ultest<cr>', 'Run all test current file'},
+    w = {':e $WT', 'edit windows terminal config'}
   },
   b = {
     name = '+buffers',

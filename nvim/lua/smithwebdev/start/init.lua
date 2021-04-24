@@ -1,8 +1,8 @@
 require 'smithwebdev.start.utils'
+require 'smithwebdev.start.autocmds'
 require 'smithwebdev.start.settings'
 --require 'smithwebdev.start.commands'
 require 'smithwebdev.start.keymaps'
-require 'smithwebdev.start.autocmds'
 
 
 --TODO

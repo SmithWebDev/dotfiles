@@ -28,11 +28,11 @@ packer.startup(function(use)
   use 'kyazdani42/nvim-tree.lua'
 
 -- Snippets
-  use 'rafamadriz/friendly-snippets'
   use 'SirVer/ultisnips'
   use 'honza/vim-snippets'
   use 'hrsh7th/vim-vsnip'
   use 'hrsh7th/vim-vsnip-integ'
+  use 'rafamadriz/friendly-snippets'
 --
 -- LSP
   use 'neovim/nvim-lspconfig'
@@ -93,8 +93,9 @@ packer.startup(function(use)
 -- Webdev
 --  use 'windwp/nvim-ts-autotag'
 --  use 'gennaro-tedesco/nvim-jqx'
-  use 'turbio/bracey.vim'
+  use 'andrewradev/tagalong.vim'
   use 'ap/vim-css-color'
+  use 'turbio/bracey.vim'
 
 -- Marks & Registers
 --  use 'gennaro-tedesco/nvim-peekup'
@@ -135,7 +136,7 @@ packer.startup(function(use)
   use 'sunjon/shade.nvim'
   use 'kdav5758/TrueZen.nvim'
 --  use 'moll/vim-bbye'
---  use {'iamcco/markdown-preview.nvim', run = 'cd app && npm install'}
+  use {'iamcco/markdown-preview.nvim', run = 'cd app && npm install'}
   use 'camspiers/animate.vim'
   use 'camspiers/lens.vim'
   use 'liuchengxu/vim-which-key'
