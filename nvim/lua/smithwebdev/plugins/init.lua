@@ -122,6 +122,7 @@ packer.startup(function(use)
   use 'joshcheek/seeing_is_believing'
 
 -- General Plugins
+  use 'andymass/vim-matchup'
   use 'alvan/vim-closetag'
   use 'tpope/vim-surround'
   use 'easymotion/vim-easymotion'
@@ -146,7 +147,6 @@ packer.startup(function(use)
 --  use 'terrortylor/nvim-comment'
 --  use 'bfredl/nvim-miniyank'
   --use 'junegunn/goyo.vim'
---  use 'andymass/vim-matchup'
 --  use 'phaazon/hop.nvim'
   use 'tpope/vim-sleuth'
 
