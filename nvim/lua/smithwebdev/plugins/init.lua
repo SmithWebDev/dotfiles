@@ -21,18 +21,20 @@ packer.startup(function(use)
   use 'cohama/lexima.vim'
   use 'hrsh7th/nvim-compe'
   use 'mattn/emmet-vim'
-  --use '9mm/vim-closer'
-  use 'rstacruz/vim-hyperstyle'
+  --use 'rstacruz/vim-hyperstyle'
+  use 'roxma/nvim-yarp'
+  use 'roxma/vim-hug-neovim-rpc'
+  use 'shougo/deoplete.nvim'
 
 -- Explorer
   use 'kyazdani42/nvim-tree.lua'
 
 -- Snippets
   use 'SirVer/ultisnips'
-  use 'honza/vim-snippets'
-  use 'hrsh7th/vim-vsnip'
-  use 'hrsh7th/vim-vsnip-integ'
-  use 'rafamadriz/friendly-snippets'
+--  use 'honza/vim-snippets'
+--  use 'hrsh7th/vim-vsnip'
+--  use 'hrsh7th/vim-vsnip-integ'
+--  use 'rafamadriz/friendly-snippets'
 --
 -- LSP
   use 'neovim/nvim-lspconfig'
@@ -49,14 +51,14 @@ packer.startup(function(use)
   use 'tpope/vim-rails'
 
 -- File Converter
-  use 'vim-pandoc/vim-pandoc'
-  use 'vim-pandoc/vim-pandoc-syntax'
+  --use 'vim-pandoc/vim-pandoc'
+  --use 'vim-pandoc/vim-pandoc-syntax'
 
 -- Treesitter
---  use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
+  use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
   use 'sheerun/vim-polyglot'
---  use 'nvim-treesitter/nvim-treesitter-refactor'
---  use 'nvim-treesitter/playground'
+  use 'nvim-treesitter/playground'
+  use 'romgrk/nvim-treesitter-context'
 
 -- Icons
   use 'kyazdani42/nvim-web-devicons'
@@ -68,6 +70,7 @@ packer.startup(function(use)
 
 -- Telescope
   use 'nvim-telescope/telescope.nvim'
+  use 'fhill2/telescope-ultisnips.nvim'
   use 'nvim-lua/plenary.nvim'
   use 'nvim-lua/popup.nvim'
   use 'windwp/nvim-spectre'
@@ -94,8 +97,9 @@ packer.startup(function(use)
 --  use 'windwp/nvim-ts-autotag'
 --  use 'gennaro-tedesco/nvim-jqx'
   use 'andrewradev/tagalong.vim'
-  use 'ap/vim-css-color'
+  use 'norcalli/nvim-colorizer.lua'
   use 'turbio/bracey.vim'
+
 
 -- Marks & Registers
 --  use 'gennaro-tedesco/nvim-peekup'
@@ -121,7 +125,19 @@ packer.startup(function(use)
 -- Ruby Plugins
   use 'joshcheek/seeing_is_believing'
 
+-- Markdown Plugins
+  use {'iamcco/markdown-preview.nvim', run = 'cd app && npm install'}
+  use 'instant-markdown/vim-instant-markdown'
+
+-- Node Plugins
+  use'moll/vim-node'
+
+
 -- General Plugins
+  use 'yggdroot/indentline'
+  use 'kevinhwang91/nvim-hlslens'
+  use 'lukas-reineke/indent-blankline.nvim'
+  --use 'wellle/context.vim'
   use 'andymass/vim-matchup'
   use 'alvan/vim-closetag'
   use 'tpope/vim-surround'
@@ -137,7 +153,6 @@ packer.startup(function(use)
   use 'sunjon/shade.nvim'
   use 'kdav5758/TrueZen.nvim'
 --  use 'moll/vim-bbye'
-  use {'iamcco/markdown-preview.nvim', run = 'cd app && npm install'}
   use 'camspiers/animate.vim'
   use 'camspiers/lens.vim'
   use 'liuchengxu/vim-which-key'
@@ -148,8 +163,13 @@ packer.startup(function(use)
 --  use 'bfredl/nvim-miniyank'
   --use 'junegunn/goyo.vim'
 --  use 'phaazon/hop.nvim'
+  use 'tpope/vim-abolish'
+  use 'tpope/vim-repeat'
+  use 'tpope/vim-rvm'
+  use 'tpope/vim-jdaddy'
+  use 'chaoren/vim-wordmotion'
+  use 'justinmk/vim-sneak'
   use 'tpope/vim-sleuth'
-
 end)
 
 require 'smithwebdev.plugins.config'.setup()

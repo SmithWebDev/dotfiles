@@ -24,6 +24,17 @@ snippet ife "if .. else .. end"
 <% end %>
 endsnippet
 
+
+snippet ifee "if .. elsif .. else .. end"
+<% if ${1:truevalue} %>
+  $2
+<% elsif ${3:truevalue} %>
+	$4
+<% else %>
+  $5
+<% end %>
+endsnippet
+
 snippet unless "unless .. end"
 <% unless ${1:falsevalue} %>
   $2

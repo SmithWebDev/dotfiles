@@ -1828,3 +1828,796 @@ snippet gitbashssh "place into gitbash to save ssh key so you can push without e
 eval $(ssh-agent -s)
 ssh-add ~/.ssh/id_rsa
 endsnippet
+
+snippet if "if .. end"
+<% if ${1:truevalue} %>
+  $2
+<% end %>
+endsnippet
+
+snippet else "else"
+<% else %>
+endsnippet
+
+snippet elsif "elsif"
+<% elsif ${1:truevalue} %>
+endsnippet
+
+snippet end "end"
+<% end %>
+endsnippet
+
+snippet ife "if .. else .. end"
+<% if ${1:truevalue} %>
+  $2
+<% else %>
+  $3
+<% end %>
+endsnippet
+
+snippet ifee "if .. elsif .. else .. end"
+<% if ${1:truevalue} %>
+  $2
+<% elsif ${3:truevalue} %>
+	$4
+<% else %>
+  $5
+<% end %>
+endsnippet
+
+snippet unless "unless .. end"
+<% unless ${1:falsevalue} %>
+  $2
+<% end %>
+endsnippet
+
+snippet unlesse "unless .. end"
+<% unless ${1:falsevalue} %>
+  $2
+<% else %>
+  $3
+<% end %>
+endsnippet
+
+snippet each "each do"
+<% ${1:items}.each do |${2:item}| %>
+  $2
+<% end %>
+endsnippet
+
+snippet pe "render block pe"
+<%= $1 %>
+endsnippet
+
+snippet er "erb exec block"
+<% $1 %>
+endsnippet
+
+snippet link-to-action "link_to (action)"
+link_to "${1:link text...}", action: "${2:index}"
+endsnippet
+
+snippet link-to-action-id "link_to (action, id)"
+link_to "${1:link text...}", action: "${2:edit}", id: ${3:@item}
+endsnippet
+
+snippet link-to-controller "link_to (controller)"
+link_to "${1:link text...}", controller: "${2:items}"
+endsnippet
+
+snippet link-to-controller-action "link_to (controller, action)"
+link_to "${1:link text...}", controller: "${2:items}", action: "${3:index}"
+endsnippet
+
+snippet link-to-controller-action-id "link_to (controller, action, id)"
+link_to "${1:link text...}", controller: "${2:items}", action: "${3:edit}", id: ${4:@item}
+endsnippet
+
+snippet link-to-path "link_to (path)"
+link_to ${1:"${2:link text...}"}, ${3:${12:model}_path(${13:@}${14:${12}})}
+endsnippet
+
+snippet link-to-path-plural "link_to (path plural)"
+link_to ${1:"${2:link text...}"}, ${3:${4:model}s_path}
+endsnippet
+
+snippet link-to-nested-path "link_to (nested path)"
+link_to ${1:"${2:link text...}"}, ${3:${12:parent}_${13:child}_path(${14:@}${15:${12}}, ${16:@}${17:${13}})}
+endsnippet
+
+snippet link-to-nested-path-plural "link_to (nested path plural)"
+link_to ${1:"${2:link text...}"}, ${3:${10:parent}_${11:child}_path(${12:@}${13:${10}})}
+endsnippet
+
+snippet link-to-model "link_to model"
+link_to ${1:model}.${2:name}, ${3:${4:$1}_path(${14:$1})}
+endsnippet
+
+snippet from-for-bootstrap "form_for with twitter bootstrap"
+<%= form_for ${1:@object}, html: { class: "form-horizontal" } do |${2:f}| %>
+	<%= render 'layouts/error_messages', ${2:f}: ${2:f}.object %>
+
+	<div class="control-group">
+		<%= ${2:f}.label :${3:attribute}, class: "control-label" %>
+		<div class="controls">
+			<%= ${2:f}.text_field :${3:attribute} %>
+		</div>
+	</div>
+
+	$4
+
+	<div class="control-group">
+		<div class="controls">
+			<%= ${2:f}.submit class: "btn btn-primary" %>
+		</div>
+	</div>
+		
+<% end %>
+
+endsnippet
+
+snippet from-for-text-field-bootstrap "text field with twitter bootstrap"
+<div class="control-group">
+	<%= ${1:f}.label :${2:attribute}, class: "control-label" %>
+	<div class="controls">
+		<%= ${1:f}.text_field :${2:attribute} %>
+	</div>
+</div>
+
+endsnippet
+
+snippet form-for "form_for"
+<%= form_for ${1:@object} do |${2:f}| %>
+	<%= render 'layouts/error_messages', f: f.object %>
+		
+	<!-- form_for @object, html: { multipart: true }, do |f| -->
+	<!-- form_for @object, html: { class: "classname" }, do |f| -->
+
+	$3
+<% end %>
+  
+endsnippet
+
+snippet form-for-with-errors "form_for with errors"
+error_messages_for :${1:model}
+
+form_for @${2:$1} do |f|
+  $0
+
+endsnippet
+
+snippet form-for-label "form_for label"
+f.label :${1:attribute}${2:, "${3:${1/[[:alpha:]]+|(_)/(?1: :\u$0)/g}}"}
+endsnippet
+
+snippet form-for-radio-box "form_for radio_box"
+f.radio_box :${1:attribute}, :${2:tag_value}
+endsnippet
+
+snippet form-for-hidden-field "form_for hidden_field"
+f.hidden_field :${1:attribute}
+endsnippet
+
+snippet form-for-file-field "ERB file field"
+<%= ${1:f}.label :${2:attribute} %><br />
+<%= ${1:f}.file_field :${2:attribute} %>
+  
+endsnippet
+
+snippet form-for-password-field "form_for password_field"
+<%= ${1:f}.label :${2:attribute} %><br />
+<%= ${1:f}.password_field :${2:attribute} %>
+
+endsnippet
+
+snippet form-for-text-area "ERB text area"
+<%= ${1:f}.label :${2:attribute} %><br />
+<%= ${1:f}.text_area :${2:attribute} %>
+
+endsnippet
+
+snippet form-for-text-field "ERB text field"
+<%= ${1:f}.label :${2:attribute} %><br />
+<%= ${1:f}.text_field :${2:attribute} %>
+
+endsnippet
+
+snippet form-for-check-box "ERB check box"
+<%= ${1:f}.label :${2:attribute} %><br />
+<%= ${1:f}.check_box :${2:attribute} %>
+
+endsnippet
+
+snippet form-for-sbumit "form_for submit"
+f.submit "${1:Submit}"${2:, disable_with: '${3:$1ing...}'}
+endsnippet
+
+snippet f.text_field "f.text_field (fftf)"
+f.text_field :${1:attribute}
+endsnippet
+
+snippet f.password "f.password_field"
+f.password_field :${1:attribute}
+endsnippet
+
+snippet f.radio-box "f.radio_box"
+f.radio_box :${1:attribute}, :${2:tag_value}
+endsnippet
+
+snippet f.text-area "f.text_area (ffta)"
+f.text_area :${1:attribute}
+endsnippet
+
+snippet f.hidden-field "f.hidden_field (ffhf)"
+f.hidden_field :${1:attribute}
+endsnippet
+
+snippet f.file-field "f.file_field (ffff)"
+f.file_field :${1:attribute}
+endsnippet
+
+snippet f.check-box "f.check_box (ffcb)"
+f.check_box :${1:attribute}
+endsnippet
+
+snippet f.label "f.label"
+f.label :${1:attribute}${2:, "${3:${1/[[:alpha:]]+|(_)/(?1: :\u$0)/g}}"}
+endsnippet
+
+snippet f.submit "f.submit"
+f.submit "${1:Submit}"${2:, disable_with: '${3:$1ing...}'}
+endsnippet
+
+snippet render-object "ERB Render Tag"
+<%= render '${1:f}', ${2:object}: @${3:object} %>
+endsnippet
+
+snippet render-action "render (action)"
+render action: "${1:action}"
+endsnippet
+
+snippet render-action-layout "render (action, layout)"
+render action: "${1:action}", layout: "${2:layoutname}"
+endsnippet
+
+snippet render-file "render (file)"
+render file: "${1:filepath}"
+endsnippet
+
+snippet render-file-path "render (file, use_full_path)"
+render file: "${1:filepath}", use_full_path: ${2:false}
+endsnippet
+
+snippet render-inline "render (inline)"
+render inline: "${1:<%= 'hello' %>}"
+endsnippet
+
+snippet render-inline-local "render (inline, locals)"
+render inline: "${1:<%= 'hello' %>}", locals: { ${2:name}: "${3:value}"$4 }
+endsnippet
+
+snippet render-inline-type "render (inline, type)"
+render inline: "${1:<%= 'hello' %>}", type: ${2::rxml}
+endsnippet
+
+snippet render-layout "render (layout)"
+render layout: "${1:layoutname}"
+endsnippet
+
+snippet render-layout-default "Ex: <%= render 'layouts/default' %>"
+<%= render 'file path' %>
+endsnippet
+
+snippet render-nothing "render (nothing)"
+render nothing: ${1:true}
+endsnippet
+
+snippet render-nothing-status "render (nothing, status)"
+render nothing: ${1:true}, status: ${2:401}
+endsnippet
+
+snippet render-partial "render partial"
+render "${1:partial/path}"${2:, ${3:var}: @${3:var}}
+endsnippet
+
+snippet render-partial-collection "render (partial, collection)"
+render partial: "${1:item}", collection: ${2:@$1s}
+endsnippet
+
+snippet render-partial-object "render (partial, object)"
+render partial: "${1:item}", object: ${2:@$1}
+endsnippet
+
+snippet render-partial-status "render (partial, status)"
+render partial: "${1:item}", status: ${2:500}
+endsnippet
+
+snippet render-text "render (text)"
+render text: "${1:text to render...}"
+endsnippet
+
+snippet render-text-layout "render (text, layout)"
+render text: "${1:text to render...}", layout: "${2:layoutname}"
+endsnippet
+
+snippet render-text-layout-true "render (text, layout: true)"
+render text: "${1:text to render...}", layout: ${2:true}
+endsnippet
+
+snippet render-text-status "render (text, status)"
+render text: "${1:text to render...}", status: ${2:401}
+endsnippet
+
+snippet render-update "render (update)"
+render :update do |${2:page}|
+	$2.$0
+end
+endsnippet
+
+snippet for-loop "ERB For loop"
+<% if !${1:list}.blank? %>
+  <% for ${2:item} in ${1} %>
+    $3
+  <% end %>
+<% else %>
+
+endsnippet
+
+snippet if-else "ERB if else"
+
+<% if ${1:condition} %>
+	$2
+	<% else %>
+	$3
+<% end %>
+
+endsnippet
+
+snippet if-unless-inline "ERB if unless inline"
+<%= ${1:do_something} ${2:type_if_or_unless} ${3:condition} %>
+endsnippet
+
+snippet else-if "ERB elsif"
+<% elsif ${1:true} %>
+endsnippet
+
+snippet emded "embed ruby ERB"
+<% $0 %>
+endsnippet
+
+snippet emded-print "output embedding tag"
+<%= $0 %>
+endsnippet
+
+snippet collection-select "ERB collection select"
+<%= collection_select(:${1:user}, :${2:id}, ${3:@users}, :${4:id}, :${5:name}) %>
+endsnippet
+
+snippet flash "flash[…]"
+flash[:${1:notice}] = "${2:Successfully created...}"$0
+endsnippet
+
+snippet format "format.format"
+format.${1:js|xml|html}${2: { $0 }}
+endsnippet
+
+snippet map "map(&:sym_proc)"
+map(&:${1:id})
+endsnippet
+
+snippet $label "$LABEL"
+$LABEL
+endsnippet
+
+snippet bye-bug "buy bug"
+
+byebug
+
+endsnippet
+
+snippet buy-bug-erb "$LABEL"
+<%= debug(params) if Rails.env.development? %>
+endsnippet
+
+snippet <% "ruby expression"
+<%$1 %>
+endsnippet
+
+snippet javascript "rails javascript_include_tag"
+<%= javascript_include_tag "$1" %>
+endsnippet
+
+snippet javascript_pack "rails webpacker javascript_pack_tag"
+<%= javascript_pack_tag "$1" %>
+endsnippet
+
+snippet stylesheet "rails stylesheet_link_tag"
+<%= stylesheet_link_tag "$1" %>
+endsnippet
+
+snippet stylesheet_pack "rails webpacker stylesheet_pack_tag"
+<%= stylesheet_pack_tag "$1" %>
+endsnippet
+
+snippet asset_pack "rails webpacker asset_pack_path"
+<%= asset_pack_path '$1' %>
+endsnippet
+
+snippet raw "rails raw"
+<%= raw $1 %>
+endsnippet
+
+snippet sanitize "rails sanitize"
+<%= sanitize $1 %>
+endsnippet
+
+snippet link_to "rails link_to"
+<%= link_to "${1:text}", ${2:model} %>
+endsnippet
+
+snippet image_tag "rails image_tag"
+<%= image_tag "${1:filename_with_extension}" %>
+endsnippet
+
+snippet video_tag "rails video_tag"
+<%= image_tag "${1:filename_with_extension}" %>
+endsnippet
+
+snippet partial "rails render partial"
+<%= render partial: "${1:path}" %>
+endsnippet
+
+snippet audio_tag "rails audio_tag"
+<%= image_tag "${1:filename_with_extension}" %>
+endsnippet
+
+snippet auto_discovery "rails auto_discovery_link_tag"
+<%= auto_discovery_link_tag (${1|:rss,:atom},{action: "${2:action}"},{title: "${3:title}"}) %>
+endsnippet
+
+snippet button_to "rails button_to"
+<%= button_to "${1:text}", ${2:model} %>
+endsnippet
+
+snippet text_field "rails text_field_tag"
+<%= text_field_tag (:${1:id_name}) %>
+endsnippet
+
+snippet label_tag "rails label_tag"
+<%= label_tag (:${1:for}, "${2:text}") %>
+endsnippet
+
+snippet text_area "rails text_area_tag"
+<%= text_area_tag (:${1:id_name}, "${2:content}"), size: "${3:colsxrols}" %>
+endsnippet
+
+snippet password_field "rails password_field_tag"
+<%= password_field_tag (:${1:id_name}) %>
+endsnippet
+
+snippet search_field "rails search_field"
+<%= search_field (:${1:id_name}) %>
+endsnippet
+
+snippet telephone_field "rails telephone_field"
+<%= telephone_field (:${1:id_name}) %>
+endsnippet
+
+snippet datetime_local_field "rails datetime_local_field"
+<%= datetime_local_field (:${1:id_name}) %>
+endsnippet
+
+snippet month_field "rails month_field"
+<%= month_field (:${1:id_name}) %>
+endsnippet
+
+snippet week_field "rails datetime_local_field"
+<%= week_field (:${1:id_name}) %>
+endsnippet
+
+snippet colorfield "rails color_field"
+<%= color_field (:${1:id_name}) %>
+endsnippet
+
+snippet options_for_select "rails options_for_select,options example:[['Lisbon', 1], ['Madrid', 2], ...], 2"
+<%= options_for_select(${1:options})) %>
+endsnippet
+
+snippet content_for "rails content_for"
+<% content_for :$1 do %>
+$2
+<% end %>
+endsnippet
+
+snippet content_for? "rails content_for?"
+ <%= content_for?(:$1) ? yield(:$1) : $2%>
+endsnippet
+
+snippet =begin "rails comment"
+<%
+=begin %>
+$1
+<%
+=end %>
+endsnippet
+
+snippet form_for "rails form_for"
+<%= form_for( ${1:variable} , remote: ${2:true}) do |f| %>
+$2
+<% end %>
+endsnippet
+
+snippet form_tag "rails form_tag"
+<%= form_tag( '${1:path}' , remote: ${2:true}) do |f| %>
+$2
+<% end %>
+endsnippet
+
+snippet asset_path "rails asset_path"
+<%= asset_path "$1" %>
+endsnippet
+
+snippet asset_data_uri "rails asset_data_uri"
+<%= asset_data_uri "$1" %>
+endsnippet
+
+snippet jrender "rails <%= j( render :partial => '${1:partial_path}' ) %>"
+<%= j( render :partial => '${1:partial_path}' ) %>
+endsnippet
+
+snippet image-url "rails image-url"
+image-url("$1") 
+endsnippet
+
+snippet image-path "rails image-path"
+image-path("$1") 
+endsnippet
+
+snippet asset-url "rails asset-url"
+asset-url("$1") 
+endsnippet
+
+snippet asset-path "rails asset-path"
+asset-path("$1") 
+endsnippet
+
+snippet form_for "rails form_for"
+<%= form_for ${1:variable} do |${2:f}| %>
+$2
+<% end %>
+endsnippet
+
+snippet simple_form_for "rails simple_form_for"
+<%= simple_form_for ${1:variable} do |${2:f}| %>
+$3
+<% end %>
+endsnippet
+
+snippet f.email_field "rails email_field"
+<%= f.email_field :${id_name} %>
+endsnippet
+
+snippet f.url_field "rails url_field"
+<%= f.url_field :${id_name} %>
+endsnippet
+
+snippet f.date_field "rails date_field"
+<%= f.date_field :${id_name} %>
+endsnippet
+
+snippet link_to_class "rails link_to"
+<%= link_to  "${1:text}", ${2:path}, class:"${3:class}" %>
+endsnippet
+
+snippet link_to_method_data "rails link_to"
+<%= link_to "${1:link_text}", ${2:path}, method: "${3:method}", data:{ ${4:data} } %>
+endsnippet
+
+snippet ltmd "rails link_to"
+<%= link_to "${1:link_text}", ${2:path}, method: "${3:method}", data:{ ${4:data} } %>
+endsnippet
+
+snippet link_to_method_data "rails link_to"
+<%= link_to "${1:link_text}", ${2:path}, method: "${3:method}", data:{ ${4:data} }, class:"${5:class}" %>
+endsnippet
+
+snippet ltmdc "rails link_to"
+<%= link_to "${1:link_text}", ${2:path}, method: "${3:method}", data:{ ${4:data} }, class:"${5:class}" %>
+endsnippet
+
+snippet link_to_method_confirm "rails link_to"
+<%= link_to "${1:link_text}", ${2:path}, method: "${3:method}", data:{ confirm: "${4:confirm}"} %>
+endsnippet
+
+snippet link_to_method_confirm "rails link_to"
+<%= link_to "${1:link_text}", ${2:path}, method: "${3:method}", data:{ confirm: "${4:confirm}"}, class:"${5:class}" %>
+endsnippet
+
+snippet ltmdcc "rails link_to"
+<%= link_to "${1:link_text}", ${2:path}, method: "${3:method}", data:{ confirm: "${4:confirm}"}, class:"${5:class}" %>
+endsnippet
+
+snippet "if else" "rails if else"
+<% if $1 %>
+  $2
+<% else %>
+  $3
+<% end %>
+endsnippet
+
+snippet "if elsif" "rails if elsif"
+<% if $1 %>
+  $2
+<% elsif $3 %>
+  $4
+<% end %>
+endsnippet
+
+snippet "if elsif else" "rails if elsif else"
+<% if $1 %>
+  $2
+<% elsif $3 %>
+  $4
+<% else %>
+  $5
+<% end %>
+endsnippet
+
+snippet pre "rails expression for <% %>"
+<% $1 %>$0
+endsnippet
+
+snippet preb "rails expression block with end"
+<% $1 %>
+	$0
+<% end %>
+endsnippet
+
+snippet pe "rails expression(<%= %>)"
+<%= $1 %>
+endsnippet
+
+snippet peb "rails expression(<%= %>)"
+<%= $1 %>
+	$0
+<% end %>
+endsnippet
+
+snippet formfor "rails form_for"
+<%= form_for ${1:variable} do |${2:f}| %>
+	$3
+<% end %>
+endsnippet
+
+snippet timezone "rails time_zone_select"
+<%= f.time_zone_select :${1:column_name} %>
+endsnippet
+
+snippet rangefield "rails range_field"
+<%= range_field (:${1:model_name}, :${2:column_name}, in: ${3:1..100}) %>
+endsnippet
+
+snippet selecttag "rails select_tag"
+<%= select_tag (:${1:id_name}, options_for_select(${2:options})) %>
+endsnippet
+
+snippet render "rails render"
+<%= render ${1:path} %>$0
+endsnippet
+
+snippet rendervar "render variable (rails)"
+<%= render ${1:path}, ${2:variable1}: ${3:variable2} %>
+endsnippet
+
+snippet lt "link_to"
+<%= link_to '${1:text}', ${2:path} %>
+endsnippet
+
+snippet ltc "link_to_class (rails)"
+<%= link_to '${1:text}', ${2:path}, class:'${3:class}' %>
+endsnippet
+
+snippet ltd "link_to delete method"
+<%= link_to '${1:text}', ${2:path}, method: :delete, data: {confirm: "Are you sure?"} %>
+endsnippet
+
+snippet ltmdc "rails link_to_method_data_class (rails)"
+<%= link_to '${1:link_text}', ${2:path}, method: '${3:method}', data:{ ${4:data} }, class:'${5:class}' %>
+endsnippet
+
+snippet ltmcon "rails link_to_method_confirm (rails)"
+<%= link_to "${1:link_text}", ${2:path}, method: "${3:method}", data:{ confirm: "${4:confirm}"} %>
+endsnippet
+
+snippet ltmconc "rails link_to_method_confirm_class"
+<%= link_to "${1:link_text}", ${2:path}, method: "${3:method}", data:{ confirm: "${4:confirm}"}, class:"${5:class}" %>
+endsnippet
+
+snippet submit "rails form submit"
+<%= f.submit %>$0
+endsnippet
+
+snippet label "rails form label"
+<%= f.label :${1:id_name}, '${2:text}' %>
+endsnippet
+
+snippet numberfield "rails number_field"
+<%= f.number_field (:${1:id_name}, in: ${2:1.0..20.0}, step: ${3:0.5}) %>
+endsnippet
+
+snippet timefield "rails time_field"
+<%= f.time_field :${1:id_name} %>
+endsnippet
+
+snippet hiddenfield "rails hidden_field"
+<%= f.hidden_field :${1:id_name} %>
+endsnippet
+
+snippet emailfield "rails email_field"
+<%= f.email_field :${1:id_name} %>
+endsnippet
+
+snippet urlfield "rails url_field"
+<%= f.url_field :${1:id_name} %>
+endsnippet
+
+snippet passwordfield "rails password_field"
+<%= f.password_field :${1:id_name} %>
+endsnippet
+
+snippet textarea "rails text_area"
+<%= f.text_area :${1:id_name} %>
+endsnippet
+
+snippet checkbox "rails check_box"
+<%= f.check_box :${1:id_name} %>
+endsnippet
+
+snippet textfield "rails text_field"
+<%= f.text_field :${1:id_name} %>
+endsnippet
+
+snippet datefield "rails date_field"
+<%= f.date_field :${1:id_name} %>
+endsnippet
+
+snippet datetimefield "rails datetime_field"
+<%= f.datetime_field :${1:id_name} %>
+endsnippet
+
+snippet radiobutton "rails radio_button,id will be ${name}_${value}"
+<%= f.radio_button :${1:name}, :value => '${2:value}' %>
+endsnippet
+
+snippet input "rails input field"
+<%= f.input :${1:id}, label: '${2:text}' %>
+endsnippet
+
+snippet path "rails path"
+${1:path}_path
+endsnippet
+
+snippet newpath "rails new_path"
+new_${1:path}_path
+endsnippet
+
+snippet editpath "rails edit_path(variable)"
+edit_${1:path}_path(${2:variable})
+endsnippet
+
+snippet "unless else" "unless .. end"
+<% unless ${1:falsevalue} %>
+	$2
+<% else %>
+	$3
+<% end %>
+endsnippet
+
+snippet %end "end"
+<% end %>
+endsnippet
+
+snippet gitbashssh "place into gitbash to save ssh key so you can push without entering your password"
+eval $(ssh-agent -s)
+ssh-add ~/.ssh/id_rsa
+endsnippet

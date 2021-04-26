@@ -3,50 +3,54 @@ local actions = require('telescope.actions')
 local builtin = require('telescope.builtin')
 local preview = require('telescope.previewers')
 local sorter = require('telescope.sorters')
+local snippet = require('telescope')
 --local tree = require('telescope.treesitter')
 local M = {}
 
 telescope.load_extension('media_files')
+snippet.load_extension('ultisnips')
 telescope.setup {
-	defaults = {
+  defaults = {
     border = {},
     borderchars = {'─', '│', '─', '│', '╭', '╮', '╯', '╰'},
-		buffer_previewer_maker = preview.buffer_previewer_maker,
-		color_devicons = true,
-		file_previewer = preview.vim_buffer_cat.new,
-		file_sorter = sorter.get_fuzzy_file,	
-		grep_previewer = preview.vim_buffer_vimgrep.new,
-		layout_strategy = 'horizontal',
-		mappings = {
-			i = {
-				['<C-j>'] = actions.move_selection_next,
-				['<C-k>'] = actions.move_selection_previous,
-				['<C-q>'] = actions.smart_send_to_qflist + actions.open_qflist,
-				["<CR>"] = actions.select_default + actions.center,
-				["<C-i>"] = actions.select_horizontal,
-				['jj'] = actions.close
-			},
-			n = {
-				['<C-j>'] = actions.move_selection_next,
-				['<C-k>'] = actions.move_selection_previous,
-				['<C-q>'] = actions.smart_send_to_qflist + actions.open_qflist,
-				['jj'] = actions.close
-			}
-		},
-		qflist_previewer = preview.vim_buffer_qflist.new,
-		selection_strategy = "reset",
-		sorting_strategy = "descending",
-		use_less = false,
-		vimgrep_arguments = {'rg', '--no-heading', '--with-filename', '--line-number', '--column', '--smart-case'},
-	},
-    extensions = {
-        media_files = {
-            -- filetypes whitelist
-            -- defaults to {"png", "jpg", "mp4", "webm", "pdf"}
-            filetypes = {"png", "webp", "jpg", "jpeg"},
-            find_cmd = "rg" -- find command (defaults to `fd`)
-        }
-    }
+    buffer_previewer_maker = preview.buffer_previewer_maker,
+    color_devicons = true,
+    file_previewer = preview.vim_buffer_cat.new,
+    file_sorter = sorter.get_fuzzy_file,
+    grep_previewer = preview.vim_buffer_vimgrep.new,
+    layout_strategy = 'horizontal',
+    mappings = {
+      i = {
+        ['<C-j>'] = actions.move_selection_next,
+        ['<C-k>'] = actions.move_selection_previous,
+        ['<C-q>'] = actions.smart_send_to_qflist + actions.open_qflist,
+        ["<CR>"] = actions.select_default + actions.center,
+        ["<C-i>"] = actions.select_horizontal,
+        ['jj'] = actions.close
+      },
+      n = {
+        ['<C-j>'] = actions.move_selection_next,
+        ['<C-k>'] = actions.move_selection_previous,
+        ['<C-q>'] = actions.smart_send_to_qflist + actions.open_qflist,
+        ['jj'] = actions.close
+      }
+    },
+    qflist_previewer = preview.vim_buffer_qflist.new,
+    selection_strategy = "reset",
+    sorting_strategy = "descending",
+    use_less = false,
+    vimgrep_arguments = {'rg', '--no-heading', '--with-filename', '--line-number', '--column', '--smart-case'},
+  },
+  extensions = {
+    media_files = {
+      -- filetypes whitelist
+      -- defaults to {"png", "jpg", "mp4", "webm", "pdf"}
+      filetypes = {"png", "webp", "jpg", "jpeg"},
+      find_cmd = "rg" -- find command (defaults to `fd`)
+    },
+    snippet.setup()
+  },
+  --telescope.extensions.ultisnips.ultisnips{},
 }
 
 M.find_files = function()

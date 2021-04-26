@@ -39,6 +39,11 @@ local keymap = {
       h = {':VYank', 'Open Snippets vsplit'},
       --y = {'<cmd>VsnipYank | VsnipOpen | p<cr>', 'Open Snippets vsplit'},
     },
+    U = {
+      name = '+UltiSnips',
+      o = {'<cmd>UltiSnipsEdit<cr>', 'Edit Snippet' },
+      s = {'<cmd>Snippets<cr>', 'Show Available Snippets'}
+    },
     u = {'<cmd>Ultest<cr>', 'Run all test current file'},
     w = {':e $WT', 'edit windows terminal config'}
   },
@@ -96,7 +101,8 @@ local keymap = {
     h = {'<cmd>Telescope help_tags<cr>', 'help tags'},
     r = {'<cmd>Telescope registers<cr>', 'find register'},
     t = {'<cmd>Telescope tags<cr>', 'find tags'},
-    T = {'<cmd>Telescope treesitter<cr>', 'find treesitter'}
+    T = {'<cmd>Telescope treesitter<cr>', 'find treesitter'},
+    u = {'<cmd>Telescope ultisnips ultisnips<cr>', 'find snippets'}
   },
   p = {
     name ='+Packer',

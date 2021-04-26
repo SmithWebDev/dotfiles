@@ -13,6 +13,7 @@ end
 
 function  M.setup()
   require 'smithwebdev.plugins.config.compe'
+  require 'smithwebdev.plugins.config.colorizer'
   require 'smithwebdev.plugins.config.emmet'
   require 'smithwebdev.plugins.config.gitworktree'
   require 'smithwebdev.plugins.config.lsp'

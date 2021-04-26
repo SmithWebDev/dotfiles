@@ -14,6 +14,12 @@ vim.g.mapleader = ' '
 --utils.keymap('n', '<TAB>', '<cmd>bnext<CR>')
 --utils.keymap('n', '<S-TAB>', '<cmd>bprevious<CR>')
 
+-- Completion
+-- -------------------------------------
+--utils.keymap('i', 'jk', [[pumvisible() ? "\<C-y>" : 'jk']])
+--utils.keymap('i', '<c-j>', [[pumvisible() ? "<C-n>" : '<c-j>']])
+--utils.keymap('i', '<c-k>', [[pumvisible() ? "<C-p>" : '<c-k']])
+
 -- Disable highlights
 utils.keymap('n', '<leader><CR>', '<cmd>noh<CR>')
 
