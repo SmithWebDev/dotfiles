@@ -168,6 +168,7 @@ local keymap = {
     p = {'<cmd>e $VIMP<cr>', 'plugin list'},
     s = {'<cmd>e $VIMS<cr>', 'settings config'},
     w = {'<cmd>e $VIME/whichkey.lua<cr>', 'whichkey config'},
+    u = {'<cmd>e $VIMU<cr>', 'utility config'},
     v = {'<cmd>luafile $MYVIMRC<cr>', 'luafile init config'},
   }
 }

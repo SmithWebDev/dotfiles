@@ -1,4 +1,4 @@
-local utils = require 'smithwebdev.utils'
+local utils = require 'smithwebdev.start.utils'
 -- -------------------------------------
 
 -- Map Leader
@@ -13,12 +13,6 @@ vim.g.mapleader = ' '
 --utils.keymap('n', '<leader>bn', '<cmd>enew<CR>')
 --utils.keymap('n', '<TAB>', '<cmd>bnext<CR>')
 --utils.keymap('n', '<S-TAB>', '<cmd>bprevious<CR>')
-
--- Completion
--- -------------------------------------
---utils.keymap('i', 'jk', [[pumvisible() ? "\<C-y>" : 'jk']])
---utils.keymap('i', '<c-j>', [[pumvisible() ? "<C-n>" : '<c-j>']])
---utils.keymap('i', '<c-k>', [[pumvisible() ? "<C-p>" : '<c-k']])
 
 -- Disable highlights
 utils.keymap('n', '<leader><CR>', '<cmd>noh<CR>')
@@ -80,6 +74,8 @@ utils.keymap('n', '<C-h>', '<C-w>h')
 utils.keymap('n', '<C-j>', '<C-w>j')
 utils.keymap('n', '<C-k>', '<C-w>k')
 utils.keymap('n', '<C-l>', '<C-w>l')
+
+
 utils.keymap('n', '<leader>d', '<C-w>_<C-w>|')
 utils.keymap('n', '<leader>=', '<C-w>=')
 utils.keymap('n', '<leader>|', '<C-w>|')

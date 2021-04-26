@@ -1,4 +1,4 @@
-local utils = require'smithwebdev.utils'
+local utils = require'smithwebdev.start.utils'
 local config = require 'lspconfig'
 local install = require 'lspinstall'
 local status = require 'lsp-status'
@@ -7,7 +7,7 @@ local function setup_servers()
 	install.setup()
 
 	local servers = install.installed_servers()
-	for _, server in pairs(servers) do 
+	for _, server in pairs(servers) do
 		config[server].setup{on_attach = on_attach}
 	end
 end
