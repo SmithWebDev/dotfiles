@@ -91,10 +91,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/awesome-vim-colorschemes"
   },
-  ["barbar.nvim"] = {
-    loaded = true,
-    path = "/home/smith/.local/share/nvim/site/pack/packer/start/barbar.nvim"
-  },
   ["birds-of-paradise.vim"] = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/birds-of-paradise.vim"
@@ -106,10 +102,6 @@ _G.packer_plugins = {
   ["colorbuddy.nvim"] = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/colorbuddy.nvim"
-  },
-  ["deoplete.nvim"] = {
-    loaded = true,
-    path = "/home/smith/.local/share/nvim/site/pack/packer/start/deoplete.nvim"
   },
   ["diagnosticls-nvim"] = {
     loaded = true,
@@ -283,6 +275,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/telescope.nvim"
   },
+  ultisnips = {
+    loaded = true,
+    path = "/home/smith/.local/share/nvim/site/pack/packer/start/ultisnips"
+  },
   ["vim-abolish"] = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/vim-abolish"
@@ -310,10 +306,6 @@ _G.packer_plugins = {
   ["vim-easymotion"] = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/vim-easymotion"
-  },
-  ["vim-endwise"] = {
-    loaded = true,
-    path = "/home/smith/.local/share/nvim/site/pack/packer/start/vim-endwise"
   },
   ["vim-hug-neovim-rpc"] = {
     loaded = true,
@@ -370,6 +362,10 @@ _G.packer_plugins = {
   ["vim-sneak"] = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/vim-sneak"
+  },
+  ["vim-snippets"] = {
+    loaded = true,
+    path = "/home/smith/.local/share/nvim/site/pack/packer/start/vim-snippets"
   },
   ["vim-startify"] = {
     loaded = true,

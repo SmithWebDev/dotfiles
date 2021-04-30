@@ -24,14 +24,14 @@ packer.startup(function(use)
   --use 'rstacruz/vim-hyperstyle'
   use 'roxma/nvim-yarp'
   use 'roxma/vim-hug-neovim-rpc'
-  use 'shougo/deoplete.nvim'
+--  use 'shougo/deoplete.nvim'
 
 -- Explorer
   use 'kyazdani42/nvim-tree.lua'
 
 -- Snippets
   use 'SirVer/ultisnips'
---  use 'honza/vim-snippets'
+  use 'honza/vim-snippets'
 --  use 'hrsh7th/vim-vsnip'
 --  use 'hrsh7th/vim-vsnip-integ'
 --  use 'rafamadriz/friendly-snippets'
@@ -47,7 +47,7 @@ packer.startup(function(use)
   use 'creativenull/diagnosticls-nvim'
 
 -- Ruby/ Rails
-  use 'tpope/vim-endwise'
+--  use 'tpope/vim-endwise'
   use 'tpope/vim-rails'
 
 -- File Converter
@@ -66,7 +66,7 @@ packer.startup(function(use)
 
 -- Status Line and Bufferline
   use 'glepnir/galaxyline.nvim'
-  use 'romgrk/barbar.nvim'
+--  use 'romgrk/barbar.nvim'
 
 -- Telescope
   use 'nvim-telescope/telescope.nvim'

@@ -1,76 +1,16 @@
-snippet begin
-begin
-	$1
-rescue => exception
-	
-end
-endsnippet
-
-snippet bigen "begin ensure"
-begin
-	$1
-rescue => exception
-	
-ensure
-	
-end
-endsnippet
-
-snippet bigel "begin else"
-begin
-	$1
-rescue => exception
-	
-else
-	
-end
-endsnippet
-
-snippet bigelen "begin else ensure"
-begin
-	$1
-rescue => exception
-	
-else
-	
-ensure
-	
-end
-endsnippet
-
-snippet clai "class init"
-class ${1:ClassName}
-	def initialize
-		$0
-	end
-end
-endsnippet
-
-snippet cla "class"
-class ${1:ClassName}
-	$0
-end
-endsnippet
-
 snippet loop
 loop do
 	$0
 end
 endsnippet
 
-snippet mod
-module ${1:ModuleName}
-	$0
-end
-endsnippet
-
-snippet unl
+snippet unless
 unless ${1:test}
 	$0
 end
 endsnippet
 
-snippet til
+snippet until
 until ${1:test}
 	$0
 end
@@ -98,33 +38,6 @@ snippet {p
 { ${1:|${2:variable}| }$0 
 endsnippet
 
-snippet ata "attr_accessor"
-attr_accessor :${1:attribute_name}
-endsnippet
-
-snippet atr "attr_reader"
-attr_reader :${1:attribute_name}
-endsnippet
-
-snippet atw "attr_writer"
-attr_writer :${1:attribute_name}
-endsnippet
-
-snippet case "Ruby case"
-case $1
-when $2
-	$3
-when $4
-	$5
-else
-	$6
-end
-endsnippet
-
-snippet when "add when statement"
-when $1
-	$0
-endsnippet
 
 snippet each "Ruby each"
 ${1:@plural}.each do |${2:single}|
@@ -132,26 +45,6 @@ ${1:@plural}.each do |${2:single}|
 end
 endsnippet
 
-snippet if "Ruby if"
-if ${1:condition}
-	$2
-end
-
-endsnippet
-
-snippet ife "Ruby ifelse"
-
-if ${1:condition}
-	$2
-else
-	$3
-end
-
-endsnippet
-
-snippet elif "Ruby elsif"
-elsif ${1:true}
-endsnippet
 
 snippet if-unless-inline "Ruby if unless inline"
 ${1:do_something} ${2:type_if_or_unless} ${3:condition}
@@ -1440,53 +1333,6 @@ snippet validates "validates :column, presence: true"
 validates :${1:column}, presence: true
 endsnippet
 
-snippet controller "class Controller"
-class ${1:name}Controller < ApplicationController
-$2
-end
-endsnippet
-
-snippet index "method index"
-def index
-$1
-end
-endsnippet
-
-snippet create "method create"
-def create
-$1
-end
-endsnippet
-
-snippet new "method new"
-def new
-$1
-end
-endsnippet
-
-snippet edit "method edit"
-def edit
-$1
-end
-endsnippet
-
-snippet show "method show"
-def show
-$1
-end
-endsnippet
-
-snippet update "method update"
-def update
-$1
-end
-endsnippet
-
-snippet destroy "method destroy"
-def destroy
-$1
-end
-endsnippet
 
 snippet before_action "before action"
 before_action :${1:id}
@@ -1593,53 +1439,7 @@ snippet any?
 ${1:array}.any? {|${2:i}| $0}
 endsnippet
 
-snippet cla1 "Class initializing one property"
-class ${1:ClassName}
-	def initialize(${2:first})
-		@${2:first} = ${2:first}
-	end
-	$0
-end
-endsnippet
 
-snippet cla2 "Class initializing two properties"
-class ${1:ClassName}
-	def initialize(${2:first}, ${3:second})
-		@${2:first} = ${2:first}
-		@${3:second} = ${3:second}
-	end
-	$0
-end
-endsnippet
-
-snippet cla3 "Class initializing three properties"
-class ${1:ClassName}
-	def initialize(${2:first}, ${3:second}, ${4:third})
-		@${2:first} = ${2:first}
-		@${3:second} = ${3:second}
-		@${4:third} = ${4:third}
-	end
-	$0
-end
-endsnippet
-
-snippet cla3 "Class initializing three properties"
-class ${1:ClassName}
-	def initialize(${2:first}, ${3:second}, ${4:third}, ${5:fourth})
-		@${2:first} = ${2:first}
-		@${3:second} = ${3:second}
-		@${4:third} = ${4:third}
-		@${5:fourth} = ${5:fourth}
-	end
-	$0
-end
-endsnippet
-
-snippet clex "Simple class extends"
-class ${1:ClassName} < ${2:ParentClass}
-	$0
-end
-endsnippet
 
 snippet for
 for ${1:value} in ${2:enumerable} do
@@ -1730,7 +1530,7 @@ resource :${1:res_name} do
 end
 endsnippet
 
-snippet "re member" "resource with a custom member block"
+snippet resmem "re member" "resource with a custom member block"
 resource :${1:res_name} do
 	member do
 		$2

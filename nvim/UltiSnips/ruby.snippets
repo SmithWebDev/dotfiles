@@ -1,41 +1,249 @@
---
-snippet begin
-begin
-	$1
-rescue => exception
-	$2
-end
-endsnippet
-
-snippet beginen "begin ensure"
-begin
-	$1
-rescue => exception
-	
-ensure
-	
-end
-endsnippet
-
-snippet beginel "begin else"
-begin
-	$1
-rescue => exception
-	
-else
-	
-end
-endsnippet
-
-snippet beginelen "begin else ensure"
-begin
-	$1
-rescue => exception
-	
-else
-	
-ensure
-	
-end
-endsnippet
-
+#snippet RSpec "Initialize Rspec"
+#RSpec.describe $1 do
+#end
+#endsnippet
+#
+#snippet begin
+#begin
+#	$1
+#rescue => exception
+#	$2
+#end
+#endsnippet
+#
+#snippet beginen "begin ensure" b
+#begin
+#	$1
+#rescue => exception
+#	
+#ensure
+#	
+#end
+#endsnippet
+#
+#snippet beginel "begin else" b
+#begin
+#	$1
+#rescue => exception
+#	
+#else
+#	
+#end
+#endsnippet
+#
+#snippet beginelen "begin else ensure" b
+#begin
+#	$1
+#rescue => exception
+#	
+#else
+#	
+#ensure
+#	
+#end
+#endsnippet
+#
+#snippet clax "Simple class extends"
+#class ${1:ClassName} < ${2:ParentClass}
+#	$0
+#end
+#endsnippet
+#
+#snippet clai "class init"
+#class ${1:ClassName}
+#	def initialize
+#		$0
+#	end
+#end
+#endsnippet
+#
+#snippet cla "class"
+#class ${1:ClassName}
+#	$0
+#end
+#endsnippet
+#
+#snippet cla1 "Class initializing one property"
+#class ${1:ClassName}
+#	def initialize(${2:first})
+#		\@${2:first} = ${2:first}
+#	end
+#	$0
+#end
+#endsnippet
+#
+#snippet cla2 "Class initializing two properties"
+#class ${1:ClassName}
+#	def initialize(${2:first}, ${3:second})
+#		@${2:first} = ${2:first}
+#		@${3:second} = ${3:second}
+#	end
+#	$0
+#end
+#endsnippet
+#
+#snippet cla3 "Class initializing three properties"
+#class ${1:ClassName}
+#	def initialize(${2:first}, ${3:second}, ${4:third})
+#		@${2:first} = ${2:first}
+#		@${3:second} = ${3:second}
+#		@${4:third} = ${4:third}
+#	end
+#	$0
+#end
+#endsnippet
+#
+#snippet cla3 "Class initializing three properties"
+#class ${1:ClassName}
+#	def initialize(${2:first}, ${3:second}, ${4:third}, ${5:fourth})
+#		@${2:first} = ${2:first}
+#		@${3:second} = ${3:second}
+#		@${4:third} = ${4:third}
+#		@${5:fourth} = ${5:fourth}
+#	end
+#	$0
+#end
+#endsnippet
+#
+#snippet attra "attr_accessor"
+#attr_accessor :${1:attribute_name}
+#endsnippet
+#
+#snippet attrr "attr_reader"
+#attr_reader :${1:attribute_name}
+#endsnippet
+#
+#snippet attrw "attr_writer"
+#attr_writer :${1:attribute_name}
+#endsnippet
+#
+#snippet clacont "class Controller"
+#class ${1:name}Controller < ApplicationController
+#$2
+#end
+#endsnippet
+#
+#snippet index "method index"
+#def index
+#$1
+#end
+#endsnippet
+#
+#snippet create "method create"
+#def create
+#	@${2:user} = ${1:User}.new(params[:${2:user}])
+#	if @${2:user}.save
+#		flash[:success] = "${1:User} successfully created"
+#		redirect_to @${2:user}
+#	else
+#		flash[:error] = "Something went wrong"
+#		render 'new'
+#	end
+#end
+#endsnippet
+#
+#snippet new "method new"
+#def new
+#$1
+#end
+#endsnippet
+#
+#snippet edit "method edit"
+#def edit
+#$1
+#end
+#endsnippet
+#
+#snippet show "method show"
+#def show
+#$1
+#end
+#endsnippet
+#
+#snippet update "method update"
+#def update
+#	if ${2:user}.update_attributes(params[:${2:user}])
+#		flash[:success] = "${1:User} was successfully updated"
+#		redirect_to @${2:user}
+#	else
+#		flash[:error] = "Something went wrong"
+#		render 'edit'
+#	end
+#end
+#endsnippet
+#
+#snippet destroy "method destroy"
+#def destroy
+#	if ${2:user}.destroy
+#		flash[:success] = "${1:User} was successfully deleted"
+#		redirect_to @${2:user}s_path
+#	else
+#		flash[:error] = "Something went wrong"
+#		redirect_to @${2:user}s_path
+#	end
+#end
+#endsnippet
+#
+#snippet private "private methods"
+#def ${1:model}.params[:${2:category}].permit(${3:attributes})
+#endsnippet 
+#
+#snippet param "Rails Params Hash"
+#params[:${1:id}]$0
+#endsnippet
+#
+#snippet mod
+#module ${1:ModuleName}
+#	$0
+#end
+#endsnippet
+#
+#snippet case "Ruby case"
+#case $1
+#when $2
+#	$3
+#when $4
+#	$5
+#else
+#	$6
+#end
+#endsnippet
+#
+#snippet when "add when statement"
+#when $1
+#	$0
+#endsnippet
+#
+#snippet if "if"
+#if ${1:condition}
+#	$2
+#end
+#endsnippet
+#
+#snippet ife "if else"
+#if ${1:condition}
+#	$2
+#else
+#	$3
+#end
+#endsnippet
+#
+#snippet ifee "if elsif else"
+#if ${1:condition}
+#	$2
+#elsif ${3:true}
+#	$4
+#else
+#	$5
+#end
+#endsnippet
+#
+#snippet elsif "elsif"
+#elsif ${1:true}
+#endsnippet
+#
+#snippet each "Ruby each"
+#${1:@plural}.each do |${2:single}|
+#	$0
+#end
+#endsnippet
