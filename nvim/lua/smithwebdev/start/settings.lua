@@ -16,7 +16,7 @@ vim.cmd 'hi Normal guibg=NONE ctermbg=NONE'
 o.completeopt='longest,menuone,noinsert,noselect'
 o.shortmess=o.shortmess .. 'c'
 o.updatetime=3000
-o.timeoutlen=500
+o.timeoutlen=1000
 
 -- Fold Options --
 w.foldmethod='indent'

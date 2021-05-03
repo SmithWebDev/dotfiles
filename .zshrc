@@ -5,9 +5,9 @@ ZSH_THEME="robbyrussell"
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
-<<<<<<< HEAD
+#<<<<<<< HEAD
 #source $HOME/dotfiles/aliases
-=======
+#=======
 
 
 ##############################
@@ -16,13 +16,14 @@ source $ZSH/oh-my-zsh.sh
 
 # ColorLS (ruby gem)
 # ----------------------------
-#alias ls='colorls --sort-dirs'
-#alias lsa='colorls -A --sort-dirs'
-#alias lst='colorls --tree --light'
+alias ls='colorls --sort-dirs'
+alias lsa='colorls -A --sort-dirs'
+alias lst='colorls --tree --light'
 
 # Config files
 # ----------------------------
 alias zshc='nvim ~/.zshrc'
+alias szsh='source ~/.zshrc'
 alias nvc='nvim ~/.config/nvim/init.lua'
 alias tmc='nvim ~/.tmux.conf'
 
@@ -195,17 +196,17 @@ alias goto='wslview'
 # VIM
 # ----------------------------
 alias nv='nvim'
-alias vim='$HOME/.config/nvim'
+#alias vim='$HOME/.config/nvim'
 alias vimc='$HOME/.config/nvim/lua/smithwebdev/plugins/config'
 alias vimp='$HOME/.config/nvim/lua/smithwebdev/plugins'
-alias vims='$HOME/.config/nvim/lua/smithwebdev'
+alias vims='$HOME/.config/nvim/lua/smithwebdev/start'
 
 #VSCode Extensions dir
 # ----------------------------
 alias codex='mnt/c/Users/smith/.vscode/extensions'
 
 alias ctag='ctags -R -f .gitignore/tags --exclude=.git --exclude=log'
->>>>>>> nvim
+#>>>>>>> nvim
 alias explorer="explorer.exe ."
 alias vivaldi="vivaldi.exe"
 
@@ -224,14 +225,15 @@ if command -v pyenv 1>/dev/null 2>&1; then
  eval "$(pyenv init -)"
 fi
 
-export VIMA="$HOME/.config/nvim/lua/smithwebdev/autocmds.lua"
-export VIMC="$HOME/.config/nvim/lua/smithwebdev/commands.lua"
+export VIMA="$HOME/.config/nvim/lua/smithwebdev/start/autocmds.lua"
+export VIMC="$HOME/.config/nvim/lua/smithwebdev/plugins/config/init.lua"
 export VIME="$HOME/.config/nvim/lua/smithwebdev/plugins/config"
 export VIMI="$HOME/.config/nvim/init.lua"
-export VIMM="$HOME/.config/nvim/lua/smithwebdev/keymaps.lua"
+export VIML="$HOME/.config/nvim/lua/smithwebdev/plugins/config/lsp/init.lua"
+export VIMM="$HOME/.config/nvim/lua/smithwebdev/start/keymaps.lua"
 export VIMP="$HOME/.config/nvim/lua/smithwebdev/plugins/init.lua"
-export VIMS="$HOME/.config/nvim/lua/smithwebdev/settings.lua"
-export VIMU="$HOME/.config/nvim/lua/smithwebdev/utils.lua"
+export VIMS="$HOME/.config/nvim/lua/smithwebdev/start/settings.lua"
+export VIMU="$HOME/.config/nvim/lua/smithwebdev/start/utils.lua"
 
 
-export TERM=xterm-256color-italic
+#export TERM=xterm-256color-italic
