@@ -40,7 +40,7 @@ packer.startup(function(use)
   use 'neovim/nvim-lspconfig'
   use 'glepnir/lspsaga.nvim'
   use 'folke/lsp-trouble.nvim'
---  use 'onsails/lspkind-nvim'
+  use 'onsails/lspkind-nvim'
 --  use 'kosayoda/nvim-lightbulb'
   use 'kabouzeid/nvim-lspinstall'
   use 'nvim-lua/lsp-status.nvim'
