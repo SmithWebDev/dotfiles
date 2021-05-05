@@ -167,7 +167,7 @@ packer.startup(function(use)
   use 'tpope/vim-repeat'
   use 'tpope/vim-rvm'
   use 'tpope/vim-jdaddy'
-  use 'chaoren/vim-wordmotion'
+  --use 'chaoren/vim-wordmotion'
   use 'justinmk/vim-sneak'
   use 'tpope/vim-sleuth'
 end)
