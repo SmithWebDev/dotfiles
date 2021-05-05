@@ -42,7 +42,6 @@ packer.startup(function(use)
   use 'folke/lsp-trouble.nvim'
   use 'onsails/lspkind-nvim'
 --  use 'kosayoda/nvim-lightbulb'
-  use 'kabouzeid/nvim-lspinstall'
   use 'nvim-lua/lsp-status.nvim'
   use 'creativenull/diagnosticls-nvim'
 
@@ -76,6 +75,7 @@ packer.startup(function(use)
   use 'windwp/nvim-spectre'
   use 'nvim-telescope/telescope-fzy-native.nvim'
   use 'nvim-telescope/telescope-media-files.nvim'
+  use 'nvim-telescope/telescope-frecency.nvim'
 
 -- Git
   use 'ThePrimeagen/git-worktree.nvim'
@@ -149,7 +149,7 @@ packer.startup(function(use)
 --  use 'kevinhwang91/rnvimr'
   use 'mhinz/vim-startify'
 --  use 'metakirby5/codi.vim'
-  use 'psliwka/vim-smoothie'
+  use 'psliwka/vim-smoothie' 
   use 'sunjon/shade.nvim'
   use 'kdav5758/TrueZen.nvim'
 --  use 'moll/vim-bbye'
@@ -170,6 +170,7 @@ packer.startup(function(use)
   --use 'chaoren/vim-wordmotion'
   use 'justinmk/vim-sneak'
   use 'tpope/vim-sleuth'
+  use 'marcushwz/nvim-workbench'
 end)
 
 require 'smithwebdev.plugins.config'.setup()

@@ -4,6 +4,7 @@ function M.init()
   require 'smithwebdev.plugins.config.bracey'
   require 'smithwebdev.plugins.config.closetag'
   require 'smithwebdev.plugins.config.easymotion'
+  require 'smithwebdev.plugins.config.lens'
   require 'smithwebdev.plugins.config.markdown'
   require 'smithwebdev.plugins.config.nvim-tree'
   require 'smithwebdev.plugins.config.ultisnips'

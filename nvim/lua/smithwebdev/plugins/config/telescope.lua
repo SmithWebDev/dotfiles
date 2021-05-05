@@ -48,6 +48,12 @@ telescope.setup {
       filetypes = {"png", "webp", "jpg", "jpeg"},
       find_cmd = "rg" -- find command (defaults to `fd`)
     },
+    frecency = {
+    show_score = false, 
+    show_unindexed = true, 
+    ignore_patterns = {"*.git/*", "*/tmp/*"}, 
+    workspaces = {}, 
+  },
     snippet.setup()
   },
   --telescope.extensions.ultisnips.ultisnips{},

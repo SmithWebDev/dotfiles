@@ -12,23 +12,23 @@ local keymap = {
     },
     c = {
       name = '+edit outside vim configs',
-      t = {'<cmd>e ~/.tmux.conf<cr>',                               'edit tmux config'},
-      z = {'<cmd>e ~/.zshrc<cr>',                                   'edit zshrc'}
+      t = {'<cmd>e ~/.tmux.conf<cr>',                           'edit tmux config'},
+      z = {'<cmd>e ~/.zshrc<cr>',                               'edit zshrc'}
     },
     g = {'<cmd>Goyo<cr>',                                       'toggle Goyo'},
-    --l = {
-    --  name = '+LSP',
-    --  a = {'<cmd>Lspsaga code_action<CR>',                      'lsp code action'},
-    --  d = {'<cmd>lua vim.lsp.buf.definition()<CR>',             'go to definition'},
-    --  e = {'<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>',     'set location list'},
-    --  m = {'<cmd>lua vim.lsp.buf.formatting()<CR>',             'lsp formatting'},
-    --  f = {'<cmd>Lspsaga lsp_finder<CR>',                       'Lsp Finder'},
-    --  k = {'<cmd>Lspsaga hover_doc<CR>',                        'Doc on hover'},
-    --  h = {'<cmd>Lspsaga signature_help<CR>',                   'Show Signature Help'},
-    --  p = {'<cmd>Lspsaga preview_definition<CR>',               'Preview Definition'},
-    --  r = {'<cmd>Lspsaga rename<CR>',                           'Rename'},
-    --  w = {'<cmd>Lspsaga show_line_diagnostics<CR>'},
-    --},
+    l = {
+      name = '+LSP',
+      a = {'<cmd>Lspsaga code_action<CR>',                      'lsp code action'},
+      d = {'<cmd>lua vim.lsp.buf.definition()<CR>',             'go to definition'},
+      e = {'<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>',     'set location list'},
+      f = {'<cmd>Lspsaga lsp_finder<CR>',                       'Lsp Finder'},
+      h = {'<cmd>Lspsaga signature_help<CR>',                   'Show Signature Help'},
+      k = {'<cmd>Lspsaga hover_doc<CR>',                        'Doc on hover'},
+      m = {'<cmd>lua vim.lsp.buf.formatting()<CR>',             'lsp formatting'},
+      p = {'<cmd>Lspsaga preview_definition<CR>',               'Preview Definition'},
+      r = {'<cmd>Lspsaga rename<CR>',                           'Rename'},
+      w = {'<cmd>Lspsaga show_line_diagnostics<CR>',            'Show line diagnostic'},
+    },
     s = {
       name = '+Snippets',
       e = {'<cmd>VsnipOpenEdit<cr>',                            'Edit Snippets'},
@@ -103,13 +103,6 @@ local keymap = {
     T = {'<cmd>Telescope treesitter<cr>',                       'find treesitter'},
     u = {'<cmd>Telescope ultisnips ultisnips<cr>',              'find snippets'}
   },
-  p = {
-    name ='+Packer',
-    c = {'<cmd>PackerClean<cr>',                                'PackerClean'},
-    i = {'<cmd>PackerInstall<cr>',                              'PackerInstall'},
-    s = {'<cmd>PackerSync<cr>',                                 'PackerSync'},
-    u = {'<cmd>PackerUpdate<cr>',                               'PackerUpdate'},
-  },
   r = {
     name = '+rails',
     a = {
@@ -119,9 +112,16 @@ local keymap = {
       t = {':AT<cr>',                                           'edit alternate in tab'},
       v = {},
     },
-    r = {
-      name = '+relative',
-    },
+--    r = {
+--      name = '+relative',
+--    },
+  },
+  p = {
+    name ='+Packer',
+    c = {'<cmd>PackerClean<cr>',                                'PackerClean'},
+    i = {'<cmd>PackerInstall<cr>',                              'PackerInstall'},
+    s = {'<cmd>PackerSync<cr>',                                 'PackerSync'},
+    u = {'<cmd>PackerUpdate<cr>',                               'PackerUpdate'},
   },
   s = {
     name = '+spectre',
@@ -159,7 +159,7 @@ local keymap = {
     name = '+vim',
     a = {'<cmd>e $VIMA<cr>',                                    'autocmds config'},
     c = {'<cmd>e $VIMC<cr>',                                    'plugins config'},
-    e = {':e $VIME/',                                       'select plugin config'},
+    e = {':e $VIME/',                                           'select plugin config'},
     f = {'<cmd>luafile %<cr>',                                  'luafile %'},
     j = {'<cmd>so %<cr>',                                       'refresh vim source'},
     m = {'<cmd>e $VIMM<cr>',                                    'keymaps config'},
