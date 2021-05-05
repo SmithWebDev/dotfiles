@@ -1,26 +1,15 @@
-local utils = require'smithwebdev.start.utils'
+--local utils = require'smithwebdev.start.utils'
 local config = require 'lspconfig'
-local install = require 'lspinstall'
-local status = require 'lsp-status'
+local servers = {'solargraph', 'cssls', 'elixirls', 'html', 'jsonls', 'sumneko_lua', 'tsserver', 'vimls', 'vuels', 'yamlls'}
 
 local function swd_on_attach()
 end
 
-local function setup_servers()
-	install.setup()
-
-	for _, server in pairs(install.installed_servers()) do
+local function setup_servers() 
+	for server in servers do
 		config[server].setup{on_attach = swd_on_attach}
 	end
 end
-
-setup_servers()
-
-install.post_install_hook = function ()
-	setup_servers()
-	vim.cmd("bufdo e")
-end
-
 
 -- LSP Saga
 -- -------------------------------------
