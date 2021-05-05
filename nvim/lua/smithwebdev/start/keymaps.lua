@@ -52,16 +52,6 @@ utils.keymap('n', '<right>', ':vertical resize -2<CR>')
 -- -------------------------------------
 --utils.keymap('n', '<M-j>', [[mz:m+<CR>`z]])
 
--- Vsnip Maps
--- -------------------------------------
---utils.keymap('i','jk', [[vsnip#expandable() ? '<Plug>(vsnip-expand)' : 'jk']], {expr = true, noremap = false})
---utils.keymap('s','jk', [[vsnip#expandable() ? '<Plug>(vsnip-expand)' : 'jk']], {expr = true, noremap = false})
---utils.keymap('i','<TAB>', [[vsnip#jumpable(1) ? '<Plug>(vsnip-jump-next)' : '<TAB>']], {expr = true, noremap = false})
---utils.keymap('s','<TAB>', [[vsnip#jumpable(1) ? '<Plug>(vsnip-jump-next)' : '<TAB>']], {expr = true, noremap = false})
---utils.keymap('i','<S-TAB>', [[vsnip#jumpable(-1) ? '<Plug>(vsnip-jump-prev)' : '<S-TAB>']], {expr = true, noremap = false})
---utils.keymap('s','<S-TAB>', [[vsnip#jumpable(-1) ? '<Plug>(vsnip-jump-prev)' : '<S-TAB>']], {expr = true, noremap = false})
---utils.keymap('v', '<leader><leader>h', ':VYank<cr>')
-
 --Selection Remaps
 -- -------------------------------------
 utils.keymap('i', '<C-j>', '<C-n>')

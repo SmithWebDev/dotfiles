@@ -18,6 +18,7 @@ function  M.setup()
   require 'smithwebdev.plugins.config.emmet'
   require 'smithwebdev.plugins.config.gitworktree'
   require 'smithwebdev.plugins.config.lsp'
+  require 'smithwebdev.plugins.config.clc'
   require 'smithwebdev.plugins.config.spectre'
   require 'smithwebdev.plugins.config.telescope'
   require 'smithwebdev.plugins.config.treesitter'

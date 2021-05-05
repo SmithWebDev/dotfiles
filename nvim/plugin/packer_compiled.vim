@@ -195,10 +195,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
   },
-  ["nvim-lspinstall"] = {
-    loaded = true,
-    path = "/home/smith/.local/share/nvim/site/pack/packer/start/nvim-lspinstall"
-  },
   ["nvim-lua-guide"] = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/nvim-lua-guide"
@@ -226,6 +222,10 @@ _G.packer_plugins = {
   ["nvim-whichkey-setup.lua"] = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/nvim-whichkey-setup.lua"
+  },
+  ["nvim-workbench"] = {
+    loaded = true,
+    path = "/home/smith/.local/share/nvim/site/pack/packer/start/nvim-workbench"
   },
   ["nvim-yarp"] = {
     loaded = true,
@@ -262,6 +262,10 @@ _G.packer_plugins = {
   ["tagalong.vim"] = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/tagalong.vim"
+  },
+  ["telescope-frecency.nvim"] = {
+    loaded = true,
+    path = "/home/smith/.local/share/nvim/site/pack/packer/start/telescope-frecency.nvim"
   },
   ["telescope-fzy-native.nvim"] = {
     loaded = true,
@@ -390,10 +394,6 @@ _G.packer_plugins = {
   ["vim-which-key"] = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/vim-which-key"
-  },
-  ["vim-wordmotion"] = {
-    loaded = true,
-    path = "/home/smith/.local/share/nvim/site/pack/packer/start/vim-wordmotion"
   }
 }
 

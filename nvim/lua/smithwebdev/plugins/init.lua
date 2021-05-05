@@ -37,13 +37,15 @@ packer.startup(function(use)
 --  use 'rafamadriz/friendly-snippets'
 --
 -- LSP
-  use 'neovim/nvim-lspconfig'
-  use 'glepnir/lspsaga.nvim'
-  use 'folke/lsp-trouble.nvim'
-  use 'onsails/lspkind-nvim'
---  use 'kosayoda/nvim-lightbulb'
-  use 'nvim-lua/lsp-status.nvim'
   use 'creativenull/diagnosticls-nvim'
+  use 'folke/lsp-trouble.nvim'
+  use 'folke/lsp-colors.nvim' 
+  use 'glepnir/lspsaga.nvim'
+  use 'kabouzeid/nvim-lspinstall'
+--  use 'kosayoda/nvim-lightbulb'
+  use 'neovim/nvim-lspconfig'
+  use 'nvim-lua/lsp-status.nvim'
+  use 'onsails/lspkind-nvim'
 
 -- Ruby/ Rails
 --  use 'tpope/vim-endwise'
@@ -170,7 +172,7 @@ packer.startup(function(use)
   --use 'chaoren/vim-wordmotion'
   use 'justinmk/vim-sneak'
   use 'tpope/vim-sleuth'
-  use 'marcushwz/nvim-workbench'
+  use 'kdav5758/NoCLC.nvim'
 end)
 
 require 'smithwebdev.plugins.config'.setup()
