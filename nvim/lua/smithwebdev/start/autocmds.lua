@@ -36,7 +36,7 @@ auto(
   [[
     augroup autosave
         au!
-        let blacklist = ['packer', 'NvimTree', 'netrw', 'TelescopePrompt', 'spectre_panel', 'startify']
+        let blacklist = ['packer', 'NvimTree', 'netrw', 'TelescopePrompt', 'spectre_panel', 'startify', 'calendar']
         au BufEnter * if &filetype == "" | setlocal ft=text | endif
         au TextChanged,InsertLeave * if index(blacklist, &ft) < 0 | silent w | endif
     augroup END
@@ -57,7 +57,7 @@ auto(
 
 auto(
   [[
-    au Filetype NvimTree set relativenumber
+    au Filetype NvimTree setlocal relativenumber
   ]],false
   )
 

@@ -71,6 +71,10 @@ end
 time("try_loadstring definition", false)
 time("Defining packer_plugins", true)
 _G.packer_plugins = {
+  ["NoCLC.nvim"] = {
+    loaded = true,
+    path = "/home/smith/.local/share/nvim/site/pack/packer/start/NoCLC.nvim"
+  },
   ScrollColors = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/ScrollColors"
@@ -98,6 +102,10 @@ _G.packer_plugins = {
   ["bracey.vim"] = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/bracey.vim"
+  },
+  ["calendar.vim"] = {
+    loaded = true,
+    path = "/home/smith/.local/share/nvim/site/pack/packer/start/calendar.vim"
   },
   ["colorbuddy.nvim"] = {
     loaded = true,
@@ -147,9 +155,9 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/lens.vim"
   },
-  ["lexima.vim"] = {
+  ["lsp-colors.nvim"] = {
     loaded = true,
-    path = "/home/smith/.local/share/nvim/site/pack/packer/start/lexima.vim"
+    path = "/home/smith/.local/share/nvim/site/pack/packer/start/lsp-colors.nvim"
   },
   ["lsp-status.nvim"] = {
     loaded = true,
@@ -179,6 +187,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/mirodark"
   },
+  ["nvim-autopairs"] = {
+    loaded = true,
+    path = "/home/smith/.local/share/nvim/site/pack/packer/start/nvim-autopairs"
+  },
   ["nvim-colorizer.lua"] = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua"
@@ -190,6 +202,10 @@ _G.packer_plugins = {
   ["nvim-hlslens"] = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/nvim-hlslens"
+  },
+  ["nvim-lsp-installer"] = {
+    loaded = true,
+    path = "/home/smith/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
@@ -215,6 +231,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/nvim-treesitter-context"
   },
+  ["nvim-ts-autotag"] = {
+    loaded = true,
+    path = "/home/smith/.local/share/nvim/site/pack/packer/start/nvim-ts-autotag"
+  },
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/nvim-web-devicons"
@@ -222,10 +242,6 @@ _G.packer_plugins = {
   ["nvim-whichkey-setup.lua"] = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/nvim-whichkey-setup.lua"
-  },
-  ["nvim-workbench"] = {
-    loaded = true,
-    path = "/home/smith/.local/share/nvim/site/pack/packer/start/nvim-workbench"
   },
   ["nvim-yarp"] = {
     loaded = true,
@@ -250,6 +266,10 @@ _G.packer_plugins = {
   ["popup.nvim"] = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/popup.nvim"
+  },
+  ["rest.nvim"] = {
+    loaded = true,
+    path = "/home/smith/.local/share/nvim/site/pack/packer/start/rest.nvim"
   },
   seeing_is_believing = {
     loaded = true,
@@ -339,9 +359,21 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/vim-node"
   },
+  ["vim-pandoc"] = {
+    loaded = true,
+    path = "/home/smith/.local/share/nvim/site/pack/packer/start/vim-pandoc"
+  },
+  ["vim-pandoc-syntax"] = {
+    loaded = true,
+    path = "/home/smith/.local/share/nvim/site/pack/packer/start/vim-pandoc-syntax"
+  },
   ["vim-polyglot"] = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/vim-polyglot"
+  },
+  ["vim-ragtag"] = {
+    loaded = true,
+    path = "/home/smith/.local/share/nvim/site/pack/packer/start/vim-ragtag"
   },
   ["vim-rails"] = {
     loaded = true,
@@ -387,9 +419,17 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/vim-test"
   },
+  ["vim-trello"] = {
+    loaded = true,
+    path = "/home/smith/.local/share/nvim/site/pack/packer/start/vim-trello"
+  },
   ["vim-ultest"] = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/vim-ultest"
+  },
+  ["vim-wakatime"] = {
+    loaded = true,
+    path = "/home/smith/.local/share/nvim/site/pack/packer/start/vim-wakatime"
   },
   ["vim-which-key"] = {
     loaded = true,

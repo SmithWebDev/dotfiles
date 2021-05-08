@@ -18,13 +18,12 @@ packer.startup(function(use)
   use 'nanotee/nvim-lua-guide'
 
 -- Completion
-  use 'cohama/lexima.vim'
   use 'hrsh7th/nvim-compe'
   use 'mattn/emmet-vim'
   --use 'rstacruz/vim-hyperstyle'
   use 'roxma/nvim-yarp'
   use 'roxma/vim-hug-neovim-rpc'
---  use 'shougo/deoplete.nvim'
+  use 'windwp/nvim-autopairs'
 
 -- Explorer
   use 'kyazdani42/nvim-tree.lua'
@@ -39,21 +38,22 @@ packer.startup(function(use)
 -- LSP
   use 'creativenull/diagnosticls-nvim'
   use 'folke/lsp-trouble.nvim'
-  use 'folke/lsp-colors.nvim' 
+  use 'folke/lsp-colors.nvim'
   use 'glepnir/lspsaga.nvim'
-  use 'kabouzeid/nvim-lspinstall'
+  --use 'kabouzeid/nvim-lspinstall'
 --  use 'kosayoda/nvim-lightbulb'
   use 'neovim/nvim-lspconfig'
   use 'nvim-lua/lsp-status.nvim'
   use 'onsails/lspkind-nvim'
+  use 'williamboman/nvim-lsp-installer'
 
 -- Ruby/ Rails
---  use 'tpope/vim-endwise'
+  use 'tpope/vim-endwise'
   use 'tpope/vim-rails'
 
 -- File Converter
-  --use 'vim-pandoc/vim-pandoc'
-  --use 'vim-pandoc/vim-pandoc-syntax'
+  use 'vim-pandoc/vim-pandoc'
+  use 'vim-pandoc/vim-pandoc-syntax'
 
 -- Treesitter
   use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
@@ -96,7 +96,7 @@ packer.startup(function(use)
   use 'vim-test/vim-test'
 
 -- Webdev
---  use 'windwp/nvim-ts-autotag'
+  use 'windwp/nvim-ts-autotag'
 --  use 'gennaro-tedesco/nvim-jqx'
   use 'andrewradev/tagalong.vim'
   use 'norcalli/nvim-colorizer.lua'
@@ -134,15 +134,15 @@ packer.startup(function(use)
 -- Node Plugins
   use'moll/vim-node'
 
-
 -- General Plugins
-  use 'yggdroot/indentline'
+--  use 'yggdroot/indentline'
   use 'kevinhwang91/nvim-hlslens'
   use 'lukas-reineke/indent-blankline.nvim'
   --use 'wellle/context.vim'
   use 'andymass/vim-matchup'
   use 'alvan/vim-closetag'
   use 'tpope/vim-surround'
+  use 'tpope/vim-ragtag'
   use 'easymotion/vim-easymotion'
   use 'junegunn/vim-easy-align'
 --  use 'kevinhwang91/nvim-bqf'
@@ -151,7 +151,7 @@ packer.startup(function(use)
 --  use 'kevinhwang91/rnvimr'
   use 'mhinz/vim-startify'
 --  use 'metakirby5/codi.vim'
-  use 'psliwka/vim-smoothie' 
+  use 'psliwka/vim-smoothie'
   use 'sunjon/shade.nvim'
   use 'kdav5758/TrueZen.nvim'
 --  use 'moll/vim-bbye'
@@ -173,6 +173,11 @@ packer.startup(function(use)
   use 'justinmk/vim-sneak'
   use 'tpope/vim-sleuth'
   use 'kdav5758/NoCLC.nvim'
+  use 'wakatime/vim-wakatime'
+  use 'itchyny/calendar.vim'
+  --use 'mattn/calendar-vim'
+  use 'NTBBloodbath/rest.nvim'
+  use 'yoshio15/vim-trello'
 end)
 
 require 'smithwebdev.plugins.config'.setup()
