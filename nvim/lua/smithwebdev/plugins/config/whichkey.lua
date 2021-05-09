@@ -103,6 +103,12 @@ local keymap = {
     T = {'<cmd>Telescope treesitter<cr>',                       'find treesitter'},
     u = {'<cmd>Telescope ultisnips ultisnips<cr>',              'find snippets'}
   },
+  m = {
+    name = '+markdown',
+    m = {':MarkdownPreviewToggle<cr>',                          'Toggle Markdown Preview'},
+    o = {':MarkdownPreview<cr>',                                'Open Markdown Preview'},
+    s = {':MarkdownPreviewStop',                                'Stop Markdown Preview'}
+  },
   r = {
     name = '+rails',
     a = {

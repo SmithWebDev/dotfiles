@@ -47,13 +47,12 @@ packer.startup(function(use)
   use 'onsails/lspkind-nvim'
   use 'williamboman/nvim-lsp-installer'
 
--- Ruby/ Rails
+-- Filetype
   use 'tpope/vim-endwise'
   use 'tpope/vim-rails'
-
--- File Converter
   use 'vim-pandoc/vim-pandoc'
   use 'vim-pandoc/vim-pandoc-syntax'
+  use {'iamcco/markdown-preview.nvim', run = 'cd app && npm install'}
 
 -- Treesitter
   use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
@@ -126,10 +125,6 @@ packer.startup(function(use)
 
 -- Ruby Plugins
   use 'joshcheek/seeing_is_believing'
-
--- Markdown Plugins
-  use {'iamcco/markdown-preview.nvim', run = 'cd app && npm install'}
-  use 'instant-markdown/vim-instant-markdown'
 
 -- Node Plugins
   use'moll/vim-node'
