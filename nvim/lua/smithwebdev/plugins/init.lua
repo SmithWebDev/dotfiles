@@ -53,6 +53,8 @@ packer.startup(function(use)
   use 'vim-pandoc/vim-pandoc'
   use 'vim-pandoc/vim-pandoc-syntax'
   use {'iamcco/markdown-preview.nvim', run = 'cd app && npm install'}
+  use 'kkoomen/vim-doge'
+  use 'sbdchd/neoformat'
 
 -- Treesitter
   use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
@@ -65,7 +67,8 @@ packer.startup(function(use)
   use 'ryanoasis/vim-devicons'
 
 -- Status Line and Bufferline
-  use 'glepnir/galaxyline.nvim'
+  use 'hoob3rt/lualine.nvim'
+--  use 'glepnir/galaxyline.nvim'
 --  use 'romgrk/barbar.nvim'
 
 -- Telescope
@@ -105,6 +108,7 @@ packer.startup(function(use)
 -- Marks & Registers
 --  use 'gennaro-tedesco/nvim-peekup'
   use 'kshenoy/vim-signature'
+  use 'MattesGroeger/vim-bookmarks'
 
 -- ColorScheme Plugins
   use 'vim-scripts/ScrollColors'
@@ -121,7 +125,8 @@ packer.startup(function(use)
   use 'bignimbus/pop-punk.vim'
   use 'rafi/awesome-vim-colorschemes'
   use 'rktjmp/lush.nvim'
-
+  use 'shaunsingh/moonlight.nvim'
+  use 'marko-cerovac/material.nvim'
 
 -- Ruby Plugins
   use 'joshcheek/seeing_is_believing'
@@ -143,7 +148,7 @@ packer.startup(function(use)
 --  use 'kevinhwang91/nvim-bqf'
 --  use 'unblevable/quick-scope'
 --  use 'airblade/vim-rooter'
---  use 'kevinhwang91/rnvimr'
+  use 'kevinhwang91/rnvimr'
   use 'mhinz/vim-startify'
 --  use 'metakirby5/codi.vim'
   use 'psliwka/vim-smoothie'
@@ -173,6 +178,7 @@ packer.startup(function(use)
   --use 'mattn/calendar-vim'
   use 'NTBBloodbath/rest.nvim'
   use 'yoshio15/vim-trello'
+  use 'terrortylor/nvim-comment'
 end)
 
 require 'smithwebdev.plugins.config'.setup()

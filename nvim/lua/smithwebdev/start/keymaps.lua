@@ -5,7 +5,7 @@ local utils = require 'smithwebdev.start.utils'
 -- -------------------------------------
 vim.g.mapleader = ' '
 
-
+utils.keymap('n', '<C-g>', [[<Cmd>lua require('material.functions').toggle_style()<CR>]])
 -- Buffer maps
 -- -------------------------------------
 --utils.keymap('n', '<leader>ba', '<cmd>buffers<CR>')
@@ -20,7 +20,6 @@ utils.keymap('n', '<leader><CR>', '<cmd>noh<CR>')
 -- Easy Esc
 -- -------------------------------------
 utils.keymap('i', 'jj', '<Esc>')
-utils.keymap('i', 'kj', '<Esc>')
 
 -- Resize window panes
 -- -------------------------------------
@@ -29,6 +28,8 @@ utils.keymap('n', '<down>', ':resize -2<CR>')
 utils.keymap('n', '<left>', ':vertical resize +2<CR>')
 utils.keymap('n', '<right>', ':vertical resize -2<CR>')
 
+utils.keymap('n', 'H', '0')
+utils.keymap('n', 'L', '$')
 -- tabs
 -- -------------------------------------
 --utils.keymap('n', '<leader>t=', ':-tabm<CR>')

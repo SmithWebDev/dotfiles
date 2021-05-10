@@ -6,9 +6,10 @@ local w=vim.wo
 -- =============================================================================
 
 vim.cmd 'syntax on'
+vim.cmd 'colorscheme material'
 --vim.cmd 'colorscheme archery'
 --vim.cmd 'colorscheme birds-of-paradise'
-vim.cmd 'colorscheme gloombuddy'
+--vim.cmd 'colorscheme gloombuddy'
 --vim.cmd 'colorscheme mirodark'
 vim.cmd 'hi Normal guibg=NONE ctermbg=NONE'
 

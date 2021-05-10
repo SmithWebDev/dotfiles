@@ -123,10 +123,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/emmet-vim"
   },
-  ["galaxyline.nvim"] = {
-    loaded = true,
-    path = "/home/smith/.local/share/nvim/site/pack/packer/start/galaxyline.nvim"
-  },
   ["git-worktree.nvim"] = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/git-worktree.nvim"
@@ -146,10 +142,6 @@ _G.packer_plugins = {
   ["indent-blankline.nvim"] = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim"
-  },
-  indentline = {
-    loaded = true,
-    path = "/home/smith/.local/share/nvim/site/pack/packer/start/indentline"
   },
   ["lens.vim"] = {
     loaded = true,
@@ -175,6 +167,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/lspsaga.nvim"
   },
+  ["lualine.nvim"] = {
+    loaded = true,
+    path = "/home/smith/.local/share/nvim/site/pack/packer/start/lualine.nvim"
+  },
   ["lush.nvim"] = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/lush.nvim"
@@ -183,9 +179,21 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim"
   },
+  ["material.nvim"] = {
+    loaded = true,
+    path = "/home/smith/.local/share/nvim/site/pack/packer/start/material.nvim"
+  },
   mirodark = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/mirodark"
+  },
+  ["moonlight.nvim"] = {
+    loaded = true,
+    path = "/home/smith/.local/share/nvim/site/pack/packer/start/moonlight.nvim"
+  },
+  neoformat = {
+    loaded = true,
+    path = "/home/smith/.local/share/nvim/site/pack/packer/start/neoformat"
   },
   ["nvim-autopairs"] = {
     loaded = true,
@@ -194,6 +202,10 @@ _G.packer_plugins = {
   ["nvim-colorizer.lua"] = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua"
+  },
+  ["nvim-comment"] = {
+    loaded = true,
+    path = "/home/smith/.local/share/nvim/site/pack/packer/start/nvim-comment"
   },
   ["nvim-compe"] = {
     loaded = true,
@@ -271,6 +283,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/rest.nvim"
   },
+  rnvimr = {
+    loaded = true,
+    path = "/home/smith/.local/share/nvim/site/pack/packer/start/rnvimr"
+  },
   seeing_is_believing = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/seeing_is_believing"
@@ -311,6 +327,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/vim-abolish"
   },
+  ["vim-bookmarks"] = {
+    loaded = true,
+    path = "/home/smith/.local/share/nvim/site/pack/packer/start/vim-bookmarks"
+  },
   ["vim-closetag"] = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/vim-closetag"
@@ -322,6 +342,10 @@ _G.packer_plugins = {
   ["vim-devicons"] = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/vim-devicons"
+  },
+  ["vim-doge"] = {
+    loaded = true,
+    path = "/home/smith/.local/share/nvim/site/pack/packer/start/vim-doge"
   },
   ["vim-dogrun"] = {
     loaded = true,
@@ -335,6 +359,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/vim-easymotion"
   },
+  ["vim-endwise"] = {
+    loaded = true,
+    path = "/home/smith/.local/share/nvim/site/pack/packer/start/vim-endwise"
+  },
   ["vim-hug-neovim-rpc"] = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/vim-hug-neovim-rpc"
@@ -342,10 +370,6 @@ _G.packer_plugins = {
   ["vim-hybrid-material"] = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/vim-hybrid-material"
-  },
-  ["vim-instant-markdown"] = {
-    loaded = true,
-    path = "/home/smith/.local/share/nvim/site/pack/packer/start/vim-instant-markdown"
   },
   ["vim-jdaddy"] = {
     loaded = true,
