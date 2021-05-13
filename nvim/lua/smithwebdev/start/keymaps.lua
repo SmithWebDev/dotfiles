@@ -114,4 +114,4 @@ utils.keymap('n', '<leader>q', '<C-w>q')
 -- **WhichKey 
 -- -------------------------------------
 --utils.keymap('n', '<leader>', [[<cmd>WhichKey '<Space>'<CR>]])
---utils.keymap('n', ',', [[<cmd>WhichKey ','<CR>]])
+utils.keymap('n', ',', [[<cmd>WhichKey ','<CR>]])

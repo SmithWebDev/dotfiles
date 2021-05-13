@@ -1,6 +1,7 @@
 -- Example onfig in lua
---vim.g.material_style = 'deep ocean'
-vim.g.material_style = 'palenight'
+vim.g.material_style = 'deep ocean'
+--vim.g.material_style = 'palenight'
+--vim.g.material_style = 'moonlight'
 vim.g.material_italic_comments = true
 vim.g.material_italic_keywords = true
 vim.g.material_italic_functions = true

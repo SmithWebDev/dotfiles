@@ -6,7 +6,8 @@ local w=vim.wo
 -- =============================================================================
 
 vim.cmd 'syntax on'
-vim.cmd 'colorscheme material'
+--vim.cmd 'colorscheme material'
+vim.cmd 'colorscheme moonlight'
 --vim.cmd 'colorscheme archery'
 --vim.cmd 'colorscheme birds-of-paradise'
 --vim.cmd 'colorscheme gloombuddy'

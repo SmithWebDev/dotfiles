@@ -24,6 +24,15 @@ auto(
   ]], false
   )
 
+-- Transparent Background
+auto(
+  [[
+    au ColorScheme * hi! Normal guibg=NONE
+    au ColorScheme * hi! SignColumn guibg=NONE
+    au ColorScheme * hi! LineNr guibg=NONE
+    au ColorScheme * hi! CursorLineNr guibg=NONE
+  ]], false
+  )
 -- Remove trailing whitespace on save
 auto(
   [[

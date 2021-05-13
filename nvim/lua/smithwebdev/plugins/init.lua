@@ -53,7 +53,7 @@ packer.startup(function(use)
   use 'vim-pandoc/vim-pandoc'
   use 'vim-pandoc/vim-pandoc-syntax'
   use {'iamcco/markdown-preview.nvim', run = 'cd app && npm install'}
-  use 'kkoomen/vim-doge'
+  --use 'kkoomen/vim-doge'
   use 'sbdchd/neoformat'
 
 -- Treesitter
