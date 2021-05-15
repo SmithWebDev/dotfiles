@@ -247,3 +247,28 @@
 #	$0
 #end
 #endsnippet
+
+
+snippet testsuite "Rspec/Guard/Capybara Install"
+	group :development, :test do
+		gem 'byebug', platforms: %i[mri mingw x64_mingw]
+		gem 'rspec-rails'
+	end
+
+	group :development do
+		gem 'guard'
+		gem 'guard-cucumber'
+		gem 'guard-haml'
+		gem 'guard-rspec'
+		gem 'listen', '~> 3.3'
+		gem 'rack-livereload'
+		gem 'rack-mini-profiler', '~> 2.0'
+		gem 'spring'
+		gem 'web-console', '>= 4.1.0'
+	end
+
+	group :test do
+		gem 'capybara'
+	end
+endsnippet
+

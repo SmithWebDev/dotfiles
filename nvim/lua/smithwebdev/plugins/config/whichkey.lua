@@ -6,18 +6,18 @@ local keymap = {
     name = '+extended options',
     b = {
       name = '+Bracey',
-      b = {'<cmd>Bracey<cr>',                               'start Bracey server'},
-      r = {'<cmd>BraceyReload<cr>',                         'reload Bracey server'},
-      s = {'<cmd>BraceyStop<cr>',                           'stop Bracey server'},
+      b = {'<cmd>Bracey<cr>',                                   'start Bracey server'},
+      r = {'<cmd>BraceyReload<cr>',                             'reload Bracey server'},
+      s = {'<cmd>BraceyStop<cr>',                               'stop Bracey server'},
     },
     c = {
       name = '+edit outside vim configs',
-      j = {'<cmd>e ~/.jsbeautifyrc<cr>',                    'edit JS Beautify config'},
-      r = {'<cmd>e ~/.rifle.conf<cr>',                      'edit ranger config'},
-      t = {'<cmd>e ~/.tmux.conf<cr>',                       'edit tmux config'},
-      z = {'<cmd>e ~/.zshrc<cr>',                           'edit zshrc'}
+      j = {'<cmd>e ~/.jsbeautifyrc<cr>',                        'edit JS Beautify config'},
+      r = {'<cmd>e ~/.rifle.conf<cr>',                          'edit ranger config'},
+      t = {'<cmd>e ~/.tmux.conf<cr>',                           'edit tmux config'},
+      z = {'<cmd>e ~/.zshrc<cr>',                               'edit zshrc'}
     },
-    g = {'<cmd>Goyo<cr>',                                   'toggle Goyo'},
+    g = {'<cmd>Goyo<cr>',                                       'toggle Goyo'},
     l = {
       name = '+LSP',
       a = {'<cmd>Lspsaga code_action<CR>',                      'lsp code action'},
@@ -30,6 +30,12 @@ local keymap = {
       p = {'<cmd>Lspsaga preview_definition<CR>',               'Preview Definition'},
       r = {'<cmd>Lspsaga rename<CR>',                           'Rename'},
       w = {'<cmd>Lspsaga show_line_diagnostics<CR>',            'Show line diagnostic'},
+    },
+    S = {
+      name = '+spectre',
+      f = {[[viw:lua require('spectre').open_file_search()<cr>]], 'search in current file'},
+      o = {[[:lua require('spectre').open()<cr>]],                'open spectre'},
+      w = {[[viw:lua require('spectre').open_visual()<cr>]],      'search current word'}
     },
     s = {
       name = '+Seeing Is Believing',
@@ -76,6 +82,8 @@ local keymap = {
   },
   c = {
     name ='+Commands',
+    d = {':!mkdir ', 'make directory'},
+    m = {':!mv ',  'move files'},
     t = {':!touch ',                                            'create file'},
     r = {':!ruby ',                                             'Run Ruby Command'},
     y = {':!yarn add ',                                         'Yarn add..'}
@@ -99,7 +107,7 @@ local keymap = {
       g = {'<cmd>Telescope git_commits<cr>',                    'commits'},
       c = {'<cmd>Telescope git_bcommits<cr>',                   'bcommits'},
       b = {'<cmd>Telescope git_branches<cr>',                   'branches'},
-      s = {'<cmd>Telescope git_status<cr>',                     'status'},
+      s = {'<cmd>Telescope git_jkjstatus<cr>',                     'status'},
     },
     f = {'<cmd>Telescope find_files<cr>',                       'find files'},
     h = {'<cmd>Telescope help_tags<cr>',                        'help tags'},
@@ -112,7 +120,7 @@ local keymap = {
     name = '+markdown',
     m = {':MarkdownPreviewToggle<cr>',                          'Toggle Markdown Preview'},
     o = {':MarkdownPreview<cr>',                                'Open Markdown Preview'},
-    s = {':MarkdownPreviewStop',                                'Stop Markdown Preview'}
+    s = {':MarkdownPreviewStop<cr>',                            'Stop Markdown Preview'}
   },
   n = {
     name = '+neoformat',
@@ -133,6 +141,7 @@ local keymap = {
       t = {'<cmd>AT<cr>',                                       'edit alternate in tab'},
       v = {'<cmd>AV<cr>',                                       'edit alternate in v split'},
     },
+    b = {':!bundle install<cr>', 'Bundle Install'},
     e = {'<cmd>Extract ',                                       'Extract to View/Helper/Concern'},
     r = {
       name = '+relative',
@@ -143,10 +152,7 @@ local keymap = {
     },
   },
   s = {
-    name = '+spectre',
-    f = {[[viw:lua require('spectre').open_file_search()<cr>]], 'search in current file'},
-    o = {[[:lua require('spectre').open()<cr>]],                'open spectre'},
-    w = {[[viw:lua require('spectre').open_visual()<cr>]],      'search current word'}
+    name = 'Scope',
   },
   t = {
     name = '+tabs',
@@ -166,6 +172,12 @@ local keymap = {
     t = {':tabs<cr>',                                           'show open tabs'},
     u = {':tabnew $VIMU<cr>',                                   'open utils file'},
     x = {':tabnew $VIME/',                                      'open config file'}
+  },
+  T = {
+    name = '+Todo',
+    q = {'<cmd>TodoQuickFix<cr>',                               'Open Todo in QuickFix Window'},
+    t = {'<cmd>TodoTrouble<cr>',                                'Open Trouble'},
+    T = {'<cmd>TodoTelescope<cr>',                              'Search Todo in Telescope'}
   },
   u = {
     name = '+ultest',
@@ -191,12 +203,12 @@ local keymap = {
   }
 }
 local visual_keymap = {
-  j = {':move \'>+1<CR>gv-gv', 'move line down'},
-  k = {':move \'<-2<CR>gv-gv', 'move line up'},
+  j = {':move \'>+1<CR>gv-gv',                                  'move line down'},
+  k = {':move \'<-2<CR>gv-gv',                                  'move line up'},
   r = {
     name = '+rails',
-    e = {":Extract ", 'Extracts range to Partial, Helper, Concern'}
-  }
+    e = {":Extract ",                                           'Extracts range to Partial, Helper, Concern'}
+  },
 }
 wk.register_keymap('leader',                                    keymap)
 wk.register_keymap('leader',                                    visual_keymap, {mode = 'v'})

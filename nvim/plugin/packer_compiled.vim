@@ -319,6 +319,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/telescope.nvim"
   },
+  ["todo-comments.nvim"] = {
+    loaded = true,
+    path = "/home/smith/.local/share/nvim/site/pack/packer/start/todo-comments.nvim"
+  },
   ultisnips = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/ultisnips"
@@ -358,6 +362,14 @@ _G.packer_plugins = {
   ["vim-endwise"] = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/vim-endwise"
+  },
+  ["vim-fugitive"] = {
+    loaded = true,
+    path = "/home/smith/.local/share/nvim/site/pack/packer/start/vim-fugitive"
+  },
+  ["vim-haml"] = {
+    loaded = true,
+    path = "/home/smith/.local/share/nvim/site/pack/packer/start/vim-haml"
   },
   ["vim-hug-neovim-rpc"] = {
     loaded = true,

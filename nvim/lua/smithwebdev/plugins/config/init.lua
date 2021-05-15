@@ -31,6 +31,7 @@ function  M.setup()
   require 'smithwebdev.plugins.config.spectre'
   require 'smithwebdev.plugins.config.statusline'
   require 'smithwebdev.plugins.config.telescope'
+  require 'smithwebdev.plugins.config.todo'
   require 'smithwebdev.plugins.config.treesitter'
   require 'smithwebdev.plugins.config.whichkeysetup'
   require 'smithwebdev.plugins.config.whichkey'

@@ -3,6 +3,7 @@
 -- =============================================================================
 local o=vim.o
 local w=vim.wo
+local command=vim.api.nvim_command
 -- =============================================================================
 
 vim.cmd 'syntax on'
@@ -76,3 +77,4 @@ o.backup=false
 o.writebackup=false
 o.clipboard='unnamedplus'
 
+command'set tags+=gems.tags'

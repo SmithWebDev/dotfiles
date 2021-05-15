@@ -50,6 +50,7 @@ packer.startup(function(use)
 -- Filetype
   use 'tpope/vim-endwise'
   use 'tpope/vim-rails'
+  use 'tpope/vim-haml'
   use 'vim-pandoc/vim-pandoc'
   use 'vim-pandoc/vim-pandoc-syntax'
   use {'iamcco/markdown-preview.nvim', run = 'cd app && npm install'}
@@ -86,7 +87,7 @@ packer.startup(function(use)
 --  use 'TimUntersberger/neogit'
   use {'lewis6991/gitsigns.nvim', requires = {'nvim-lua/plenary.nvim'}}
 --  use 'f-person/git-blame.nvim'
---  use 'tpope/vim-fugitive'
+  use 'tpope/vim-fugitive'
 --  use 'tpope/vim-rhubarb'
 
 -- Easily Create Gists
@@ -107,6 +108,7 @@ packer.startup(function(use)
 
 -- Marks & Registers
 --  use 'gennaro-tedesco/nvim-peekup'
+  use 'folke/todo-comments.nvim'
   use 'kshenoy/vim-signature'
   use 'MattesGroeger/vim-bookmarks'
 
