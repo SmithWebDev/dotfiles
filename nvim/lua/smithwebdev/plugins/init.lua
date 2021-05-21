@@ -97,6 +97,7 @@ packer.startup(function(use)
 -- Testing
   use 'rcarriga/vim-ultest'
   use 'vim-test/vim-test'
+  use 'thoughtbot/vim-rspec'
 
 -- Webdev
   use 'windwp/nvim-ts-autotag'
@@ -105,6 +106,9 @@ packer.startup(function(use)
   use 'norcalli/nvim-colorizer.lua'
   use 'turbio/bracey.vim'
 
+
+-- Tmux 
+  use 'christoomey/vim-tmux-navigator'
 
 -- Marks & Registers
 --  use 'gennaro-tedesco/nvim-peekup'
@@ -137,7 +141,7 @@ packer.startup(function(use)
   use'moll/vim-node'
 
 -- General Plugins
---  use 'yggdroot/indentline'
+  use 'yggdroot/indentline'
   use 'kevinhwang91/nvim-hlslens'
   use 'lukas-reineke/indent-blankline.nvim'
   --use 'wellle/context.vim'
@@ -174,7 +178,7 @@ packer.startup(function(use)
   --use 'chaoren/vim-wordmotion'
   use 'justinmk/vim-sneak'
   use 'tpope/vim-sleuth'
-  use 'kdav5758/NoCLC.nvim'
+  --use 'kdav5758/NoCLC.nvim'
   use 'wakatime/vim-wakatime'
   use 'itchyny/calendar.vim'
   --use 'mattn/calendar-vim'

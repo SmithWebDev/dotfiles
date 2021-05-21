@@ -88,6 +88,10 @@ local keymap = {
     r = {':!ruby ',                                             'Run Ruby Command'},
     y = {':!yarn add ',                                         'Yarn add..'}
   },
+  C = {
+    name= '+Ctags',
+    a = {':ta '}
+    },
   e = {
     name = '+NvimTree',
     e = {'<cmd>NvimTreeToggle<cr>',                             'toggle NvimTree'},
@@ -142,7 +146,9 @@ local keymap = {
       v = {'<cmd>AV<cr>',                                       'edit alternate in v split'},
     },
     b = {':!bundle install<cr>', 'Bundle Install'},
-    e = {'<cmd>Extract ',                                       'Extract to View/Helper/Concern'},
+    d = {'<cmd>Destroy',  'Rails Destroy'},
+    g = {'<cmd>Generate ',  'Rails Generate'},
+
     r = {
       name = '+relative',
       e = {'<cmd>RE<cr>',                                       'edit relative file'},

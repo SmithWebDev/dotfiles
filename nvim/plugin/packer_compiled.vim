@@ -71,10 +71,6 @@ end
 time("try_loadstring definition", false)
 time("Defining packer_plugins", true)
 _G.packer_plugins = {
-  ["NoCLC.nvim"] = {
-    loaded = true,
-    path = "/home/smith/.local/share/nvim/site/pack/packer/start/NoCLC.nvim"
-  },
   ScrollColors = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/ScrollColors"
@@ -142,6 +138,10 @@ _G.packer_plugins = {
   ["indent-blankline.nvim"] = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim"
+  },
+  indentline = {
+    loaded = true,
+    path = "/home/smith/.local/share/nvim/site/pack/packer/start/indentline"
   },
   ["lens.vim"] = {
     loaded = true,
@@ -415,6 +415,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/vim-repeat"
   },
+  ["vim-rspec"] = {
+    loaded = true,
+    path = "/home/smith/.local/share/nvim/site/pack/packer/start/vim-rspec"
+  },
   ["vim-rvm"] = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/vim-rvm"
@@ -450,6 +454,10 @@ _G.packer_plugins = {
   ["vim-test"] = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/vim-test"
+  },
+  ["vim-tmux-navigator"] = {
+    loaded = true,
+    path = "/home/smith/.local/share/nvim/site/pack/packer/start/vim-tmux-navigator"
   },
   ["vim-trello"] = {
     loaded = true,
