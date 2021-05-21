@@ -1,7 +1,7 @@
 local M = {}
 
 function M.init()
-  require 'smithwebdev.plugins.config.api'
+--  require 'smithwebdev.plugins.config.api'
   require 'smithwebdev.plugins.config.bookmarks'
   require 'smithwebdev.plugins.config.bracey'
   --require 'smithwebdev.plugins.config.calendar'
