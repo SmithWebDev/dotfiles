@@ -23,7 +23,8 @@ packer.startup(function(use)
   --use 'rstacruz/vim-hyperstyle'
   use 'roxma/nvim-yarp'
   use 'roxma/vim-hug-neovim-rpc'
-  use 'windwp/nvim-autopairs'
+--  use 'windwp/nvim-autopairs'
+  use 'jiangmiao/auto-pairs'
 
 -- Explorer
   use 'kyazdani42/nvim-tree.lua'

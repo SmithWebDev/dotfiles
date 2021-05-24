@@ -3,7 +3,7 @@ vim.g.which_key_dict={','}
 local wk = require('whichkey_setup')
 local keymap = {
   ['<leader>'] = {
-    name = '+extended options',
+    name = '+extended_options',
     b = {
       name = '+Bracey',
       b = {'<cmd>Bracey<cr>',                                   'start Bracey server'},
@@ -158,7 +158,7 @@ local keymap = {
     },
   },
   s = {
-    name = 'Scope',
+    name = '+Scope',
   },
   t = {
     name = '+tabs',
@@ -168,8 +168,8 @@ local keymap = {
     e = {':tabedit %<cr>',                                      'tab edit current file'},
     h = {':tabfirst<cr>',                                       'first tab'},
     i = {':tabnew $MYVIMRC<cr>',                                'open init in tab'},
-    j = {':tabnext<cr>',                                        'next tab'},
-    k = {':tabprev<cr>',                                        'previous tab'},
+    --j = {':tabnext<cr>',                                        'next tab'},
+    --k = {':tabprev<cr>',                                        'previous tab'},
     l = {':tablast<cr>',                                        'last tab'},
     m = {':tabnew $VIMM<cr>',                                   'open keymap in tab'},
     n = {':tabnew<space>',                                      'open new tab'},

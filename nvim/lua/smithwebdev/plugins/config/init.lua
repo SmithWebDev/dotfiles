@@ -19,6 +19,7 @@ end
 
 
 function  M.setup()
+--  require 'smithwebdev.plugins.config.nvim-autopairs'
   require 'smithwebdev.plugins.config.autopairs'
   require 'smithwebdev.plugins.config.colorizer'
   require 'smithwebdev.plugins.config.comment'
