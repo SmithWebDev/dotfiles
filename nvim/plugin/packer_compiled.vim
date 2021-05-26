@@ -119,10 +119,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/elrodeo-vim-colorscheme"
   },
-  ["emmet-vim"] = {
-    loaded = true,
-    path = "/home/smith/.local/share/nvim/site/pack/packer/start/emmet-vim"
-  },
   ["git-worktree.nvim"] = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/git-worktree.nvim"
