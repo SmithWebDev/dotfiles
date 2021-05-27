@@ -18,7 +18,7 @@ auto(
   [[
     augroup exitInsert
       au CursorHoldI * stopinsert
-      au InsertEnter * let updaterestore=&updatetime | set updatetime=10000
+      au InsertEnter * let updaterestore=&updatetime | set updatetime=3000
       au InsertLeave * let &updatetime=updaterestore
     augroup END
   ]], false
