@@ -199,6 +199,7 @@ local keymap = {
     e = {':e $VIME/',                                           'select plugin config'},
     f = {'<cmd>luafile %<cr>',                                  'luafile %'},
     j = {'<cmd>so %<cr>',                                       'refresh vim source'},
+    l = {'<cmd>e $VIML<cr>',                                    'LSP init'},
     m = {'<cmd>e $VIMM<cr>',                                    'keymaps config'},
     o = {'<cmd>e $MYVIMRC<cr>',                                 'edit init'},
     p = {'<cmd>e $VIMP<cr>',                                    'plugin list'},
