@@ -5,6 +5,7 @@ function M.init()
   require 'smithwebdev.plugins.config.bookmarks'
   require 'smithwebdev.plugins.config.bracey'
   --require 'smithwebdev.plugins.config.calendar'
+  require 'smithwebdev.plugins.config.cheat'
   require 'smithwebdev.plugins.config.closetag'
   require 'smithwebdev.plugins.config.easymotion'
   require 'smithwebdev.plugins.config.lens'

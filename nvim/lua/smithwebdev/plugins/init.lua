@@ -57,6 +57,8 @@ packer.startup(function(use)
   use {'iamcco/markdown-preview.nvim', run = 'cd app && npm install'}
   --use 'kkoomen/vim-doge'
   use 'sbdchd/neoformat'
+  use 'Rishabhrd/popfix'
+  use 'Rishabhrd/nvim-cheat.sh'
 
 -- Treesitter
   use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
