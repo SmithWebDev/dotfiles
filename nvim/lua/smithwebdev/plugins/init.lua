@@ -110,7 +110,6 @@ packer.startup(function(use)
   use 'norcalli/nvim-colorizer.lua'
   use 'turbio/bracey.vim'
 
-
 -- Tmux 
   use 'christoomey/vim-tmux-navigator'
 
