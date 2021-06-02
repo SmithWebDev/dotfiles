@@ -57,7 +57,7 @@ o.autowrite=true
 o.autowriteall=true
 o.mouse='a'
 o.termguicolors=true
-o.t_Co='256'
+--o.t_Co='256'
 o.undodir=vim.fn.stdpath('cache')..'/undodir'
 o.undofile=true
 
