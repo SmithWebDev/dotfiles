@@ -18,19 +18,6 @@ local keymap = {
       z = {'<cmd>e ~/.zshrc<cr>',                               'edit zshrc'}
     },
     g = {'<cmd>Goyo<cr>',                                       'toggle Goyo'},
-    l = {
-      name = '+LSP',
-      a = {'<cmd>Lspsaga code_action<CR>',                      'lsp code action'},
-      d = {'<cmd>lua vim.lsp.buf.definition()<CR>',             'go to definition'},
-      e = {'<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>',     'set location list'},
-      f = {'<cmd>Lspsaga lsp_finder<CR>',                       'Lsp Finder'},
-      h = {'<cmd>Lspsaga signature_help<CR>',                   'Show Signature Help'},
-      k = {'<cmd>Lspsaga hover_doc<CR>',                        'Doc on hover'},
-      m = {'<cmd>lua vim.lsp.buf.formatting()<CR>',             'lsp formatting'},
-      p = {'<cmd>Lspsaga preview_definition<CR>',               'Preview Definition'},
-      r = {'<cmd>Lspsaga rename<CR>',                           'Rename'},
-      w = {'<cmd>Lspsaga show_line_diagnostics<CR>',            'Show line diagnostic'},
-    },
     S = {
       name = '+spectre',
       f = {[[viw:lua require('spectre').open_file_search()<cr>]], 'search in current file'},
@@ -42,6 +29,12 @@ local keymap = {
       b = {':%!seeing_is_believing --timeout 12 --line-length 500 --number-of-captures 300 --alignment-strategy chunk<cr>',                                       'Annotate every line'},
       c = {'%!seeing_is_believing --clean<cr>',                 'Remove Annotations'},
       n = {':%!seeing_is_believing --timeout 12 --line-length 500 --number-of-captures 300 --alignment-strategy chunk --xmpfilter-style<cr>',                     'Annotat marked lines'}
+    },
+    t = {
+      name = '+Todo',
+      f = {'<cmd>TodoTelescope<cr>',                              'Search Todo in Telescope'},
+      q = {'<cmd>TodoQuickFix<cr>',                               'Open Todo in QuickFix Window'},
+      t = {'<cmd>TodoTrouble<cr>',                                'Open Trouble'},
     },
     U = {
       name = '+UltiSnips',
@@ -106,6 +99,7 @@ local keymap = {
       h = {'<cmd>Telescope command_history<cr>',                'history'},
       q = {'<cmd>Telescope quickfix<cr>',                       'quickfix'},
     },
+    f = {'<cmd>Telescope find_files<cr>',                       'find files'},
     g = {
       name = '+git',
       g = {'<cmd>Telescope git_commits<cr>',                    'commits'},
@@ -113,13 +107,50 @@ local keymap = {
       b = {'<cmd>Telescope git_branches<cr>',                   'branches'},
       s = {'<cmd>Telescope git_jkjstatus<cr>',                     'status'},
     },
-    f = {'<cmd>Telescope find_files<cr>',                       'find files'},
     h = {'<cmd>Telescope help_tags<cr>',                        'help tags'},
     r = {'<cmd>Telescope registers<cr>',                        'find register'},
     t = {'<cmd>Telescope tags<cr>',                             'find tags'},
     T = {'<cmd>Telescope treesitter<cr>',                       'find treesitter'},
     u = {'<cmd>Telescope ultisnips ultisnips<cr>',              'find snippets'}
   },
+  l = {
+    name = '+LSP',
+    a = {'<cmd>Lspsaga code_action<CR>',                      'lsp code action'},
+    c = {'Lspsaga show_cursor_diagnostics','show_cursor_diagnostics'},
+    d = {'<cmd>lua vim.lsp.buf.definition()<CR>',             'go to definition'},
+    D = {'<cmd>lua vim.lsp.buf.declaration()<CR>',            'go to declaration'},
+    e = {'<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>',     'set location list'},
+    f = {'<cmd>Lspsaga lsp_finder<CR>',                       'Lsp Finder'},
+    h = {'<cmd>Lspsaga signature_help<CR>',                   'Show Signature Help'},
+    i = {'Lspsaga implement','implement'},
+    j = {'<cmd>Lspsaga diagnostic_jump_next<CR>','diagnostic_jump_next'},
+    k = {'<cmd>Lspsaga diagnostic_jump_prev<CR>','diagnostic_jump_prev'},
+    K = {'<cmd>Lspsaga hover_doc<CR>',                        'Doc on hover'},
+    m = {'<cmd>lua vim.lsp.buf.formatting()<CR>',             'lsp formatting'},
+    p = {
+      name = '+preview',
+      d = {'<cmd>Lspsaga preview_definition<CR>',               'Preview Definition'},
+      D = {'<cmd>lua require(\'goto-preview\').goto_preview_definition()<CR>'},
+      i = {'<cmd>lua require(\'goto-preview\').goto_preview_implementation()<CR>'},
+      p = {'<cmd>lua require(\'goto-preview\').close_all_win()<CR>'}
+    },
+    r = {'<cmd>Lspsaga rename<CR>',                           'Rename'},
+    S = {'<cmd>Lspsaga show_line_diagnostics<CR>',            'Show line diagnostic'},
+  },
+--  l = {
+--    name = '+LSP',
+--    a = {'<cmd>Lspsaga code_action<CR>',                      'lsp code action'},
+--    d = {'<cmd>lua vim.lsp.buf.definition()<CR>',             'go to definition'},
+--    D = {'<cmd>lua vim.lsp.buf.declaration()<CR>',            'go to declaration'},
+--    e = {'<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>',     'set location list'},
+--    f = {'<cmd>Lspsaga lsp_finder<CR>',                       'Lsp Finder'},
+--    h = {'<cmd>Lspsaga signature_help<CR>',                   'Show Signature Help'},
+--    k = {'<cmd>Lspsaga hover_doc<CR>',                        'Doc on hover'},
+--    m = {'<cmd>lua vim.lsp.buf.formatting()<CR>',             'lsp formatting'},
+--    p = {'<cmd>Lspsaga preview_definition<CR>',               'Preview Definition'},
+--    r = {'<cmd>Lspsaga rename<CR>',                           'Rename'},
+--    w = {'<cmd>Lspsaga show_line_diagnostics<CR>',            'Show line diagnostic'},
+--  },
   m = {
     name = '+markdown',
     m = {':MarkdownPreviewToggle<cr>',                          'Toggle Markdown Preview'},
@@ -168,8 +199,6 @@ local keymap = {
     e = {':tabedit %<cr>',                                      'tab edit current file'},
     h = {':tabfirst<cr>',                                       'first tab'},
     i = {':tabnew $MYVIMRC<cr>',                                'open init in tab'},
-    --j = {':tabnext<cr>',                                        'next tab'},
-    --k = {':tabprev<cr>',                                        'previous tab'},
     l = {':tablast<cr>',                                        'last tab'},
     m = {':tabnew $VIMM<cr>',                                   'open keymap in tab'},
     n = {':tabnew<space>',                                      'open new tab'},
@@ -177,13 +206,8 @@ local keymap = {
     s = {':tabnew $VIMS<cr>',                                   'open settings file'},
     t = {':tabs<cr>',                                           'show open tabs'},
     u = {':tabnew $VIMU<cr>',                                   'open utils file'},
+    w = {':tabnew $VIME/whichkey.lua<cr>', },
     x = {':tabnew $VIME/',                                      'open config file'}
-  },
-  T = {
-    name = '+Todo',
-    q = {'<cmd>TodoQuickFix<cr>',                               'Open Todo in QuickFix Window'},
-    t = {'<cmd>TodoTrouble<cr>',                                'Open Trouble'},
-    T = {'<cmd>TodoTelescope<cr>',                              'Search Todo in Telescope'}
   },
   u = {
     name = '+ultest',
@@ -197,8 +221,8 @@ local keymap = {
     a = {'<cmd>e $VIMA<cr>',                                    'autocmds config'},
     c = {'<cmd>e $VIMC<cr>',                                    'plugins config'},
     e = {':e $VIME/',                                           'select plugin config'},
-    f = {'<cmd>luafile %<cr>',                                  'luafile %'},
-    j = {'<cmd>so %<cr>',                                       'refresh vim source'},
+    --f = {'<cmd>luafile %<cr>',                                  'luafile %'},
+    j = {'<cmd>so %<cr>',                                       'refresh source'},
     l = {'<cmd>e $VIML<cr>',                                    'LSP init'},
     m = {'<cmd>e $VIMM<cr>',                                    'keymaps config'},
     o = {'<cmd>e $MYVIMRC<cr>',                                 'edit init'},
@@ -206,7 +230,7 @@ local keymap = {
     s = {'<cmd>e $VIMS<cr>',                                    'settings config'},
     w = {'<cmd>e $VIME/whichkey.lua<cr>',                       'whichkey config'},
     u = {'<cmd>e $VIMU<cr>',                                    'utility config'},
-    v = {'<cmd>luafile $MYVIMRC<cr>',                           'luafile init config'},
+    --v = {'<cmd>luafile $MYVIMRC<cr>',                           'luafile init config'},
   }
 }
 local visual_keymap = {

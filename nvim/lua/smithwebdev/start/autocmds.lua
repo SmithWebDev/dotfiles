@@ -12,13 +12,13 @@ local auto = vim.api.nvim_exec
 --  vim.api.nvim_exec(cmds, false)
 --end
 -- =============================================================================
-
+print('Autocommands connected')
 -- Automatically exit from Insert mode
 auto(
   [[
     augroup exitInsert
       au CursorHoldI * stopinsert
-      au InsertEnter * let updaterestore=&updatetime | set updatetime=3000
+      au InsertEnter * let updaterestore=&updatetime | set updatetime=1000
       au InsertLeave * let &updatetime=updaterestore
     augroup END
   ]], false
@@ -45,7 +45,7 @@ auto(
   [[
     augroup autosave
         au!
-        let blacklist = ['packer', 'NvimTree', 'netrw', 'TelescopePrompt', 'spectre_panel', 'startify', 'calendar', 'text', 'help', 'Trouble', 'tutor']
+        let blacklist = ['packer', 'NvimTree', 'netrw', 'TelescopePrompt', 'spectre_panel', 'startify', 'calendar', 'text', 'help', 'Trouble', 'tutor', 'Neoformat', 'lspinfo']
         au BufEnter * if &filetype == "" | setlocal ft=text | endif
         au TextChanged,InsertLeave * if index(blacklist, &ft) < 0 | silent w | endif
     augroup END
@@ -66,19 +66,25 @@ auto(
 
 auto(
   [[
-    au Filetype NvimTree setlocal relativenumber
+    au Filetype * setlocal relativenumber
   ]],false
   )
 
 auto(
-  [[
-    au BufWritePost * UltestNearest
-  ]], true
-  )
+[[
+  au CursorHold, CursorHoldI * lua require'nvim-lightbulb.update_lightbulb()
+]], false
+)
 
-auto(
-  [[
-    au!
-    au BufWritePre * undojoin | Neoformat
-    ]], false
-  )
+--auto(
+--  [[
+--    au BufWritePost * UltestNearest
+--  ]], true
+--  )
+
+--auto(
+--  [[
+--    au!
+--    au BufWritePre * undojoin | Neoformat
+--    ]], false
+--  )

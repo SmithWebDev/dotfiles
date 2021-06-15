@@ -31,18 +31,6 @@ function M.buf_keymap(mode, lhs, rhs, opts)
   key_mapper(mode, lhs, rhs, opts, true)
 end
 
--- Reload the all modules that reside
--- in config lua/ dir
-function M.reload_config()
-  for k, v in pairs(package.loaded) do
-    if string.match(k, "^smithwebdev") then
-      package.loaded[k] = nil
-    end
-  end
-
-  dofile(os.getenv('MYVIMRC'))
-end
-
 -- Toggle Conceal for markdown, json, etc
 function M.toggle_conceal()
   if vim.wo.conceallevel == 2 then

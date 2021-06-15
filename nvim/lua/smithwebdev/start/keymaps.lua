@@ -1,4 +1,5 @@
 local utils = require 'smithwebdev.start.utils'
+print('Keymaps connected')
 -- -------------------------------------
 
 -- Map Leader
@@ -30,6 +31,7 @@ utils.keymap('n', '<right>', ':vertical resize -2<CR>')
 
 utils.keymap('n', 'H', '0')
 utils.keymap('n', 'L', '$')
+
 -- tabs
 -- -------------------------------------
 --utils.keymap('n', '<leader>t=', ':-tabm<CR>')
@@ -67,14 +69,14 @@ utils.keymap('n', '<C-k>', '<C-w>k')
 utils.keymap('n', '<C-l>', '<C-w>l')
 
 
-utils.keymap('n', '<leader>d', '<C-w>_<C-w>|')
+utils.keymap('n', 'M', '<C-w>_<C-w>|')
 utils.keymap('n', '<leader>=', '<C-w>=')
 utils.keymap('n', '<leader>|', '<C-w>|')
 utils.keymap('n', '<leader>_', '<C-w>_')
 utils.keymap('n', '<leader>\\', '<C-w>v')
 utils.keymap('n', '<leader>-', '<C-w>s')
 utils.keymap('n', '<leader>q', '<C-w>q')
-utils.keymap('n', '<leader>Q', '<cmd>qa')
+utils.keymap('n', '<leader>Q', '<cmd>qa<cr>')
 
 -- VIM commands
 -- -------------------------------------
@@ -95,7 +97,7 @@ utils.keymap('n', '<leader>Q', '<cmd>qa')
 -- -------------------------------------
 --utils.keymap('i', 'jk', 'compe#confirm("<CR>")')
 
--- **Nvim-Tree 
+-- **Nvim-Tree
 -- -------------------------------------
 --utils.keymap('n', '<leader>ee', ':NvimTreeToggle<CR>')
 --utils.keymap('n', '<leader>ef', ':NvimTreeFindFile<CR>')

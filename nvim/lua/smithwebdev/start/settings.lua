@@ -5,10 +5,10 @@ local o=vim.o
 local w=vim.wo
 local command=vim.api.nvim_command
 -- =============================================================================
-
+print('Settings connected')
 vim.cmd 'syntax on'
 --vim.cmd 'colorscheme material'
-vim.cmd 'colorscheme moonlight'
+--vim.cmd 'colorscheme moonlight'
 --vim.cmd 'colorscheme archery'
 --vim.cmd 'colorscheme birds-of-paradise'
 --vim.cmd 'colorscheme gloombuddy'
@@ -18,7 +18,7 @@ vim.cmd 'hi Normal guibg=NONE ctermbg=NONE'
 -- Completion Options --
 o.completeopt='longest,menuone,noinsert,noselect'
 o.shortmess=o.shortmess .. 'c'
-o.updatetime=3000
+--o.updatetime=2000
 o.timeoutlen=500
 
 -- Fold Options --
@@ -38,7 +38,7 @@ o.softtabstop=2
 
 -- Line Options --
 o.textwidth=80
-o.listchars='space:·,tab:→ ,trail:·,extends:…,eol:↩'
+o.listchars='space:.,tab:→ ,trail:·,extends:…,eol:↩' --space:·
 o.showbreak='+++'
 o.scrolloff=999
 o.sidescrolloff=15
