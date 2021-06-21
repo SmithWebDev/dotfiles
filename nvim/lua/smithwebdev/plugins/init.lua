@@ -50,6 +50,17 @@ packer.startup(function(use)
   use 'rmagatti/goto-preview'
   use 'pechorin/any-jump.vim'
 
+<<<<<<< Updated upstream
+=======
+-- File Converter
+  use 'vim-pandoc/vim-pandoc'
+  use 'vim-pandoc/vim-pandoc-syntax'
+
+
+-- Status Line and Bufferline
+  use 'glepnir/galaxyline.nvim'
+  use 'romgrk/barbar.nvim'
+>>>>>>> Stashed changes
 
   --File Type Plugins
   --=================
