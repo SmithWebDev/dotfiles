@@ -57,3 +57,9 @@
 - [SQL nvim](https://github.com/tami5/sql.nvim)
 - [Goto Preview](https://github.com/rmagatti/goto-preview)
 - [Vgit](https://github.com/tanvirtin/vgit.nvim)
+
+### Marks, Register, Todos
+
+- [Nvim Peekup](https://github.com/gennaro-tedesco/nvim-peekup)
+- [Todo Comments](https://github.com/folke/todo-comments.nvim)
+- [Vim Signature](https://github.com/kshenoy/vim-signature)

@@ -2,27 +2,36 @@ export ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="robbyrussell"
 
-plugins=(git)
+plugins=(
+  git
+  bundler
+  dotenv
+  osx
+  rake
+  ruby
+  npm
+  zsh-syntax-highlighting
+  zsh-autosuggestions
+)
 
 source $ZSH/oh-my-zsh.sh
-<<<<<<< HEAD
-#source $HOME/dotfiles/aliases
-=======
 
+export EDITOR=nvim
 
-##############################
+#############################
 #          ALIAS             #
 ##############################
 
 # ColorLS (ruby gem)
 # ----------------------------
-#alias ls='colorls --sort-dirs'
-#alias lsa='colorls -A --sort-dirs'
-#alias lst='colorls --tree --light'
+alias ls='colorls --sort-dirs'
+alias lsa='colorls -A --sort-dirs'
+alias lst='colorls --tree --light'
 
 # Config files
 # ----------------------------
 alias zshc='nvim ~/.zshrc'
+alias szsh='source ~/.zshrc'
 alias nvc='nvim ~/.config/nvim/init.lua'
 alias tmc='nvim ~/.tmux.conf'
 
@@ -94,6 +103,13 @@ function gacp() { git add . && git commit -m "$1" && git push;}
 #------- Git add remote && push
 function grap() { git remote add origin $1 && git push -u origin master;}
 
+#     Postgresql
+alias pgstart='sudo service postgresql start'
+
+#     Python
+# ----------------------------
+alias python='python3'
+
 #     Rails
 # ----------------------------
 alias rs='rails s'
@@ -123,6 +139,7 @@ alias rgs='rails g scaffold'
 
 #---- Rails Kill Server----------
 alias search='lsof -wni tcp:3000'
+alias search1='lsof -wni tcp:5432'
 alias destroy='kill -9 $1'
 
 #---- Rails Routes Alias -------
@@ -168,6 +185,10 @@ function deviseview(){ rails g devise:install && rails g devise:views }
 # Ruby/Rails Testing Functions
 #-------------------------------
 
+# Matestack UI 
+#-------------------------------
+alias matestack='bundle add matestack-ui-core && yarn add matestack-ui-core'
+#
 #------- Testing Initialization
 function rinit() { rails g rspec:install && bundle binstubs rspec-core }
 function ginit() { guard init && bundle binstubs guard }
@@ -188,16 +209,36 @@ function nvfront() { mkcd $1 && touch index.html gulpfile.js index.js style.sass
 
 function fe() { mkdir $1 && cd $1 && touch index.html style.sass && git init && ci .;}
 
+# React Commands
+# ----------------------------
+function cra() { create-react-app $1 && cd $1 }
+
+# Tmux Commands
+# ----------------------------
+alias tls='tmux list-sessions'
+alias tas='tmux attach -t $1'
+alias tns='tmux new-session -s $1'
+alias tks='tmux kill-session -t $1'
+alias tk='tmux kill-server'
+
+
+# Windows Terminal
+# ----------------------------
+# export WT='cd ../../mnt/c/Users/smith/Local\ Settings/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/'
+alias wt='cd ../../mnt/c/Users/smith/Local\ Settings/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/'
+
 # WSL
 # ----------------------------
-alias goto='wslview'
+alias goto='wslview $1'
+alias clean='sudo make distclean'
+alias minstall='sudo make CMAKE_BUILD_TYPE=Release install'
 
 # VIM
 # ----------------------------
 alias nv='nvim'
 alias vim='$HOME/.config/nvim'
-alias vimc='$HOME/.config/nvim/lua/smithwebdev/plugins/config'
-alias vimp='$HOME/.config/nvim/lua/smithwebdev/plugins'
+alias vimc='$HOME/.config/nvim/lua/smithwebdev/start/plugins/config'
+alias vimp='$HOME/.config/nvim/lua/smithwebdev/start/plugins'
 alias vims='$HOME/.config/nvim/lua/smithwebdev'
 
 #VSCode Extensions dir
@@ -205,7 +246,7 @@ alias vims='$HOME/.config/nvim/lua/smithwebdev'
 alias codex='mnt/c/Users/smith/.vscode/extensions'
 
 alias ctag='ctags -R -f .gitignore/tags --exclude=.git --exclude=log'
->>>>>>> nvim
+alias ct='ct -R --exclude=node_modules --exclude=.git --exclude=log . $(bundle list --paths)'
 alias explorer="explorer.exe ."
 alias vivaldi="vivaldi.exe"
 
@@ -224,14 +265,17 @@ if command -v pyenv 1>/dev/null 2>&1; then
  eval "$(pyenv init -)"
 fi
 
-export VIMA="$HOME/.config/nvim/lua/smithwebdev/autocmds.lua"
-export VIMC="$HOME/.config/nvim/lua/smithwebdev/commands.lua"
-export VIME="$HOME/.config/nvim/lua/smithwebdev/plugins/config"
+export VIMA="$HOME/.config/nvim/lua/smithwebdev/start/autocmds.lua"
+export VIMC="$HOME/.config/nvim/lua/smithwebdev/plugins/config/init.lua"
+export VIME="$HOME/.config/nvim/lua/smithwebdev/plugins/config/"
 export VIMI="$HOME/.config/nvim/init.lua"
-export VIMM="$HOME/.config/nvim/lua/smithwebdev/keymaps.lua"
+export VIML="$HOME/dotfiles/nvim/lua/smithwebdev/plugins/config/lsp/init.lua"
+export VIMM="$HOME/.config/nvim/lua/smithwebdev/start/keymaps.lua"
 export VIMP="$HOME/.config/nvim/lua/smithwebdev/plugins/init.lua"
-export VIMS="$HOME/.config/nvim/lua/smithwebdev/settings.lua"
-export VIMU="$HOME/.config/nvim/lua/smithwebdev/utils.lua"
+export VIMS="$HOME/.config/nvim/lua/smithwebdev/start/settings.lua"
+export VIMU="$HOME/.config/nvim/lua/smithwebdev/start/utils.lua"
 
 
 export TERM=xterm-256color-italic
+
+alias settings='cd ../../mnt/c/Users/smith/Local\ Settings/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState'
