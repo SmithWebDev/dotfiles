@@ -23,15 +23,15 @@ packer.startup(function(use)
   --Cosmetic Upgrades
   --=================
   use 'bkegley/gloombuddy'
-  --use 'camspiers/animate.vim'
-  --use 'camspiers/lens.vim'
+  use 'camspiers/animate.vim'
+  use 'camspiers/lens.vim'
   use 'folke/tokyonight.nvim'
   use 'hoob3rt/lualine.nvim'
-  use 'kdav5758/NoCLC.nvim'
+  --use 'kdav5758/NoCLC.nvim'
   use 'kevinhwang91/nvim-hlslens'
   use 'lukas-reineke/indent-blankline.nvim'
   use 'psliwka/vim-smoothie'
-  --use 'sunjon/shade.nvim'
+  use 'sunjon/shade.nvim'
   use 'tjdevries/colorbuddy.nvim'
   use 'vim-scripts/ScrollColors'
   use 'yggdroot/indentline'
@@ -85,7 +85,13 @@ packer.startup(function(use)
   use 'nvim-lua/lsp-status.nvim'
   use 'onsails/lspkind-nvim'
   use 'ray-x/lsp_signature.nvim'
---
+
+  -- Marks & Registers
+  --=================
+  use 'gennaro-tedesco/nvim-peekup'
+  use 'folke/todo-comments.nvim'
+  use 'kshenoy/vim-signature'
+
   --Snippets
   --=================
   use 'SirVer/ultisnips'

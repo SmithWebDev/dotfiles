@@ -18,6 +18,13 @@ local keymap = {
       z = {'<cmd>e ~/.zshrc<cr>',                               'edit zshrc'}
     },
     g = {'<cmd>Goyo<cr>',                                       'toggle Goyo'},
+    p = {
+      name ='+Packer',
+      c = {'<cmd>PackerClean<cr>',                                'PackerClean'},
+      i = {'<cmd>PackerInstall<cr>',                              'PackerInstall'},
+      s = {'<cmd>PackerSync<cr>',                                 'PackerSync'},
+      u = {'<cmd>PackerUpdate<cr>',                               'PackerUpdate'},
+    },
     S = {
       name = '+spectre',
       f = {[[viw:lua require('spectre').open_file_search()<cr>]], 'search in current file'},
@@ -27,7 +34,7 @@ local keymap = {
     s = {
       name = '+Seeing Is Believing',
       b = {':%!seeing_is_believing --timeout 12 --line-length 500 --number-of-captures 300 --alignment-strategy chunk<cr>',                                       'Annotate every line'},
-      c = {'%!seeing_is_believing --clean<cr>',                 'Remove Annotations'},
+      c = {'%.!seeing_is_believing --clean<cr>',                 'Remove Annotations'},
       n = {':%!seeing_is_believing --timeout 12 --line-length 500 --number-of-captures 300 --alignment-strategy chunk --xmpfilter-style<cr>',                     'Annotat marked lines'}
     },
     t = {
@@ -135,22 +142,8 @@ local keymap = {
       p = {'<cmd>lua require(\'goto-preview\').close_all_win()<CR>'}
     },
     r = {'<cmd>Lspsaga rename<CR>',                           'Rename'},
-    S = {'<cmd>Lspsaga show_line_diagnostics<CR>',            'Show line diagnostic'},
+    s = {'<cmd>Lspsaga show_line_diagnostics<CR>',            'Show line diagnostic'},
   },
---  l = {
---    name = '+LSP',
---    a = {'<cmd>Lspsaga code_action<CR>',                      'lsp code action'},
---    d = {'<cmd>lua vim.lsp.buf.definition()<CR>',             'go to definition'},
---    D = {'<cmd>lua vim.lsp.buf.declaration()<CR>',            'go to declaration'},
---    e = {'<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>',     'set location list'},
---    f = {'<cmd>Lspsaga lsp_finder<CR>',                       'Lsp Finder'},
---    h = {'<cmd>Lspsaga signature_help<CR>',                   'Show Signature Help'},
---    k = {'<cmd>Lspsaga hover_doc<CR>',                        'Doc on hover'},
---    m = {'<cmd>lua vim.lsp.buf.formatting()<CR>',             'lsp formatting'},
---    p = {'<cmd>Lspsaga preview_definition<CR>',               'Preview Definition'},
---    r = {'<cmd>Lspsaga rename<CR>',                           'Rename'},
---    w = {'<cmd>Lspsaga show_line_diagnostics<CR>',            'Show line diagnostic'},
---  },
   m = {
     name = '+markdown',
     m = {':MarkdownPreviewToggle<cr>',                          'Toggle Markdown Preview'},
@@ -160,13 +153,13 @@ local keymap = {
   n = {
     name = '+neoformat',
     },
-  p = {
-    name ='+Packer',
-    c = {'<cmd>PackerClean<cr>',                                'PackerClean'},
-    i = {'<cmd>PackerInstall<cr>',                              'PackerInstall'},
-    s = {'<cmd>PackerSync<cr>',                                 'PackerSync'},
-    u = {'<cmd>PackerUpdate<cr>',                               'PackerUpdate'},
-  },
+--  p = {
+--    name ='+Packer',
+--    c = {'<cmd>PackerClean<cr>',                                'PackerClean'},
+--    i = {'<cmd>PackerInstall<cr>',                              'PackerInstall'},
+--    s = {'<cmd>PackerSync<cr>',                                 'PackerSync'},
+--    u = {'<cmd>PackerUpdate<cr>',                               'PackerUpdate'},
+--  },
   r = {
     name = '+ruby/rails',
     a = {
@@ -221,7 +214,6 @@ local keymap = {
     a = {'<cmd>e $VIMA<cr>',                                    'autocmds config'},
     c = {'<cmd>e $VIMC<cr>',                                    'plugins config'},
     e = {':e $VIME/',                                           'select plugin config'},
-    --f = {'<cmd>luafile %<cr>',                                  'luafile %'},
     j = {'<cmd>so %<cr>',                                       'refresh source'},
     l = {'<cmd>e $VIML<cr>',                                    'LSP init'},
     m = {'<cmd>e $VIMM<cr>',                                    'keymaps config'},
@@ -230,7 +222,7 @@ local keymap = {
     s = {'<cmd>e $VIMS<cr>',                                    'settings config'},
     w = {'<cmd>e $VIME/whichkey.lua<cr>',                       'whichkey config'},
     u = {'<cmd>e $VIMU<cr>',                                    'utility config'},
-    --v = {'<cmd>luafile $MYVIMRC<cr>',                           'luafile init config'},
+    v = {'<cmd>source $MYVIMRC<cr>',                            'luafile init config'},
   }
 }
 local visual_keymap = {

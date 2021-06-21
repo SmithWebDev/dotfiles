@@ -18,7 +18,7 @@ auto(
   [[
     augroup exitInsert
       au CursorHoldI * stopinsert
-      au InsertEnter * let updaterestore=&updatetime | set updatetime=1000
+      au InsertEnter * let updaterestore=&updatetime | set updatetime=2500
       au InsertLeave * let &updatetime=updaterestore
     augroup END
   ]], false
@@ -45,7 +45,7 @@ auto(
   [[
     augroup autosave
         au!
-        let blacklist = ['packer', 'NvimTree', 'netrw', 'TelescopePrompt', 'spectre_panel', 'startify', 'calendar', 'text', 'help', 'Trouble', 'tutor', 'Neoformat', 'lspinfo']
+        let blacklist = ['packer', 'NvimTree', 'netrw', 'TelescopePrompt', 'spectre_panel', 'startify', 'calendar', 'text', 'help', 'Trouble', 'tutor', 'Neoformat', 'lspinfo', 'any-jump']
         au BufEnter * if &filetype == "" | setlocal ft=text | endif
         au TextChanged,InsertLeave * if index(blacklist, &ft) < 0 | silent w | endif
     augroup END
