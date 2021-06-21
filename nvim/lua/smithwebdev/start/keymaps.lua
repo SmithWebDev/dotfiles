@@ -1,5 +1,4 @@
 local utils = require 'smithwebdev.start.utils'
-print('Keymaps connected')
 -- -------------------------------------
 
 -- Map Leader
@@ -118,3 +117,4 @@ utils.keymap('n', '<leader>Q', '<cmd>qa<cr>')
 -- -------------------------------------
 --utils.keymap('n', '<leader>', [[<cmd>WhichKey '<Space>'<CR>]])
 utils.keymap('n', ',', [[<cmd>WhichKey ','<CR>]])
+print('Keymaps connected')

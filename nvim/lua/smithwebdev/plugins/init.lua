@@ -31,6 +31,7 @@ packer.startup(function(use)
   use 'kevinhwang91/nvim-hlslens'
   use 'lukas-reineke/indent-blankline.nvim'
   use 'psliwka/vim-smoothie'
+  use 'shaunsingh/moonlight.nvim'
   use 'sunjon/shade.nvim'
   use 'tjdevries/colorbuddy.nvim'
   use 'vim-scripts/ScrollColors'
@@ -50,8 +51,6 @@ packer.startup(function(use)
   use 'rmagatti/goto-preview'
   use 'pechorin/any-jump.vim'
 
-<<<<<<< Updated upstream
-=======
 -- File Converter
   use 'vim-pandoc/vim-pandoc'
   use 'vim-pandoc/vim-pandoc-syntax'
@@ -59,8 +58,7 @@ packer.startup(function(use)
 
 -- Status Line and Bufferline
   use 'glepnir/galaxyline.nvim'
-  use 'romgrk/barbar.nvim'
->>>>>>> Stashed changes
+  --use 'romgrk/barbar.nvim'
 
   --File Type Plugins
   --=================
@@ -134,3 +132,4 @@ end)
 
 
 require 'smithwebdev.plugins.config'.setup()
+print('Plugins Loaded')

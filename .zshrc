@@ -15,14 +15,13 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
-
 export EDITOR=nvim
 
 #############################
 #          ALIAS             #
 ##############################
 
-# ColorLS (ruby gem)
+# ColorLS (ruby gem) gem install colorls
 # ----------------------------
 alias ls='colorls --sort-dirs'
 alias lsa='colorls -A --sort-dirs'
@@ -168,10 +167,8 @@ function rgsm() { rails g scaffold $1 && rails db:migrate; }
 function rntapp() { rails new $1 && cd $1 && guard init && bundle binstubs guard && rails g rspec:install && bundle binstubs rspec-core && cucumber --init && nvim;}
 #Rails new, change into directory, install webpacker, and open code-insiders
 
-
 #Rails 6 Javascript setup
 function setjs() { mkdir app/javascript/scss app/javascript/js app/javascript/images && touch app/javascript/js/site.js app/javascript/scss/site.scss && mv app/javascript app/webpacker }
-
 
 #------- Rails test function
 function rnapp-() { rails new $1 --database=postgresql --skip-test --skip-action-cable --skip-active-storage --skip-turbolinks --skip-yarn && cd $1 && code-insiders .;}
@@ -188,12 +185,16 @@ function deviseview(){ rails g devise:install && rails g devise:views }
 # Matestack UI 
 #-------------------------------
 alias matestack='bundle add matestack-ui-core && yarn add matestack-ui-core'
-#
+
 #------- Testing Initialization
 function rinit() { rails g rspec:install && bundle binstubs rspec-core }
 function ginit() { guard init && bundle binstubs guard }
 function cinit() { cucumber --init }
 function testing() { guard init && bundle binstubs guard && rails g rspec:install && bundle binstubs rspec-core && cucumber --init }
+
+#     Tagrity
+# ----------------------------
+(tagrity revive &) &> /dev/null
 
 #     Terminal Functions
 # ----------------------------
@@ -215,6 +216,7 @@ function cra() { create-react-app $1 && cd $1 }
 
 # Tmux Commands
 # ----------------------------
+alias tx='tmuxinator'
 alias tls='tmux list-sessions'
 alias tas='tmux attach -t $1'
 alias tns='tmux new-session -s $1'
@@ -245,8 +247,9 @@ alias vims='$HOME/.config/nvim/lua/smithwebdev'
 # ----------------------------
 alias codex='mnt/c/Users/smith/.vscode/extensions'
 
-alias ctag='ctags -R -f .gitignore/tags --exclude=.git --exclude=log'
-alias ct='ct -R --exclude=node_modules --exclude=.git --exclude=log . $(bundle list --paths)'
+alias ctag='ctags -R -f .gitignore/tags --exclude=.git --exclude=log .tags'
+alias rtag='ctags -R --output-format=json --languages=ruby --exclude=.git --exclude=log -f $(bundle list --paths) .tags'
+alias jtag='ctags -R --output-format=json --languages=javascript --exclude=.git --exclude=log -f .tags'
 alias explorer="explorer.exe ."
 alias vivaldi="vivaldi.exe"
 
@@ -276,6 +279,7 @@ export VIMS="$HOME/.config/nvim/lua/smithwebdev/start/settings.lua"
 export VIMU="$HOME/.config/nvim/lua/smithwebdev/start/utils.lua"
 
 
-export TERM=xterm-256color-italic
+#export TERM=xterm-256color-italic
 
 alias settings='cd ../../mnt/c/Users/smith/Local\ Settings/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState'
+source ~/.rvm/scripts/rvm
