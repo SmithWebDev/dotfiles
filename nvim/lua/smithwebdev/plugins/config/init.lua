@@ -31,6 +31,7 @@ function  M.setup()
   require 'smithwebdev.plugins.config.lsp'
   require 'smithwebdev.plugins.config.lualine'
   --require 'smithwebdev.plugins.config.noclc'
+  require 'smithwebdev.plugins.config.nvim-dap'
   --require 'smithwebdev.plugins.config.shade'
   require 'smithwebdev.plugins.config.spectre'
   require 'smithwebdev.plugins.config.statusline'
