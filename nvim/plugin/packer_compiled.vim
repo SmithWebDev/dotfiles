@@ -84,10 +84,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/Smith/.local/share/nvim/site/pack/packer/start/any-jump.vim"
   },
-  ["barbar.nvim"] = {
-    loaded = true,
-    path = "/Users/Smith/.local/share/nvim/site/pack/packer/start/barbar.nvim"
-  },
   ["colorbuddy.nvim"] = {
     loaded = true,
     path = "/Users/Smith/.local/share/nvim/site/pack/packer/start/colorbuddy.nvim"
@@ -151,6 +147,10 @@ _G.packer_plugins = {
   ["markdown-preview.nvim"] = {
     loaded = true,
     path = "/Users/Smith/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim"
+  },
+  ["moonlight.nvim"] = {
+    loaded = true,
+    path = "/Users/Smith/.local/share/nvim/site/pack/packer/start/moonlight.nvim"
   },
   ["nvim-autopairs"] = {
     loaded = true,

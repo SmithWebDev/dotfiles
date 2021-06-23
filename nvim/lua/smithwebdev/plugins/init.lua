@@ -37,11 +37,15 @@ packer.startup(function(use)
   use 'vim-scripts/ScrollColors'
   use 'yggdroot/indentline'
 
+  --Debugging
+  --===================
+  use 'mfussenegger/nvim-dap'
+  use 'rcarriga/nvim-dap-ui'
+
   --Editor Improvements
   --===================
+  use 'junegunn/vim-easy-align'
   use 'tpope/vim-surround'
-
-
 
   --File Explorer
   --===============
@@ -51,11 +55,6 @@ packer.startup(function(use)
   use 'rmagatti/goto-preview'
   use 'pechorin/any-jump.vim'
 
--- File Converter
-  use 'vim-pandoc/vim-pandoc'
-  use 'vim-pandoc/vim-pandoc-syntax'
-
-
 -- Status Line and Bufferline
   use 'glepnir/galaxyline.nvim'
   --use 'romgrk/barbar.nvim'
@@ -63,6 +62,7 @@ packer.startup(function(use)
   --File Type Plugins
   --=================
   use {'iamcco/markdown-preview.nvim', run = 'cd app && npm install'}
+  use 'joshcheek/seeing_is_believing'
   use 'Rishabhrd/popfix'
   use 'Rishabhrd/nvim-cheat.sh'
   use 'tpope/vim-endwise'
@@ -122,6 +122,7 @@ packer.startup(function(use)
   --Testing
   --=================
   use { 'rcarriga/vim-ultest', requires = {'vim-test/vim-test'}, run = ':UpdateRemotePlugins' }
+  --use 'thoughtbot/vim-rspec'
 
   --Treesitter
   --=================

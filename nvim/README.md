@@ -58,8 +58,13 @@
 - [Goto Preview](https://github.com/rmagatti/goto-preview)
 - [Vgit](https://github.com/tanvirtin/vgit.nvim)
 
+### Debugging
+- [Nvim DAP](https://github.com/mfussenegger/nvim-dap)
+- [Nvim DAP UI](https://github.com/rcarriga/nvim-dap-ui)
+
 ### Marks, Register, Todos
 
 - [Nvim Peekup](https://github.com/gennaro-tedesco/nvim-peekup)
 - [Todo Comments](https://github.com/folke/todo-comments.nvim)
 - [Vim Signature](https://github.com/kshenoy/vim-signature)
+

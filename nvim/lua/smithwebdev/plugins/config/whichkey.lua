@@ -33,9 +33,9 @@ local keymap = {
     },
     s = {
       name = '+Seeing Is Believing',
-      b = {':%!seeing_is_believing --timeout 12 --line-length 500 --number-of-captures 300 --alignment-strategy chunk<cr>',                                       'Annotate every line'},
+      b = {':%!seeing_is_believing --timeout 10 --line-length 500 --number-of-captures 300 --alignment-strategy chunk<cr>',                                       'Annotate every line'},
       c = {'%.!seeing_is_believing --clean<cr>',                 'Remove Annotations'},
-      n = {':%!seeing_is_believing --timeout 12 --line-length 500 --number-of-captures 300 --alignment-strategy chunk --xmpfilter-style<cr>',                     'Annotat marked lines'}
+      n = {':%!seeing_is_believing --timeout 10 --line-length 500 --number-of-captures 300 --alignment-strategy chunk --xmpfilter-style<cr>',                     'Annotat marked lines'}
     },
     t = {
       name = '+Todo',
@@ -133,6 +133,7 @@ local keymap = {
     j = {'<cmd>Lspsaga diagnostic_jump_next<CR>','diagnostic_jump_next'},
     k = {'<cmd>Lspsaga diagnostic_jump_prev<CR>','diagnostic_jump_prev'},
     K = {'<cmd>Lspsaga hover_doc<CR>',                        'Doc on hover'},
+    l = {':lua print(vim.inspect(vim.lsp.buf_get_clients()))<cr>',     'check LSP language attach'},
     m = {'<cmd>lua vim.lsp.buf.formatting()<CR>',             'lsp formatting'},
     p = {
       name = '+preview',
