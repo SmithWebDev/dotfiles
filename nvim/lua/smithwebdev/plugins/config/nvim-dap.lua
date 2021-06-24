@@ -5,17 +5,17 @@ dap.adapters.ruby = {
   args = {'exec', 'readapt', 'stdio'};
 }
 
-dap.configuration.ruby = {
-  {
-    type = 'ruby';
-    request = 'launch';
-    name = 'Rails';
-    program = 'bundle';
-    programArgs = {'exec', 'rails', 's'};
-    useBundler = true;
-  },
-}
+--dap.configuration.ruby = {
+--  {
+--    type = 'ruby';
+--    request = 'launch';
+--    name = 'Rails';
+--    program = 'bundle';
+--    programArgs = {'exec', 'rails', 's'};
+--    useBundler = true;
+--  },
+--}
 
-require('dap-ui').setup()
+--require('dap-ui').setup()
 
 -- :help dap.txt

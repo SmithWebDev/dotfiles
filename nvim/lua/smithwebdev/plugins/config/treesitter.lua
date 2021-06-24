@@ -25,5 +25,11 @@ require 'nvim-treesitter.configs'.setup{
       node_decremental = 'grm'
     }
   },
-  indent = {enable = true}
+  indent = {enable = true},
+  playground = {
+    enable = true,
+    disable = {},
+    updatetime = 25,
+    persist_queries = false
+  }
 }
