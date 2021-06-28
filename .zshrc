@@ -34,7 +34,11 @@ alias szsh='source ~/.zshrc'
 alias nvc='nvim ~/.config/nvim/init.lua'
 alias tmc='nvim ~/.tmux.conf'
 
-# Git Aliases
+# FZY
+# ----------------------
+alias fzy='find . -type f | fzy'
+
+# git aliases
 # ----------------------
 alias ga='git add'
 alias gaa='git add .'

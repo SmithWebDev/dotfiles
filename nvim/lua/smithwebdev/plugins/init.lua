@@ -55,8 +55,9 @@ packer.startup(function(use)
   use 'rmagatti/goto-preview'
   use 'pechorin/any-jump.vim'
 
--- Status Line and Bufferline
-  use 'glepnir/galaxyline.nvim'
+  --Status Line and Bufferline
+  --==========================
+  --use 'glepnir/galaxyline.nvim'
   --use 'romgrk/barbar.nvim'
 
   --File Type Plugins
