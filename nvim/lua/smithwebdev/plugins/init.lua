@@ -93,7 +93,9 @@ packer.startup(function(use)
   use 'neovim/nvim-lspconfig'
   use 'nvim-lua/lsp-status.nvim'
   use 'onsails/lspkind-nvim'
+  
   use 'ray-x/lsp_signature.nvim'
+  use { 'ray-x/navigator.lua', requires = {'ray-x/guihua.lua', run = 'cd lua/fzy && make'}}
 
   -- Marks & Registers
   --=================

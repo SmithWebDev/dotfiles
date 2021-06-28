@@ -30,6 +30,7 @@ function  M.setup()
 --  require 'smithwebdev.plugins.config.gitworktree'
   require 'smithwebdev.plugins.config.lsp'
   require 'smithwebdev.plugins.config.lualine'
+  require 'smithwebdev.plugins.config.navigator'
   --require 'smithwebdev.plugins.config.noclc'
   require 'smithwebdev.plugins.config.nvim-dap'
   --require 'smithwebdev.plugins.config.shade'
