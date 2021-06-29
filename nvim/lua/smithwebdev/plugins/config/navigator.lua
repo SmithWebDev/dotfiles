@@ -1,1 +1,3 @@
-require'navigator'.setup()
+require'navigator'.setup({
+  default_mapping = false
+})

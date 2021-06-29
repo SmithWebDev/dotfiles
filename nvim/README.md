@@ -62,6 +62,9 @@
 - [Nvim DAP](https://github.com/mfussenegger/nvim-dap)
 - [Nvim DAP UI](https://github.com/rcarriga/nvim-dap-ui)
 
+### Git
+- [LazyGit](https://github.com/kdheepak/lazygit.nvim)
+
 ### Marks, Register, Todos
 
 - [Nvim Peekup](https://github.com/gennaro-tedesco/nvim-peekup)

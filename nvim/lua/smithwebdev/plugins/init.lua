@@ -77,6 +77,7 @@ packer.startup(function(use)
   --Git Plugins
   --=================
   use 'sindrets/diffview.nvim'
+  use 'kdheepak/lazygit.nvim'
   use 'lambdalisue/gina.vim'
   use 'tanvirtin/vgit.nvim'
 
