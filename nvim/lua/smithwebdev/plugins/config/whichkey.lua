@@ -48,7 +48,6 @@ local keymap = {
       o = {'<cmd>UltiSnipsEdit<cr>',                            'Edit Snippet' },
       s = {'<cmd>Snippets<cr>',                                 'Show Available Snippets'}
     },
-    u = {'<cmd>Ultest<cr>',                                     'Run all test current file'},
     w = {':e $WT',                                              'edit windows terminal config'}
   },
   b = {
@@ -207,6 +206,7 @@ local keymap = {
     name = '+ultest',
     a = {'<cmd>UltestAttach<cr>',                               'Attach (Debugging live)'},
     j = {'<cmd>UltestNearest<cr>',                              'Run nearest test current file'},
+    r = {'<cmd>Ultest<cr>',                                     'Run all test current file'},
     s = {'<cmd>UltestSummary<cr>',                              'Toggle summary window'},
     x = {'<cmd>UltestStop<cr>',                                 'Stop running tests'}
   },
