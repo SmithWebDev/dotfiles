@@ -45,7 +45,7 @@ auto(
   [[
     augroup autosave
         au!
-        let blacklist = ['packer', 'NvimTree', 'netrw', 'TelescopePrompt', 'spectre_panel', 'startify', 'calendar', 'text', 'help', 'Trouble', 'tutor', 'Neoformat', 'lspinfo', 'any-jump', 'tsplayground']
+        let blacklist = ['packer', 'NvimTree', 'netrw', 'TelescopePrompt', 'spectre_panel', 'startify', 'calendar', 'text', 'help', 'Trouble', 'tutor', 'Neoformat', 'lspinfo', 'any-jump', 'tsplayground', 'orgagenda']
         au BufEnter * if &filetype == "" | setlocal ft=text | endif
         au TextChanged,InsertLeave * if index(blacklist, &ft) < 0 | silent w | endif
     augroup END
@@ -62,12 +62,6 @@ auto(
   [[
     au Filetype * set tabstop=2
   ]], false
-  )
-
-auto(
-  [[
-    au Filetype * setlocal relativenumber
-  ]],false
   )
 
 auto(

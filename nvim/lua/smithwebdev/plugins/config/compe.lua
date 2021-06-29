@@ -16,6 +16,7 @@ require 'compe'.setup {
     path = true,
     buffer = true,
     -- calc = true,
+    orgmode = true,
     vsnip = true,
     ultisnips = true,
     snippets_nvim = true,

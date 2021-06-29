@@ -75,7 +75,7 @@ utils.keymap('n', '<leader>_', '<C-w>_')
 utils.keymap('n', '<leader>\\', '<C-w>v')
 utils.keymap('n', '<leader>-', '<C-w>s')
 utils.keymap('n', '<leader>q', '<C-w>q')
-utils.keymap('n', '<leader>Q', '<cmd>qa<cr>')
+utils.keymap('n', '<leader>Q', '<cmd>qa!<cr>')
 
 -- VIM commands
 -- -------------------------------------

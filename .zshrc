@@ -287,3 +287,10 @@ export VIMU="$HOME/.config/nvim/lua/smithwebdev/start/utils.lua"
 
 alias settings='cd ../../mnt/c/Users/smith/Local\ Settings/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState'
 source ~/.rvm/scripts/rvm
+
+
+#### FIG ENV VARIABLES ####
+[ -s ~/.fig/fig.sh ] && source ~/.fig/fig.sh
+#### END FIG ENV VARIABLES ####
+
+

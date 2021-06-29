@@ -94,7 +94,7 @@ local keymap = {
     },
   e = {
     name = '+NvimTree',
-    e = {'<cmd>NvimTreeToggle<cr>',                             'toggle NvimTree'},
+    e = {'<cmd>NvimTreeToggle<cr> | :set rnu<cr> ',                             'toggle NvimTree'},
     f = {'<cmd>NvimTreeFindFile<cr>',                           'NvimTreeFindFile'}
   },
   f = {

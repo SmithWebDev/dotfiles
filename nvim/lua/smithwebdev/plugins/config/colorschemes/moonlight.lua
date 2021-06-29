@@ -6,4 +6,4 @@ vim.g.moonlight_contrast = true
 vim.g.moonlight_borders = true
 vim.g.moonlight_disable_background = true
 
-require('moonlight').set()
+--require('moonlight').set()

@@ -25,6 +25,7 @@ packer.startup(function(use)
   use 'bkegley/gloombuddy'
   use 'camspiers/animate.vim'
   use 'camspiers/lens.vim'
+  use 'djjcast/mirodark'
   use 'folke/tokyonight.nvim'
   use 'hoob3rt/lualine.nvim'
   --use 'kdav5758/NoCLC.nvim'
@@ -45,6 +46,7 @@ packer.startup(function(use)
   --Editor Improvements
   --===================
   use 'junegunn/vim-easy-align'
+  use 'kristijanhusak/orgmode.nvim'
   use 'tpope/vim-surround'
 
   --File Explorer
@@ -94,7 +96,6 @@ packer.startup(function(use)
   use 'neovim/nvim-lspconfig'
   use 'nvim-lua/lsp-status.nvim'
   use 'onsails/lspkind-nvim'
-  
   use 'ray-x/lsp_signature.nvim'
   use { 'ray-x/navigator.lua', requires = {'ray-x/guihua.lua', run = 'cd lua/fzy && make'}}
 
@@ -125,7 +126,6 @@ packer.startup(function(use)
   --Testing
   --=================
   use { 'rcarriga/vim-ultest', requires = {'vim-test/vim-test'}, run = ':UpdateRemotePlugins' }
-  --use 'thoughtbot/vim-rspec'
 
   --Treesitter
   --=================
