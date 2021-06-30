@@ -17,13 +17,11 @@ require 'compe'.setup {
     buffer = true,
     -- calc = true,
     orgmode = true,
-    vsnip = true,
     ultisnips = true,
-    snippets_nvim = true,
     nvim_lsp = true,
     nvim_lua = true,
     spell = true,
     tags = true,
-    -- treesitter = true
+    treesitter = true
   }
 }

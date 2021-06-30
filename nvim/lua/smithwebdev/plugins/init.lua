@@ -16,10 +16,10 @@ packer.startup(function(use)
 
   --Completion
   --===============
-  --use 'hrsh7th/nvim-compe'
+  use 'hrsh7th/nvim-compe'
   use 'mattn/emmet-vim'
-  use 'Shougo/deoplete.nvim'
-  use 'deoplete-plugins/deoplete-lsp'
+  --use 'Shougo/deoplete.nvim'
+  --use 'deoplete-plugins/deoplete-lsp'
   use 'windwp/nvim-autopairs'
 
   --Cosmetic Upgrades
