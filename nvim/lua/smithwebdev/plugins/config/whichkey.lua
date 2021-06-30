@@ -115,10 +115,10 @@ local keymap = {
     T = {'<cmd>Telescope treesitter<cr>',                          'find treesitter'},
     u = {'<cmd>Telescope ultisnips ultisnips<cr>',                 'find snippets'}
   },
-  g = {
+  G = {
     name= '+Git',
     l = {'<cmd>Lazy Git<cr>','Open Lazy Git'},
-    o = {'<cmd>LazyGitConfig','Open Lazy Git Config'}
+    o = {'<cmd>LazyGitConfig<cr>','Open Lazy Git Config'}
   },
   l = {
     name = '+LSP',
@@ -171,8 +171,8 @@ local keymap = {
       v = {'<cmd>AV<cr>',                                       'edit alternate in v split'},
     },
     b = {':!bundle install<cr>', 'Bundle Install'},
-    d = {'<cmd>Destroy',  'Rails Destroy'},
-    g = {'<cmd>Generate ',  'Rails Generate'},
+    d = {':Destroy ',  'Rails Destroy'},
+    g = {':Generate ',  'Rails Generate'},
 
     r = {
       name = '+relative',
@@ -196,11 +196,11 @@ local keymap = {
     l = {':tablast<cr>',                                        'last tab'},
     m = {':tabnew $VIMM<cr>',                                   'open keymap in tab'},
     n = {':tabnew<space>',                                      'open new tab'},
-    p = {':tabnew $VIMP<cr>',                                   ' open plugin file'},
+    p = {':tabnew $VIMP<cr>',                                   'open plugin file'},
     s = {':tabnew $VIMS<cr>',                                   'open settings file'},
     t = {':tabs<cr>',                                           'show open tabs'},
     u = {':tabnew $VIMU<cr>',                                   'open utils file'},
-    w = {':tabnew $VIME/whichkey.lua<cr>', },
+    w = {':tabnew $VIME/whichkey.lua<cr>',                      'open WhichKey Maps'},
     x = {':tabnew $VIME/',                                      'open config file'}
   },
   u = {
