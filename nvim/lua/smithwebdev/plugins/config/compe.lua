@@ -15,15 +15,13 @@ require 'compe'.setup {
   source = {
     path = true,
     buffer = true,
-    -- calc = true,
+    calc = true,
     orgmode = true,
-    vsnip = true,
     ultisnips = true,
-    snippets_nvim = true,
     nvim_lsp = true,
     nvim_lua = true,
     spell = true,
     tags = true,
-    -- treesitter = true
+    treesitter = true
   }
 }
