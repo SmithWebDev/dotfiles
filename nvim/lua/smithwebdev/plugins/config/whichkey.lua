@@ -122,6 +122,7 @@ local keymap = {
   },
   l = {
     name = '+LSP',
+    ["?"] = {':lua print(vim.inspect(vim.lsp.buf_get_clients()))<cr>', 'check LSP language attach'},
     a = {'<cmd>Lspsaga code_action<CR>',                           'lsp code action'},
     c = {'Lspsaga show_cursor_diagnostics',                        'show_cursor_diagnostics'},
     d = {'<cmd>lua vim.lsp.buf.definition()<CR>',                  'go to definition'},
@@ -133,7 +134,7 @@ local keymap = {
     j = {'<cmd>Lspsaga diagnostic_jump_next<CR>',                  'diagnostic_jump_next'},
     k = {'<cmd>Lspsaga diagnostic_jump_prev<CR>',                  'diagnostic_jump_prev'},
     K = {'<cmd>Lspsaga hover_doc<CR>',                             'Doc on hover'},
-    l = {':lua print(vim.inspect(vim.lsp.buf_get_clients()))<cr>', 'check LSP language attach'},
+    l = {'<cmd>lua vim.lsp.codelens.run()<cr>',                    'run lsp codelens'},
     m = {'<cmd>lua vim.lsp.buf.formatting()<CR>',                  'lsp formatting'},
     p = {
       name = '+preview',

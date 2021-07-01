@@ -36,11 +36,13 @@ telescope.setup {
       }
     },
     qflist_previewer = preview.vim_buffer_qflist.new,
-    prompt_position = 'top',
     selection_strategy = "reset",
     sorting_strategy = "ascending",
     use_less = false,
     vimgrep_arguments = {'rg', '--no-heading', '--with-filename', '--line-number', '--column', '--smart-case'},
+    layout_config = {
+      prompt_position = 'top',
+    },
   },
   extensions = {
     media_files = {

@@ -12,7 +12,7 @@ function M.init()
 --  require 'smithwebdev.plugins.config.instantmarkdown'
   require 'smithwebdev.plugins.config.markdown-preview'
   --require 'smithwebdev.plugins.config.material'
-  require 'smithwebdev.plugins.config.nvim-tree'
+  --require 'smithwebdev.plugins.config.nvim-tree'
   require 'smithwebdev.plugins.config.surround'
   require 'smithwebdev.plugins.config.ultisnips'
 --  require 'smithwebdev.plugins.config.vsnip'

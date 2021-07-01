@@ -6,8 +6,7 @@
 - [Vim Devicons](https://github.com/ryanoasis/vim-devicons)
 - [Animate](https://github.com/camspiers/animate.vim)
 - [Lens](https://github.com/camspiers/lens.vim)
-- [Nvim-Compe](https://github.com/hrsh7th/nvim-compe) changing to Deoplete
-- [Deoplete](https://github.com/shougo/deoplete.nvim)
+- [Nvim-Compe](https://github.com/hrsh7th/nvim-compe)
 - [Emmet-vim](https://github.com/mattn/emmit-vim)
 - [Nvim-Autopairs](https://github.com/windwp/nvim-autopairs)
 - [Lualine](https://github.com/hoob3rt/lualine.nvim)

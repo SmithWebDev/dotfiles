@@ -40,6 +40,13 @@ auto(
   ]], false
   )
 
+-- Code Lens support
+auto(
+  [[
+    au CursorHold,CursorHoldI,InsertLeave <buffer> lua vim.lsp.codelens.refresh()
+  ]], false
+  )
+
 -- Saves on text change or exit Insert mode
 auto(
   [[
@@ -55,7 +62,7 @@ auto(
 auto(
   [[
     autocmd Filetype help wincmd L
-    ]], false
+  ]], false
   )
 
 auto(
@@ -65,10 +72,10 @@ auto(
   )
 
 auto(
-[[
-  au CursorHold, CursorHoldI * lua require'nvim-lightbulb.update_lightbulb()
-]], false
-)
+  [[
+    au CursorHold, CursorHoldI * lua require'nvim-lightbulb.update_lightbulb()
+  ]], false
+  )
 
 --auto(
 --  [[
