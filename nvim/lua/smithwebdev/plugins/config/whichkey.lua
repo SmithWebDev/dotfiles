@@ -115,9 +115,9 @@ local keymap = {
     T = {'<cmd>Telescope treesitter<cr>',                          'find treesitter'},
     u = {'<cmd>Telescope ultisnips ultisnips<cr>',                 'find snippets'}
   },
-  G = {
+  g = {
     name= '+Git',
-    l = {'<cmd>Lazy Git<cr>','Open Lazy Git'},
+    l = {'<cmd>LazyGit<cr>','Open Lazy Git'},
     o = {'<cmd>LazyGitConfig<cr>','Open Lazy Git Config'}
   },
   l = {

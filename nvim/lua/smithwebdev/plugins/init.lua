@@ -78,8 +78,8 @@ packer.startup(function(use)
   --=================
   use 'sindrets/diffview.nvim'
   use 'kdheepak/lazygit.nvim'
-  use 'lambdalisue/gina.vim'
-  use 'tanvirtin/vgit.nvim'
+  --use 'lambdalisue/gina.vim'
+  --use 'tanvirtin/vgit.nvim'
 
   --Key Binds
   --===============
@@ -122,7 +122,6 @@ packer.startup(function(use)
   use 'nvim-telescope/telescope-fzy-native.nvim'
   use 'nvim-telescope/telescope-media-files.nvim'
   use 'windwp/nvim-spectre'
-
 
   --Testing
   --=================
