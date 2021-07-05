@@ -70,4 +70,5 @@ o.backup=false
 o.writebackup=false
 o.clipboard='unnamedplus'
 
+o.completefunc='emoji#complete'
 command'set tags+=gems.tags'

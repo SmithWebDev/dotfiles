@@ -16,6 +16,7 @@ packer.startup(function(use)
 
   --Completion
   --===============
+  use 'AndrewRadev/tagalong.vim'
   use 'hrsh7th/nvim-compe'
   use 'mattn/emmet-vim'
   use 'windwp/nvim-autopairs'
@@ -29,14 +30,15 @@ packer.startup(function(use)
   use 'folke/tokyonight.nvim'
   use 'hoob3rt/lualine.nvim'
   --use 'kdav5758/NoCLC.nvim'
+  use 'junegunn/vim-emoji'
   use 'kevinhwang91/nvim-hlslens'
+  use 'norcalli/nvim-colorizer.lua'
   use 'lukas-reineke/indent-blankline.nvim'
   use 'psliwka/vim-smoothie'
   use 'shaunsingh/moonlight.nvim'
   use 'sunjon/shade.nvim'
   use 'tjdevries/colorbuddy.nvim'
   use 'vim-scripts/ScrollColors'
-  use 'yggdroot/indentline'
 
   --Debugging
   --===================
@@ -47,6 +49,7 @@ packer.startup(function(use)
   --===================
   use 'junegunn/vim-easy-align'
   use 'kristijanhusak/orgmode.nvim'
+  use 'nacro90/numb.nvim'
   use 'tpope/vim-surround'
 
   --File Explorer
@@ -78,8 +81,8 @@ packer.startup(function(use)
   --=================
   use 'sindrets/diffview.nvim'
   use 'kdheepak/lazygit.nvim'
-  --use 'lambdalisue/gina.vim'
-  --use 'tanvirtin/vgit.nvim'
+  use 'lambdalisue/gina.vim'
+  use 'tanvirtin/vgit.nvim'
 
   --Key Binds
   --===============

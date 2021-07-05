@@ -16,11 +16,12 @@ require 'compe'.setup {
     path = true,
     buffer = true,
     calc = true,
+    emoji = true,
     orgmode = true,
     ultisnips = true,
     nvim_lsp = true,
     nvim_lua = true,
-    spell = true,
+--    spell = true,
     tags = true,
     treesitter = true
   }

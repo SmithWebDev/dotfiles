@@ -113,10 +113,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim"
   },
-  indentline = {
-    loaded = true,
-    path = "/home/smith/.local/share/nvim/site/pack/packer/start/indentline"
-  },
   ["lazygit.nvim"] = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/lazygit.nvim"
@@ -161,6 +157,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/navigator.lua"
   },
+  ["numb.nvim"] = {
+    loaded = true,
+    path = "/home/smith/.local/share/nvim/site/pack/packer/start/numb.nvim"
+  },
   ["nvim-autopairs"] = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/nvim-autopairs"
@@ -168,6 +168,10 @@ _G.packer_plugins = {
   ["nvim-cheat.sh"] = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/nvim-cheat.sh"
+  },
+  ["nvim-colorizer.lua"] = {
+    loaded = true,
+    path = "/home/smith/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua"
   },
   ["nvim-compe"] = {
     loaded = true,
@@ -257,6 +261,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/sql.nvim"
   },
+  ["tagalong.vim"] = {
+    loaded = true,
+    path = "/home/smith/.local/share/nvim/site/pack/packer/start/tagalong.vim"
+  },
   ["telescope-frecency.nvim"] = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/telescope-frecency.nvim"
@@ -300,6 +308,10 @@ _G.packer_plugins = {
   ["vim-easy-align"] = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/vim-easy-align"
+  },
+  ["vim-emoji"] = {
+    loaded = true,
+    path = "/home/smith/.local/share/nvim/site/pack/packer/start/vim-emoji"
   },
   ["vim-endwise"] = {
     loaded = true,

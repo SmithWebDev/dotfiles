@@ -32,6 +32,7 @@ function  M.setup()
   --require 'smithwebdev.plugins.config.lazygit'
   require 'smithwebdev.plugins.config.navigator'
   --require 'smithwebdev.plugins.config.noclc'
+  require 'smithwebdev.plugins.config.numb'
   require 'smithwebdev.plugins.config.nvim-dap'
   require 'smithwebdev.plugins.config.orgmode'
   --require 'smithwebdev.plugins.config.shade'

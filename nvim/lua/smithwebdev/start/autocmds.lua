@@ -12,7 +12,6 @@ local auto = vim.api.nvim_exec
 --  vim.api.nvim_exec(cmds, false)
 --end
 -- =============================================================================
-print('Autocommands connected')
 -- Automatically exit from Insert mode
 auto(
   [[
@@ -89,3 +88,4 @@ auto(
 --    au BufWritePre * undojoin | Neoformat
 --    ]], false
 --  )
+print('Autocommands connected')
