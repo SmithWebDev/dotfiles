@@ -69,6 +69,7 @@ packer.startup(function(use)
   --=================
   use {'iamcco/markdown-preview.nvim', run = 'cd app && npm install'}
   use 'joshcheek/seeing_is_believing'
+  use 'keith/rspec.vim'
   use 'Rishabhrd/popfix'
   use 'Rishabhrd/nvim-cheat.sh'
   use 'tpope/vim-endwise'
@@ -108,6 +109,10 @@ packer.startup(function(use)
   use 'gennaro-tedesco/nvim-peekup'
   use 'folke/todo-comments.nvim'
   use 'kshenoy/vim-signature'
+
+  -- WebDev
+  --=================
+  use 'turbio/bracey.vim'
 
   --Snippets
   --=================

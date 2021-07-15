@@ -1,4 +1,5 @@
-require 'compe'.setup {
+local compe = require'compe'
+compe.setup {
   enabled = true,
   autocomplete = true,
   debug = false,
@@ -26,3 +27,4 @@ require 'compe'.setup {
     treesitter = true
   }
 }
+

@@ -26,3 +26,8 @@ end
 
 
 remap('i' , '<CR>','v:lua.MUtils.completion_confirm()', {expr = true , noremap = true})
+
+require('nvim-autopairs.completion.compe').setup({
+    map_cr = true,
+    map_complete = true
+  })

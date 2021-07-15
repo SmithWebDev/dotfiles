@@ -226,6 +226,10 @@ local keymap = {
     w = {'<cmd>e $VIME/whichkey.lua<cr>',                       'whichkey config'},
     u = {'<cmd>e $VIMU<cr>',                                    'utility config'},
     v = {'<cmd>source $MYVIMRC<cr>',                            'luafile init config'},
+  },
+  w = {
+    name = "WebDev",
+    c = {'<cmd>ColorizerToggle<cr>',                            'Toggle Colorizer'}
   }
 }
 local visual_keymap = {
