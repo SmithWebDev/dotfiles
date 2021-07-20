@@ -1,1 +1,4 @@
-require'colorizer'.setup(nil, {css = true; })
+require'colorizer'.setup({
+    css = true,
+    css_fn = true
+  })
