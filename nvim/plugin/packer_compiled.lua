@@ -81,6 +81,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/any-jump.vim"
   },
+  ["color-converter.nvim"] = {
+    loaded = true,
+    path = "/home/smith/.local/share/nvim/site/pack/packer/start/color-converter.nvim"
+  },
   ["colorbuddy.nvim"] = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/colorbuddy.nvim"

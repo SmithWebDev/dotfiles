@@ -32,6 +32,7 @@ packer.startup(function(use)
   --use 'kdav5758/NoCLC.nvim'
   use 'junegunn/vim-emoji'
   use 'kevinhwang91/nvim-hlslens'
+  use 'ntbbloodbath/color-converter.nvim'
   use 'norcalli/nvim-colorizer.lua'
   use 'lukas-reineke/indent-blankline.nvim'
   use 'psliwka/vim-smoothie'
