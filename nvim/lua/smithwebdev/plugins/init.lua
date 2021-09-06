@@ -19,7 +19,7 @@ packer.startup(function(use)
   use 'AndrewRadev/tagalong.vim'
   use 'hrsh7th/nvim-compe'
   use 'mattn/emmet-vim'
-  use 'windwp/nvim-autopairs'
+  --use 'windwp/nvim-autopairs'
 
   --Cosmetic Upgrades
   --=================
