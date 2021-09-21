@@ -165,10 +165,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/numb.nvim"
   },
-  ["nvim-autopairs"] = {
-    loaded = true,
-    path = "/home/smith/.local/share/nvim/site/pack/packer/start/nvim-autopairs"
-  },
   ["nvim-cheat.sh"] = {
     loaded = true,
     path = "/home/smith/.local/share/nvim/site/pack/packer/start/nvim-cheat.sh"
